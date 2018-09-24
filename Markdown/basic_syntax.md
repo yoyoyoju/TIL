@@ -1,6 +1,6 @@
-Basic syntax
+# Basic syntax
 
-# Headers
+## Headers
 
 ```markdown
 # This is an <h1> tag
