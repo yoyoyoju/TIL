@@ -54,6 +54,7 @@ _italic **bold**_
 ```markdown
 ![shown when cannot load](example_picture.png "shown when you hover over the image")
 ![AltText][logo]
+
 [logo]: https://github.com/yoyoyoju/TIL/blob/master/Markdown/example_picture.png "Dog"
 ```
 ![shown when cannot load](example_picture.png "shown when you hover over the image")
@@ -63,6 +64,7 @@ _italic **bold**_
 
 
 ### Links
+
 ```markdown
 http://github.com - automatic!
 [GitHub](http://github.com)
@@ -86,3 +88,6 @@ use `print` to print
 ```
 
 
+
+-------
+reference: [GitHubGuides](https://guides.github.com/features/mastering-markdown/)
