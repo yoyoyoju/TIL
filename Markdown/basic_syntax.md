@@ -51,11 +51,13 @@ _italic **bold**_
 
 ### Images
 ```markdown
-![Little Dog](example_picture.png "Dog")
-Format: ![AltText](url)
+![shown when cannot load](example_picture.png "shown when you hover over the image")
+![AltText][logo]
+[logo]: https://github.com/yoyoyoju/TIL/blob/master/Markdown/example_picture.png "Dog"
 ```
-![Little Dog](example_picture.png "Dog")
-Format: ![AltText](url)
+![shown when cannot load](example_picture.png "shown when you hover over the image")
+![AltText][logo]
+[logo]: https://github.com/yoyoyoju/TIL/blob/master/Markdown/example_picture.png "Dog"
 
 
 ### Links
@@ -80,3 +82,4 @@ I want to quote:
 ```markdown
 use `print` to print
 ```
+
