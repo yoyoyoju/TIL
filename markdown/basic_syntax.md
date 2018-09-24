@@ -55,12 +55,12 @@ _italic **bold**_
 ![shown when cannot load](example_picture.png "shown when you hover over the image")
 ![AltText][logo]
 
-[logo]: https://github.com/yoyoyoju/TIL/blob/master/Markdown/example_picture.png "Dog"
+[logo]: https://github.com/yoyoyoju/TIL/blob/master/markdown/example_picture.png "Dog"
 ```
 ![shown when cannot load](example_picture.png "shown when you hover over the image")
 ![AltText][logo]
 
-[logo]: https://github.com/yoyoyoju/TIL/blob/master/Markdown/example_picture.png "Dog"
+[logo]: https://github.com/yoyoyoju/TIL/blob/master/markdown/example_picture.png "Dog"
 
 
 ### Links
