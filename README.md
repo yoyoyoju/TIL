@@ -17,9 +17,12 @@ Today I Learned.
 ---------------
 ## Category
 
+* [Vim](vim)
 * [Markdown](markdown)
 
 ---------------
+### Vim
+* [search replace](vim/search_replace.md)
 ### Markdown
 * [basic syntax](markdown/basic_syntax.md)
 * [github flavored](markdown/github_flavored.md)
