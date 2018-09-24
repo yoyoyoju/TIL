@@ -11,21 +11,24 @@
             return True
 ```
 
-2. use ` ``` `:
-```
+2. use fenced code
+`````
 ```
 def foo():
     if not bar:
         return True
 ```
-```
+`````
 
 #### with highlight
 
-```markdown
+`````markdown
 ```python
 def foo():
     if not bar:
         return True
 ```
-```
+`````
+
+
+
