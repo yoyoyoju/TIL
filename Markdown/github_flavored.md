@@ -93,3 +93,20 @@ yoyoyoju/TIL/Markdown/github_flavored.md@6e02119fa3b2c4cfc36be1a52c218af09661299
 yoyoyoju@6e02119fa3b2c4cfc36be1a52c218af09661299a
 yoyoyoju/TIL/Markdown@6e02119fa3b2c4cfc36be1a52c218af09661299a
 yoyoyoju/TIL/Markdown/github_flavored.md@6e02119fa3b2c4cfc36be1a52c218af09661299a
+
+16c999e8c71134401a78d4d46435517b2271d6ac
+mojombo@16c999e8c71134401a78d4d46435517b2271d6ac
+mojombo/github-flavored-markdown@16c999e8c71134401a78d4d46435517b2271d6ac
+
+
+### Issue references within a repository
+
+#1
+mojombo#1
+mojombo/github-flavored-markdown#1
+
+### Username @mentions
+```markdown
+@yoyoyoju
+```
+@yoyoyoju
