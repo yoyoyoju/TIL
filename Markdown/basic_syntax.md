@@ -46,13 +46,18 @@ _italic **bold**_
     1. Item 2a
 ```
 
-
+|```markdown |
+|1. Item 1  |
+|```|
+|---|
+|1. Item 1|
 
 
 ```python
 if True:
     print('hello')
 ```
+
 
 
 
