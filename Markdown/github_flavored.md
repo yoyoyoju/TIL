@@ -82,31 +82,35 @@ next  | next
 
 ### SHA references
 
-SHA-1 hash into a link to that commit on GitHub
+SHA-1 hash into a link to that commit on GitHub.
 ```markdown
 6e02119fa3b2c4cfc36be1a52c218af09661299a
 yoyoyoju@6e02119fa3b2c4cfc36be1a52c218af09661299a
 yoyoyoju/TIL/Markdown@6e02119fa3b2c4cfc36be1a52c218af09661299a
 yoyoyoju/TIL/Markdown/github_flavored.md@6e02119fa3b2c4cfc36be1a52c218af09661299a
 ```
-6e02119fa3b2c4cfc36be1a52c218af09661299a
-yoyoyoju@6e02119fa3b2c4cfc36be1a52c218af09661299a
-yoyoyoju/TIL/Markdown@6e02119fa3b2c4cfc36be1a52c218af09661299a
-yoyoyoju/TIL/Markdown/github_flavored.md@6e02119fa3b2c4cfc36be1a52c218af09661299a
-
-16c999e8c71134401a78d4d46435517b2271d6ac
-mojombo@16c999e8c71134401a78d4d46435517b2271d6ac
-mojombo/github-flavored-markdown@16c999e8c71134401a78d4d46435517b2271d6ac
-
 
 ### Issue references within a repository
 
+```markdown
 #1
-mojombo#1
-mojombo/github-flavored-markdown#1
+```
 
 ### Username @mentions
+notify that person to come and view the comment.
 ```markdown
 @yoyoyoju
 ```
 @yoyoyoju
+
+
+### Strikethrough
+
+```markdown
+~~crossed out~~
+```
+~~crossed out~~
+
+
+-------
+reference: [GitHubGuides](https://guides.github.com/features/mastering-markdown/)
