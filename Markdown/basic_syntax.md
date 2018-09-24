@@ -50,6 +50,7 @@ _italic **bold**_
 
 
 ### Images
+
 ```markdown
 ![shown when cannot load](example_picture.png "shown when you hover over the image")
 ![AltText][logo]
@@ -57,6 +58,7 @@ _italic **bold**_
 ```
 ![shown when cannot load](example_picture.png "shown when you hover over the image")
 ![AltText][logo]
+
 [logo]: https://github.com/yoyoyoju/TIL/blob/master/Markdown/example_picture.png "Dog"
 
 
@@ -82,4 +84,5 @@ I want to quote:
 ```markdown
 use `print` to print
 ```
+
 
