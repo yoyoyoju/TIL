@@ -79,3 +79,17 @@ First Header | Second Header
 cell1 | cell2
 next  | next
 
+
+### SHA references
+
+SHA-1 hash into a link to that commit on GitHub
+```markdown
+6e02119fa3b2c4cfc36be1a52c218af09661299a
+yoyoyoju@6e02119fa3b2c4cfc36be1a52c218af09661299a
+yoyoyoju/TIL/Markdown@6e02119fa3b2c4cfc36be1a52c218af09661299a
+yoyoyoju/TIL/Markdown/github_flavored.md@6e02119fa3b2c4cfc36be1a52c218af09661299a
+```
+6e02119fa3b2c4cfc36be1a52c218af09661299a
+yoyoyoju@6e02119fa3b2c4cfc36be1a52c218af09661299a
+yoyoyoju/TIL/Markdown@6e02119fa3b2c4cfc36be1a52c218af09661299a
+yoyoyoju/TIL/Markdown/github_flavored.md@6e02119fa3b2c4cfc36be1a52c218af09661299a
