@@ -65,4 +65,17 @@ def foo():
 - [ ] incomplete item
 
 
+### Tables
+Create table by hyphens `-` and pipe `|`.
+
+```markdown
+First Header | Second Header
+-------------| -------------
+cell1 | cell2
+next  | next
+```
+First Header | Second Header
+-------------| -------------
+cell1 | cell2
+next  | next
 
