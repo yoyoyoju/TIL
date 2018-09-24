@@ -1,6 +1,6 @@
 # GitHub Flavored Markdown
 
-### Syntax highlighting
+### code blocks
 
 #### without highlight
 
@@ -29,6 +29,27 @@ def foo():
         return True
 ```
 `````
+
+### double code blocks
+
+Either combine indent and fenced or
+`````markdown
+    code
+    ```
+    fenced code
+    ```
+    more code
+`````
+increase the amount of backticks:
+```````markdown
+`````markdown
+You can write and code like this:
+```python
+def foo():
+    return True
+```
+`````
+```````
 
 
 
