@@ -52,4 +52,17 @@ def foo():
 ```````
 
 
+### Task Lists
+```markdown
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax
+- [x] complete item
+- [ ] incomplete item
+```
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax
+- [x] complete item
+- [ ] incomplete item
+
+
 
