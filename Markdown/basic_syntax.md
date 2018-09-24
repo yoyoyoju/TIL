@@ -31,7 +31,6 @@ _italic **bold**_
     * Item 2a
         * Item 2a-1
 ```
-----
 * Item 1
 * Item 2
     * Item 2a
@@ -45,20 +44,39 @@ _italic **bold**_
 1. Item 2
     1. Item 2a
 ```
-
-|```markdown |
-|1. Item 1  |
-|```|
-|---|
-|1. Item 1|
+1. Item 1
+1. Item 2
+    1. Item 2a
 
 
-```python
-if True:
-    print('hello')
+### Images
+```markdown
+![Little Dog](/example_picture.png)
+Format: ![AltText](url)
+```
+![Little Dog](/example_picture.png)
+Format: ![AltText](url)
+
+
+### Links
+```markdown
+http://github.com - automatic!
+[GitHub](http://github.com)
 ```
 
+### Blockquotes
+```markdown
+I want to quote:
 
+> this
+> that
+```
+I want to quote:
 
+> this
+> that
 
-
+### Inline code
+```markdown
+use `print` to print
+```
