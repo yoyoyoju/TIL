@@ -2,6 +2,8 @@
 
 Today I Learned.
 
+-----------------
+
 ## To Do List
 
 - [x] markdown
@@ -10,6 +12,7 @@ Today I Learned.
 - [ ] vim
 - [ ] python - the previous lecture
 - [ ] python - the current lecture
+
 
 ---------------
 ## Category
