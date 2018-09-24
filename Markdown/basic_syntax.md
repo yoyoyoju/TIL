@@ -51,10 +51,10 @@ _italic **bold**_
 
 ### Images
 ```markdown
-![Little Dog](/example_picture.png)
+![Little Dog](example_picture.png "Dog")
 Format: ![AltText](url)
 ```
-![Little Dog](/example_picture.png)
+![Little Dog](example_picture.png "Dog")
 Format: ![AltText](url)
 
 
