@@ -39,7 +39,7 @@ for x in os.listdir('.'):
 readme_file.write('\n')
 readme_file.write('---------------\n')
 for category in os.listdir('.'):
-    if os.path.isdir(category) and category[0] != '.' and category[0] !='_':
+    if os.path.isdir(category) and category[0] != '.' and category[0] != '_':
         readme_file.write('---------------\n')
         readme_file.write('### ' + category.capitalize() + '\n')
 
