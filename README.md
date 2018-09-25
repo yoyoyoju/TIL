@@ -21,6 +21,7 @@ Today I Learned.
 * [Vim](vim)
 * [Python](python)
 * [Markdown](markdown)
+* [Resource](resource)
 
 ---------------
 ---------------
@@ -33,3 +34,6 @@ Today I Learned.
 ### Markdown
 * [Basic syntax](markdown/basic_syntax.md)
 * [Github flavored](markdown/github_flavored.md)
+---------------
+### Resource
+* [Jobsearch](resource/jobsearch.md)
