@@ -1,3 +1,3 @@
 # Python
 * [Doctest mistakes](doctest_mistakes.md)
-   * [newline](doctest_mistakes.md#line)
+   * [newline](doctest_mistakes.md#newline)
