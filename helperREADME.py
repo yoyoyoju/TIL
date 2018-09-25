@@ -96,7 +96,7 @@ def write_headers(writefile, readfilename, path = '', header = 3):
     for line in readfile:
         if line[:header + 1] == header * '#' + ' ':
             writefile.write('   * [' + format_line(line) + '](' + readfilename + \
-                    '#' + format_line(line) + ')\n')
+                    '#' + format_line(line, link = True) + ')\n')
     readfile.close()
 
 
