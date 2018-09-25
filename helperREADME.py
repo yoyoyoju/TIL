@@ -22,6 +22,15 @@ def check_dir_name(dirname):
     notgood = ['.', '_']
     return dirname[0] not in notgood
 
+
+def format_title(s):
+    res = s
+    ind = s.find('.')
+    if ind > 0:
+        res = s[:ind]
+    return res.capitalize().replace('_', ' ')
+
+
 def linked_str(s, directory = ''):
     '''(str) -> str
     return a formatted to link based on the s and directory.
@@ -33,15 +42,7 @@ def linked_str(s, directory = ''):
     >>> linked_str(a, directory = 'vim')
     '* [How to vim](vim/how_to_vim)\\n'
     '''
-    def format_title(s):
-        res = s
-        ind = s.find('.')
-        if ind > 0:
-            res = s[:ind]
-        return res.capitalize().replace('_', ' ')
-
     result = '* ['
-
     result += format_title(s)
     result += ']('
     if directory != '':
@@ -49,6 +50,17 @@ def linked_str(s, directory = ''):
     result += s
     result += ')\n'
     return result
+
+
+def make_readme(dirname):
+    '''(str) -> NoneType
+
+    make a README.md file in the given directory.
+    '''
+
+    dir_readme_file = open(dirname + '/README.md', 'w')
+    dir_readme_file.write('# ' + format_title(dirname) + '\n')
+    dir_readme_file.close()
 
 
 if __name__ == '__main__':
