@@ -14,7 +14,6 @@ python3 generateREADME.py
 git add .
 
 # check argument:
-
 if [ "$#" -gt 0 ]; then
     git commit -m "$1"
 else

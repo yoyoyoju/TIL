@@ -1,13 +1,6 @@
 import os
+from helperREADME import *
 
-
-# helper functions
-def sorted_dir(folder):
-    def getmtime(name):
-        path = os.path.join(folder, name)
-        return os.path.getmtime(path)
-
-    return sorted(os.listdir(folder), key=getmtime, reverse=True)
 
 
 # Constants
@@ -39,23 +32,20 @@ readme_file.write('\n')
 
 for x in os.listdir('.'):
     if os.path.isdir(x) and x[0] != '.':
-        readme_file.write('* [' + x.capitalize() + ']')
-        readme_file.write('(' + x + ')')
-        readme_file.write('\n')
+        readme_file.write(linked_str(x))
 
 
 # list the files under the corresponding category
 readme_file.write('\n')
 readme_file.write('---------------\n')
 for category in os.listdir('.'):
-    if os.path.isdir(category) and category[0] != '.':
+    if os.path.isdir(category) and category[0] != '.' and category[0] !='_':
         readme_file.write('### ' + category.capitalize() + '\n')
 
         # for f in os.listdir(category):  # write files in the category
         for f in sorted_dir(category):
             if f[-3:] == '.md':
-                readme_file.write('* [' + f[:-3].replace('_', ' ') + ']')
-                readme_file.write('(' + category + '/' + f + ')\n')
+                readme_file.write(linked_str(f, directory = category))
 
 
 

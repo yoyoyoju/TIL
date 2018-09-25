@@ -18,12 +18,16 @@ Today I Learned.
 ## Category
 
 * [Vim](vim)
+* [Python](python)
 * [Markdown](markdown)
+* [  pycache  ](__pycache__)
 
 ---------------
 ### Vim
-* [README](vim/README.md)
-* [search replace](vim/search_replace.md)
+* [Readme](vim/README.md)
+* [Search replace](vim/search_replace.md)
+### Python
+* [Doctest mistakes](python/doctest_mistakes.md)
 ### Markdown
-* [basic syntax](markdown/basic_syntax.md)
-* [github flavored](markdown/github_flavored.md)
+* [Basic syntax](markdown/basic_syntax.md)
+* [Github flavored](markdown/github_flavored.md)
