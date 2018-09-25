@@ -17,19 +17,11 @@ Today I Learned.
 ---------------
 ## Category
 
-* [Vim](vim)
-* [Python](python)
-* [Markdown](markdown)
 * [  pycache  ](__pycache__)
+* [.git](.git)
 
 ---------------
 ---------------
-### Vim
-* [Search replace](vim/search_replace.md)
+### __pycache__
 ---------------
-### Python
-* [Doctest mistakes](python/doctest_mistakes.md)
----------------
-### Markdown
-* [Basic syntax](markdown/basic_syntax.md)
-* [Github flavored](markdown/github_flavored.md)
+### .git

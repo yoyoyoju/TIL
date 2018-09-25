@@ -15,6 +15,13 @@ def sorted_dir(folder):
     return sorted(os.listdir(folder), key=getmtime, reverse=True)
 
 
+def check_dir_name(dirname):
+    '''(str) -> bool
+    return True if the dirname is to be listed.
+    '''
+    notgood = ['.', '_']
+    return dirname[0] in notgood
+
 def linked_str(s, directory = ''):
     '''(str) -> str
     return a formatted to link based on the s and directory.

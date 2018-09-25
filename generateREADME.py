@@ -31,7 +31,7 @@ readme_file.write('## Category\n')
 readme_file.write('\n')
 
 for x in os.listdir('.'):
-    if os.path.isdir(x) and x[0] != '.':
+    if os.path.isdir(x) and check_dir_name(x):
         readme_file.write(linked_str(x))
 
 
@@ -39,7 +39,7 @@ for x in os.listdir('.'):
 readme_file.write('\n')
 readme_file.write('---------------\n')
 for category in os.listdir('.'):
-    if os.path.isdir(category) and category[0] != '.' and category[0] != '_':
+    if os.path.isdir(category) and check_dir_name(category):
         readme_file.write('---------------\n')
         readme_file.write('### ' + category.capitalize() + '\n')
 
