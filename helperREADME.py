@@ -20,7 +20,7 @@ def check_dir_name(dirname):
     return True if the dirname is to be listed.
     '''
     notgood = ['.', '_']
-    return dirname[0] in notgood
+    return dirname[0] not in notgood
 
 def linked_str(s, directory = ''):
     '''(str) -> str
