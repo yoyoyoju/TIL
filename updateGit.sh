@@ -18,6 +18,8 @@ git add .
 if [ "$#" -gt 0 ]; then
     git commit -m "$1"
 else
-    echo "no argument"
+    git status --porcelain \
+    | git commit -F -
 fi
 
+git push
