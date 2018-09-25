@@ -14,6 +14,7 @@
 * [frontEnd](https://github.com/h5bp/Front-end-Developer-Interview-Questions): h5bp/Front-end-Developer-Interview-Questions
 * leetcode.com: algorithm and data structure
 
-### advise for job searching
+### advice for job searching
 * send CV to real person
 * do the interviews from lower level company first: you learn from the experience
+    
