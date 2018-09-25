@@ -1,7 +1,6 @@
 # Markdown
 * [Basic syntax](basic_syntax.md)
-   * Headers
-
+   * [Headers](basic_syntax.md#Headers)
    * Emphasis
 
    * Lists
