@@ -31,6 +31,22 @@ def format_title(s):
     return res.capitalize().replace('_', ' ')
 
 
+
+def make_dir_path(path, filename):
+    '''(str, str) -> str
+    return the combined str of path and filename
+    >>> make_dir_path('', 'README.md')
+    README.md
+    >>> make_dir_path('vim', 'README.md')
+    vim/README.md
+    '''
+    result = ''
+    if path != '':
+        result += path + '/'
+    result += filename
+    return result
+
+
 def linked_str(s, directory = ''):
     '''(str) -> str
     return a formatted to link based on the s and directory.
@@ -45,9 +61,7 @@ def linked_str(s, directory = ''):
     result = '* ['
     result += format_title(s)
     result += ']('
-    if directory != '':
-        result += directory + '/'
-    result += s
+    result += make_dir_path(directory, s)
     result += ')\n'
     return result
 
@@ -63,18 +77,24 @@ def make_readme(dirname):
     dir_readme_file.close()
 
 
-def write_headers(writefile, readfilename, header = 3):
-    '''(file, str) -> NotnType
+### change for more input
+def write_headers(writefile, readfilename, path = '', header = 3):
+    '''(file, str, str, int) -> NotnType
     writefile: file to write into
     readfilename: file name to collect the headers
+    path: the path to the readfilename
 
     write into writefile, the h-header headers from readfilename.
     default: h3 header
     '''
-    readfile = open(readfilename, 'r')
+    def format_line(str, start = header + 1):
+        return str[start:].rstrip()
+
+    readfile = open(make_dir_path(path, readfilename), 'r')
     for line in readfile:
         if line[:header + 1] == header * '#' + ' ':
-            writefile.write('   * ' + line[header + 1:] + '\n')
+            writefile.write('   * [' + format_line(line) + '](' + readfilename + \
+                    '#' + format_line(line) + ')\n')
     readfile.close()
 
 

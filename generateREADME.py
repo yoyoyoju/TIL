@@ -53,7 +53,7 @@ for category in os.listdir('.'):
                 readme_file.write(linked_str(f, directory = category))
                 dir_readme_file.write(linked_str(f))
                 ## collect h3 header from the f
-                write_headers(dir_readme_file, category + '/' + f)
+                write_headers(dir_readme_file, f, path = category)
         dir_readme_file.close()
 
 
