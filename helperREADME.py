@@ -89,6 +89,8 @@ def write_headers(writefile, readfilename, path = '', header = 3):
     '''
     def format_line(str, start = header + 1, link = False):
         if link:
+            import re
+            str = re.sub('[^a-zA-Z1-9 ]+', '', str)
             str = str.lower().replace(' ', '-')
         return str[start:].rstrip()
 
