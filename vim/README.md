@@ -1,4 +1,4 @@
 # Vim
-* [Search replace](search_replace.md#search-and-replace)
+* [Search replace](search_replace.md)
+   * search and replace
 
-### test header

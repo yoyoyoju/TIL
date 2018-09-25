@@ -63,6 +63,21 @@ def make_readme(dirname):
     dir_readme_file.close()
 
 
+def write_headers(writefile, readfilename, header = 3):
+    '''(file, str) -> NotnType
+    writefile: file to write into
+    readfilename: file name to collect the headers
+
+    write into writefile, the h-header headers from readfilename.
+    default: h3 header
+    '''
+    readfile = open(readfilename, 'r')
+    for line in readfile:
+        if line[:header + 1] == header * '#' + ' ':
+            writefile.write('   * ' + line[header + 1:] + '\n')
+    readfile.close()
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()

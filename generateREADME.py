@@ -52,6 +52,8 @@ for category in os.listdir('.'):
             if f[-3:] == '.md' and f != 'README.md':
                 readme_file.write(linked_str(f, directory = category))
                 dir_readme_file.write(linked_str(f))
+                ## collect h3 header from the f
+                write_headers(dir_readme_file, category + '/' + f)
         dir_readme_file.close()
 
 
