@@ -87,7 +87,9 @@ def write_headers(writefile, readfilename, path = '', header = 3):
     write into writefile, the h-header headers from readfilename.
     default: h3 header
     '''
-    def format_line(str, start = header + 1):
+    def format_line(str, start = header + 1, link = False):
+        if link:
+            str = str.lower().replace(' ', '-')
         return str[start:].rstrip()
 
     readfile = open(make_dir_path(path, readfilename), 'r')
