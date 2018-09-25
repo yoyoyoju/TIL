@@ -22,6 +22,7 @@ Today I Learned.
 
 ---------------
 ### Vim
+* [README](vim/README.md)
 * [search replace](vim/search_replace.md)
 ### Markdown
 * [basic syntax](markdown/basic_syntax.md)
