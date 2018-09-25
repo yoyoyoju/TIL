@@ -23,11 +23,13 @@ Today I Learned.
 * [  pycache  ](__pycache__)
 
 ---------------
+---------------
 ### Vim
-* [Readme](vim/README.md)
 * [Search replace](vim/search_replace.md)
+---------------
 ### Python
 * [Doctest mistakes](python/doctest_mistakes.md)
+---------------
 ### Markdown
 * [Basic syntax](markdown/basic_syntax.md)
 * [Github flavored](markdown/github_flavored.md)

@@ -40,11 +40,12 @@ readme_file.write('\n')
 readme_file.write('---------------\n')
 for category in os.listdir('.'):
     if os.path.isdir(category) and category[0] != '.' and category[0] !='_':
+        readme_file.write('---------------\n')
         readme_file.write('### ' + category.capitalize() + '\n')
 
         # for f in os.listdir(category):  # write files in the category
         for f in sorted_dir(category):
-            if f[-3:] == '.md':
+            if f[-3:] == '.md' and f != 'README.md':
                 readme_file.write(linked_str(f, directory = category))
 
 
