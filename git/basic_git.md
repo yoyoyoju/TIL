@@ -84,5 +84,8 @@ How to clone an existing repository
 
 
 ### undo
+
+* `git commit -amend`: this commit replaces the previous one.
+added
 ---------------
 reference: PRO GIT
