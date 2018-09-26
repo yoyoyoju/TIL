@@ -4,7 +4,7 @@
    * [edit](beginners_guide.md#edit)
    * [search and replace](beginners_guide.md#search-and-replace)
    * [highlight](beginners_guide.md#highlight)
-   * [Copy and paste](beginners_guide.md#copy-and-paste)
+   * [copy and paste](beginners_guide.md#copy-and-paste)
    * [save and quit](beginners_guide.md#save-and-quit)
 * [Search replace](search_replace.md)
    * [search and replace](search_replace.md#search-and-replace)

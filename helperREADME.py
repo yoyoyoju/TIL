@@ -92,6 +92,8 @@ def write_headers(writefile, readfilename, path = '', header = 3):
             # import re
             # str = re.sub('[^a-zA-Z1-9 ]+', '', str)
             str = str.lower().replace(' ', '-')
+        else:
+            str = str.capitalize()
         return str[start:].rstrip()
 
     readfile = open(make_dir_path(path, readfilename), 'r')
