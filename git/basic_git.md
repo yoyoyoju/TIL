@@ -99,7 +99,7 @@ How to clone an existing repository:
 ## remotes
 remote repositories are versions of my project hosted on the internet or network somewhere.
 
-### add and see remote 
+### add, see, remove remotes
 * To see it use `git remote` or `git remote -v` to see the URL.
 * `git remote show <remote-name>`: to inspect
 * `git remote add <shortname> <url>`: to add a remote
@@ -118,5 +118,41 @@ remote repositories are versions of my project hosted on the internet or network
 ### push to remote
 * `git push <remote-name> <branch-name>`: push commited data into remote
 * `git push origin master`: push my master branch to my `origin` server
+
+
+
+
+## tagging
+* lightweight tag: pointer to a specific commit
+* annotated tags: stored as full objects in the Git database. has all the information.
+* `git tag`: to list the available tags
+* `git show v1.4`: to show the tag data
+
+### create tags
+* `git tag -a v1.4 -m 'my version 1.4'`: create annotated tag (by `-a` flag)
+* `git tag v1.4-lw`: create lightweight tag (no `-a`, `-s`, `-m` option)
+* `git tag -a <tag> <commit-hash>`: tag onto previous commit ex)`git tag -a v1.2 9f232cb`
+
+
+### share tags
+* `git push <remote> <tag>`: push the tag (`git push` does not push tag by default)
+* `git push <remote> --tags`: transfer all my tags
+
+
+
+
+## Aliases
+
+### set up aliases
+set up aliases by using `git config`.
+
+examples:
+* `git config --global alias.ci commit`: to commit use `git ci` 
+* `git config --global alias.unstage 'reset HEAD --'`: `git unstage fileA`
+* `git config --global alias.last 'log -1 HEAD'`: `git last`
+* to run external command use `!` character in front of it.
+    * `git config --global alias.visual "!gitk"`
+
+
 ---------------
 reference: PRO GIT

@@ -8,7 +8,8 @@ Today I Learned.
 
 - [x] markdown
 - [x] generateREADME code
-- [ ] git
+- [x] git - basic
+- [ ] git - branch
 - [x] vim - covered the basic
 - [ ] python - the previous lecture
 - [ ] python - the current lecture
