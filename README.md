@@ -9,9 +9,10 @@ Today I Learned.
 - [x] markdown
 - [x] generateREADME code
 - [ ] git
-- [ ] vim
+- [x] vim - covered the basic
 - [ ] python - the previous lecture
 - [ ] python - the current lecture
+
 
 
 ---------------
@@ -22,10 +23,12 @@ Today I Learned.
 * [Python](python)
 * [Markdown](markdown)
 * [Resource](resource)
+* [Git](git)
 
 ---------------
 ---------------
 ### Vim
+* [Fold](vim/fold.md)
 * [Beginners guide](vim/beginners_guide.md)
 * [Search replace](vim/search_replace.md)
 ---------------
@@ -38,3 +41,7 @@ Today I Learned.
 ---------------
 ### Resource
 * [Jobsearch](resource/jobsearch.md)
+---------------
+### Git
+* [Basic git](git/basic_git.md)
+* [Status options](git/status_options.md)

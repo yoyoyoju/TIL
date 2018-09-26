@@ -1,4 +1,6 @@
 # Vim
+* [Fold](fold.md)
+   * [Open and close folds](fold.md#open-and-close-folds)
 * [Beginners guide](beginners_guide.md)
    * [Basic movement](beginners_guide.md#basic-movement)
    * [Edit](beginners_guide.md#edit)
