@@ -9,7 +9,7 @@ about basic thing.
 * `b`: backward one word.
 * `G`: end of the file.
 * `gg`: beginning of the file.
-* `\`.`: move to the last edit.
+* `` `. ``: move to the last edit.
 
 can type numbers in front of these to make it multiple times:
 `5w` or `10b`.
