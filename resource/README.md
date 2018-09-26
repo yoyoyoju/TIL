@@ -1,5 +1,5 @@
 # Resource
 * [Jobsearch](jobsearch.md)
-   * [coding games](jobsearch.md#coding-games)
-   * [resources for interview](jobsearch.md#resources-for-interview)
-   * [advice for job searching](jobsearch.md#advice-for-job-searching)
+   * [Coding games](jobsearch.md#coding-games)
+   * [Resources for interview](jobsearch.md#resources-for-interview)
+   * [Advice for job searching](jobsearch.md#advice-for-job-searching)
