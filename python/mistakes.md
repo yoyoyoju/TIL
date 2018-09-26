@@ -14,6 +14,7 @@ def foo():
 
 
 ### loop over dictionary
-`for key in dictionary:` for keys
-`for key, value in dictionary.items():` for keys
-`for key, value in dictionary.iteritems():` for Python2.x 
+* `for key in dictionary:` for keys
+* `for key, value in dictionary.items():` for keys
+* `for key, value in dictionary.iteritems():` for Python2.x 
+
