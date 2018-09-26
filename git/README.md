@@ -7,6 +7,7 @@
    * [Record changes](basic_git.md#record-changes)
    * [Commit history](basic_git.md#commit-history)
    * [Undo](basic_git.md#undo)
+   * [Add remote repositories](basic_git.md#add-remote-repositories)
 * [Status options](status_options.md)
    * [Output](status_options.md#output)
    * [Ignore option](status_options.md#ignore-option)

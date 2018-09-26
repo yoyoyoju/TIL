@@ -85,9 +85,21 @@ How to clone an existing repository
 
 ### undo
 
-* `git commit --amend`: this commit replaces the previous one. (when I want to add something to the previous commit)
+* `git commit --amend`: this commit replaces the previous one. 
+    * when I want to add something to the previous commit
 * `git reset HEAD <file>`: unstage staged file
 * `git checkout -- <file>`: discard changes, copy the unchanged file over current file.
     * the current change is lost. be careful to use it.
+
+
+
+
+## remotes
+remote repositories are versions of my project hosted on the internet or network somewhere.
+* To see it use `git remote` or `git remote -v` to see the URL.
+
+### add remote repositories
+* `git remote add <shortname> <url>`: to add a remote
+* `git fetch <shortname>`: to fetch from the remote
 ---------------
 reference: PRO GIT
