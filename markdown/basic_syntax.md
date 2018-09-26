@@ -94,5 +94,6 @@ to use backtick in inline code: use double tick to wrap(or more)
 
 
 -------
-reference: [GitHubGuides](https://guides.github.com/features/mastering-markdown/)
+<div style="text-align: right"> reference: [GitHubGuides](https://guides.github.com/features/mastering-markdown/) </div>
+
 
