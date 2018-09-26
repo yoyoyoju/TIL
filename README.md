@@ -26,6 +26,7 @@ Today I Learned.
 ---------------
 ---------------
 ### Vim
+* [Beginners guide](vim/beginners_guide.md)
 * [Search replace](vim/search_replace.md)
 ---------------
 ### Python
