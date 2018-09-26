@@ -86,7 +86,11 @@ I want to quote:
 ```markdown
 use `print` to print
 ```
-
+to use backtick in inline code: use double tick to wrap(or more)
+```
+``` `` `something` `` ```
+```
+``` `` `something` `` ```
 
 
 -------
