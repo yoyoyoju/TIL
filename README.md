@@ -33,7 +33,7 @@ Today I Learned.
 * [Search replace](vim/search_replace.md)
 ---------------
 ### Python
-* [Doctest mistakes](python/doctest_mistakes.md)
+* [Mistakes](python/mistakes.md)
 ---------------
 ### Markdown
 * [Basic syntax](markdown/basic_syntax.md)
