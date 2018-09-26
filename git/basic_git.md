@@ -85,7 +85,9 @@ How to clone an existing repository
 
 ### undo
 
-* `git commit -amend`: this commit replaces the previous one.
-added
+* `git commit --amend`: this commit replaces the previous one. (when I want to add something to the previous commit)
+* `git reset HEAD <file>`: unstage staged file
+* `git checkout -- <file>`: discard changes, copy the unchanged file over current file.
+    * the current change is lost. be careful to use it.
 ---------------
 reference: PRO GIT
