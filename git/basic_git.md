@@ -33,9 +33,11 @@ $ git commit -m 'first commit'
 ```
 
 ### clone
-How to clone an existing repository
+How to clone an existing repository: 
 * `git clone <url>`: clone the url into a dir created after the repository name
 * `git clone <url> <dirname>`: create a dir of dirname and clone the repository there
+* This remote is named as `origin`
+    * automatically sets my local master branch to track the (origin) remote master branch
 
 
 
@@ -96,10 +98,25 @@ How to clone an existing repository
 
 ## remotes
 remote repositories are versions of my project hosted on the internet or network somewhere.
-* To see it use `git remote` or `git remote -v` to see the URL.
 
-### add remote repositories
+### add and see remote 
+* To see it use `git remote` or `git remote -v` to see the URL.
+* `git remote show <remote-name>`: to inspect
 * `git remote add <shortname> <url>`: to add a remote
-* `git fetch <shortname>`: to fetch from the remote
+* `git remote rename <name-old> <name-new>`: rename remote name (its branch names too)
+* `git remote rm <remote-name>`: remove the remote
+
+
+### fetch and pull from remote
+* `git fetch <shortname>`: to fetch from the remote. 
+    * accessable locally.
+    * does not automatically merge.
+* `git fetch origin`: fetch from the origin remote
+* `git pull`: fetch and merge from the corresponding remote branch to my current branch.
+
+
+### push to remote
+* `git push <remote-name> <branch-name>`: push commited data into remote
+* `git push origin master`: push my master branch to my `origin` server
 ---------------
 reference: PRO GIT
