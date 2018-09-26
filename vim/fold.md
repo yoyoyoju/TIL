@@ -5,3 +5,4 @@ to do: add about the setting
 * `zc`: close the fold
 * `zo`: open the fold
 * `za`: toggle the fold
+* `zC`, `zO`, `zA`: for all levels
