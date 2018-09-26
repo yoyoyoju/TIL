@@ -60,3 +60,5 @@ can type numbers in front of these to make it multiple times:
 * `:q`: quit
 * `ZZ`: save and quit
 
+-----------------
+reference: [linux.com](https://www.linux.com/learn/vim-101-beginners-guide-vim)
