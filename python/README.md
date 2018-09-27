@@ -1,4 +1,12 @@
 # Python
+* [Lec6001x](lec6001x.md)
+   * [1 intro](lec6001x.md#1-intro)
+   * [2 str branching iter](lec6001x.md#2-str-branching-iter)
+   * [3 loops str guessandcheck approximation bisection](lec6001x.md#3-loops-str-guessandcheck-approximation-bisection)
+   * [4 functions recursion](lec6001x.md#4-functions-recursion)
+* [Algorithms](algorithms.md)
+   * [Guess and check](algorithms.md#guess-and-check)
+   * [Recursion](algorithms.md#recursion)
 * [Mistakes](mistakes.md)
    * [Newline](mistakes.md#newline)
    * [Loop over dictionary](mistakes.md#loop-over-dictionary)
