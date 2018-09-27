@@ -35,3 +35,33 @@ reference: 6001x lec2
 `p(x) = a_n x^n + a_{n-1} x^{n-1} + ... + a_1 x + a_0`
 * want to find `r` such that `p(r) = 0`
 * if `g` is an approximation ot the root, then `g - p(g)/p'(g)` is better approximation; where `p'` is derivative of `p`
+
+
+
+### Recursion
+reference: 6001x lec4
+* function calls itself
+* divide-and-conquer or decrease-and-conquer
+* Not to have infinite recursion
+    * recursive step - reduce problem to a simpler/smaller version of same problem
+    * base case - keep reducing until reach a simple case that can be solved directly
+
+example:
+```python
+def factorial(n):
+    if n == 1:  # base case
+        return 1
+    else:
+        return n * factorial(n-1)   # reduces smaller(n-1) version of itself
+```
+* inductive reasoning to tell if it will stop
+    * base case: no recursive call and stops
+    * `n>1` cases will call with a smaller version of n; must eventually reach call with basecase.
+* indective reasoning to tell if it will work
+    * base case: it returns correct answer.
+    * for resursive case, assume it returns right answer for smaller size. By additional step, it also returns corrent answer for this size.
+
+
+#### Divide and Conquer
+
+
