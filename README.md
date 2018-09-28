@@ -46,5 +46,6 @@ Today I Learned.
 * [Jobsearch](resource/jobsearch.md)
 ---------------
 ### Git
+* [Branch git](git/branch_git.md)
 * [Basic git](git/basic_git.md)
 * [Status options](git/status_options.md)
