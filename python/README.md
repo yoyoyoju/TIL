@@ -1,4 +1,7 @@
 # Python
+* [Notes](notes.md)
+   * [Dictionary safe way](notes.md#dictionary-safe-way)
+   * [Multiple exception](notes.md#multiple-exception)
 * [Lec6001x](lec6001x.md)
    * [1 intro](lec6001x.md#1-intro)
    * [2 str branching iter](lec6001x.md#2-str-branching-iter)
