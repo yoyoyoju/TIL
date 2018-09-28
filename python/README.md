@@ -1,4 +1,8 @@
 # Python
+* [Mistakes](mistakes.md)
+   * [Doctest newline](mistakes.md#doctest-newline)
+   * [Doctest normalize whitespace](mistakes.md#doctest-normalize-whitespace)
+   * [Loop over dictionary](mistakes.md#loop-over-dictionary)
 * [Notes](notes.md)
    * [Dictionary safe way](notes.md#dictionary-safe-way)
    * [Multiple exception](notes.md#multiple-exception)
@@ -10,6 +14,3 @@
 * [Algorithms](algorithms.md)
    * [Guess and check](algorithms.md#guess-and-check)
    * [Recursion](algorithms.md#recursion)
-* [Mistakes](mistakes.md)
-   * [Newline](mistakes.md#newline)
-   * [Loop over dictionary](mistakes.md#loop-over-dictionary)

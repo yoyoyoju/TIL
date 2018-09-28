@@ -1,7 +1,7 @@
 # Mistakes
 The mistakes I made
 
-### newline
+### doctest newline
 new line `\n` should be written in doctest as `\\n`.
 ```python
 def foo():
@@ -11,6 +11,18 @@ def foo():
     '''
     return 'hello\n'
 ```
+
+
+### doctest NORMALIZE WHITESPACE
+`````python
+def foo():
+    '''
+    >>> foo()   # doctest: +NORMALIZE_WHITESPACE
+    a b c
+    '''
+    print("a b c ")
+`````
+to normalize the white space
 
 
 ### loop over dictionary
