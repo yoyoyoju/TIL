@@ -6,6 +6,8 @@ To sort out things later
 It returns `default` when the key does not exist in the `d`.
 It does not raise `KeyError` oppose to `d[key]`.
 
+* `sum(d.values())` or `list(d.values())`
+
 
 ### multiple exception
 ```python
