@@ -23,6 +23,7 @@ Today I Learned.
 * [Vim](vim)
 * [Python](python)
 * [Markdown](markdown)
+* [Aws](aws)
 * [Resource](resource)
 * [Git](git)
 
@@ -42,6 +43,9 @@ Today I Learned.
 ### Markdown
 * [Basic syntax](markdown/basic_syntax.md)
 * [Github flavored](markdown/github_flavored.md)
+---------------
+### Aws
+* [First start](aws/first_start.md)
 ---------------
 ### Resource
 * [Jobsearch](resource/jobsearch.md)
