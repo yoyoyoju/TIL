@@ -27,7 +27,19 @@ Introduction to Exercise 2
     * tags: user defined metadata for the instance (key: value pair)
     * security group: selete existing one? eipsq
     * key pairs: new one
+    * launch
+    * waite until the status checks changes from `initializing` to `2/2 checks passed`.
+    * connect to the `IPv4 public IP` from a browser
+* to connect
+    * `chmod 400 path/to/yourkeyname.pem`
+    * `ssh -i path/to/yourkeyname.pem ubuntu@12.123.123.123`
 * to terminae
     * Service, EC2 for EC2 dashboard
     * Instances, select the one to terminate
     * Actions, Instance State, Terminate
+
+
+----------------
+reference:
+* edX AWS Developer: Building on AWS
+* [about git install](devoncmather.com/setting-aws-ec2-instance-lamp-git/)
