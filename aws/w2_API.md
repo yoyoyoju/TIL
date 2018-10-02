@@ -77,14 +77,37 @@ client = boto3.client('ec2')
 client.describe_instances()
 ```
 
-### S3 bucket
+### S3 bucket Ex5
 * `S3` dashboard
 * create bucket
 * bucket name
 * region
 
 
-### S3 uploader component
+### S3 via boto3 Ex5
+example code from the lecture
+```python3
+import boto3
+s3_client = boto3.client('s3')
+prefix = "photos/"
+responce = s3_client.list_objects(
+    Bucket=config.PHOTOS_BUCKET,
+    Prefix=prefix
+)
+
+s3_client.put_object(
+    Bucket=config.PHOTOS_BUCKET,
+    Key=key,
+    Body=image_bytes,
+    ContentType='image/png'
+)
+
+url = s3_client.generate_presigned_url(
+    'get_object',
+    Params={'Bucket': config.PHOTOS_BUCKET, 'Key': key})
+```
+
+### Ex6
 
 
 
