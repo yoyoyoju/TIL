@@ -35,9 +35,9 @@ Today I Learned.
 * [Search replace](vim/search_replace.md)
 ---------------
 ### Python
+* [Lec6001x](python/lec6001x.md)
 * [Notes](python/notes.md)
 * [Mistakes](python/mistakes.md)
-* [Lec6001x](python/lec6001x.md)
 * [Algorithms](python/algorithms.md)
 ---------------
 ### Markdown
