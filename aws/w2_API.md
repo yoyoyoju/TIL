@@ -107,7 +107,20 @@ url = s3_client.generate_presigned_url(
     Params={'Bucket': config.PHOTOS_BUCKET, 'Key': key})
 ```
 
-### Ex6
+### rekognition Ex6
+
+example code
+```python3
+rek = boto3.client('rekognition')
+response = rek.detect_labels(
+    Image={
+        'S3Object': {
+            'Bucket': config.PHOTOS_BUCKET,
+            'Name': key
+        }
+    })
+```
+
 
 
 
