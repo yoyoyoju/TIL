@@ -50,6 +50,7 @@ virtual private cloud. How the network traffic is routed. How the network connec
 * choose `Your VPCs` from left navigation menu
 * write down the vpc-id
 * choose `Subnet` from left navigation menu
+* write down the subnet-id
 
 
 ### EC2 instance in a VPC

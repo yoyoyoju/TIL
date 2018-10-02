@@ -46,6 +46,7 @@ Today I Learned.
 ---------------
 ### Aws
 * [First start](aws/first_start.md)
+* [W2 api](aws/w2_API.md)
 ---------------
 ### Resource
 * [Jobsearch](resource/jobsearch.md)
