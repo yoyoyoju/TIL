@@ -1,4 +1,11 @@
 # Vim
+* [Vimrc](vimrc.md)
+   * [Set number](vimrc.md#set-number)
+   * [Indent](vimrc.md#indent)
+* [Move](move.md)
+   * [Pagewise](move.md#pagewise)
+* [Search replace](search_replace.md)
+   * [Search and replace](search_replace.md#search-and-replace)
 * [Fold](fold.md)
    * [Open and close folds](fold.md#open-and-close-folds)
 * [Beginners guide](beginners_guide.md)
@@ -8,5 +15,3 @@
    * [Highlight](beginners_guide.md#highlight)
    * [Copy and paste](beginners_guide.md#copy-and-paste)
    * [Save and quit](beginners_guide.md#save-and-quit)
-* [Search replace](search_replace.md)
-   * [Search and replace](search_replace.md#search-and-replace)
