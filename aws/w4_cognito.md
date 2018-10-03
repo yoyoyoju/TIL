@@ -116,3 +116,27 @@ def callback():
 
 ### stop RDS instance
 
+
+
+------ 
+## notes
+### HTTPS between user and load balance
+To secure the connection between the users and my load balancer, one should create a listener to encrypt the connection (SSL offload).
+[HTTPS Listeners for Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html)
+
+
+### Encrypting Data in AWS
+#### Encrypting Data in Transit:
+* [Configure Apache Webserver on Amazon Linux to Use SSL/TLS from EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-an-instance.html#letsencrypt)
+* [Using SSL to Encrypte a Connection to a DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html)
+
+#### Encrypting Data at Rest
+* EC2 Instance: use [EBS volume with Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
+* RDS database: [Encrypting RDS Resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html)
+* S3 Contens: [S3 Default Encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) and [S3 Encryptiong](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html)
+* more about Encryptiong Key: [KMS](https://docs.aws.amazon.com/kms/latest/developerguide/service-integration.html)
+* more on [Encryption](https://aws.amazon.com/blogs/security/category/encryption/)
+
+#### Compliance programs
+* [compliance programs](https://aws.amazon.com/compliance/pci-data-privacy-protection-hipaa-soc-fedramp-faqs/)
+* [security whitepaper](https://d1.awsstatic.com/whitepapers/Security/AWS_Security_Whitepaper.pdf)
