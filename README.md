@@ -54,8 +54,9 @@ Today I Learned.
 ---------------
 ### Python
 * [Lec6001x](python/lec6001x.md)
-* [Mistakes](python/mistakes.md)
 * [Algorithms](python/algorithms.md)
+* [Lambda filter map](python/lambda_filter_map.md)
+* [Mistakes](python/mistakes.md)
 * [Notes](python/notes.md)
 ---------------
 ### Markdown

@@ -45,6 +45,7 @@ reference: 6001x lec4
 * Not to have infinite recursion
     * recursive step - reduce problem to a simpler/smaller version of same problem
     * base case - keep reducing until reach a simple case that can be solved directly
+* sometimes to make som 'memo' of progress make the process efficient: "memoization"
 
 example:
 ```python
