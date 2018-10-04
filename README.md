@@ -38,9 +38,9 @@ Today I Learned.
 ---------------
 ### Aws
 * [W5 lambda](aws/w5_lambda.md)
+* [W5 xray](aws/w5_xray.md)
 * [Mistakes](aws/mistakes.md)
 * [W2 api](aws/w2_API.md)
-* [W5 xray](aws/w5_xray.md)
 * [W4 cognito](aws/w4_cognito.md)
 * [W4 polly](aws/w4_polly.md)
 * [W3 db loadbalancer](aws/w3_DB_loadbalancer.md)

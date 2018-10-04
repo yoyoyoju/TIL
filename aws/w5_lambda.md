@@ -153,3 +153,10 @@ run the application.py
 
 ### stop the RDS instance
 
+------
+### note
+
+#### permissions
+
+1. give a permission to Lambda by IAM role
+2. Lambda function policy gives other service to triget my Lambda (?)

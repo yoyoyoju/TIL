@@ -37,3 +37,14 @@ document = xray_recorder.current_segment()
 
 
 ### stop RDS instance
+
+------
+### notes
+
+#### Xray
+to use X-Ray:
+* configure the X-Ray SDK in my application
+* ensure appropriate X-Ray permissions
+* run the X-Ray daemon
+
+
