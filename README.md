@@ -53,7 +53,7 @@ Today I Learned.
 * [Basic git](git/basic_git.md)
 ---------------
 ### Python
-* [Lec6001x](python/lec6001x.md)
+* [Lec6001x1](python/lec6001x1.md)
 * [Algorithms](python/algorithms.md)
 * [Lambda filter map](python/lambda_filter_map.md)
 * [Mistakes](python/mistakes.md)
