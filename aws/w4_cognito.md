@@ -1,6 +1,12 @@
 # week 4 cognito
 using cognito, one can add sign-in and sign-out feature.
 
+
+### ADD HTTPS
+from week4, the lecture also covered how to set HTTPS.
+-> make a note about how to set HTTPS
+
+
 ### RDS instance
 Start the RDS database instance.
 * open RDS dashboard
