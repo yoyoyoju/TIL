@@ -30,6 +30,7 @@ Today I Learned.
 ---------------
 ---------------
 ### Vim
+* [Number change](vim/number_change.md)
 * [Vimrc](vim/vimrc.md)
 * [Move](vim/move.md)
 * [Search replace](vim/search_replace.md)

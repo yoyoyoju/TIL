@@ -1,4 +1,5 @@
 # Vim
+* [Number change](number_change.md)
 * [Vimrc](vimrc.md)
    * [Set number](vimrc.md#set-number)
    * [Indent](vimrc.md#indent)
