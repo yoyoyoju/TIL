@@ -37,11 +37,13 @@ Today I Learned.
 * [Beginners guide](vim/beginners_guide.md)
 ---------------
 ### Aws
+* [W5 lambda](aws/w5_lambda.md)
+* [Mistakes](aws/mistakes.md)
+* [W2 api](aws/w2_API.md)
 * [W5 xray](aws/w5_xray.md)
 * [W4 cognito](aws/w4_cognito.md)
 * [W4 polly](aws/w4_polly.md)
 * [W3 db loadbalancer](aws/w3_DB_loadbalancer.md)
-* [W2 api](aws/w2_API.md)
 * [First start](aws/first_start.md)
 ---------------
 ### Git
