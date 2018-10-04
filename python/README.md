@@ -6,6 +6,7 @@
    * [4 functions recursion](lec6001x.md#4-functions-recursion)
    * [5 tuples lists mutability cloning](lec6001x.md#5-tuples-lists-mutability-cloning)
    * [6 functions as objects dictionary](lec6001x.md#6-functions-as-objects-dictionary)
+   * [7 testing debugging](lec6001x.md#7-testing-debugging)
 * [Algorithms](algorithms.md)
    * [Guess and check](algorithms.md#guess-and-check)
    * [Recursion](algorithms.md#recursion)
