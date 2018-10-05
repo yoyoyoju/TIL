@@ -145,3 +145,8 @@ sqs.delete_message(
 * SQS: uploads-queue SQS queue
 * S3: delete S3 photos and deployment buckets
 * Cognito: delete the photos-pool userpool
+
+-------
+#### notes
+* missed?: I added subscriber from SNS side to add the lambda function. then it worked.
+
