@@ -38,6 +38,7 @@ Today I Learned.
 * [Beginners guide](vim/beginners_guide.md)
 ---------------
 ### Aws
+* [W6 sns sqs](aws/w6_SNS_SQS.md)
 * [W5 lambda](aws/w5_lambda.md)
 * [W5 xray](aws/w5_xray.md)
 * [Mistakes](aws/mistakes.md)
