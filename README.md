@@ -54,12 +54,12 @@ Today I Learned.
 * [Basic git](git/basic_git.md)
 ---------------
 ### Python
+* [Notes](python/notes.md)
 * [Getter setter](python/getter_setter.md)
 * [Lec6001x1](python/lec6001x1.md)
 * [Algorithms](python/algorithms.md)
 * [Lambda filter map](python/lambda_filter_map.md)
 * [Mistakes](python/mistakes.md)
-* [Notes](python/notes.md)
 ---------------
 ### Markdown
 * [Github flavored](markdown/github_flavored.md)

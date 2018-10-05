@@ -1,4 +1,8 @@
 # Python
+* [Notes](notes.md)
+   * [Dictionary safe way](notes.md#dictionary-safe-way)
+   * [Multiple exception](notes.md#multiple-exception)
+   * [Multiple inheritance](notes.md#multiple-inheritance)
 * [Getter setter](getter_setter.md)
 * [Lec6001x1](lec6001x1.md)
    * [1 intro](lec6001x1.md#1-intro)
@@ -20,6 +24,3 @@
    * [Doctest newline](mistakes.md#doctest-newline)
    * [Doctest normalize whitespace](mistakes.md#doctest-normalize-whitespace)
    * [Loop over dictionary](mistakes.md#loop-over-dictionary)
-* [Notes](notes.md)
-   * [Dictionary safe way](notes.md#dictionary-safe-way)
-   * [Multiple exception](notes.md#multiple-exception)
