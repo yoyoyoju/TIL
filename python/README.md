@@ -1,4 +1,5 @@
 # Python
+* [Getter setter](getter_setter.md)
 * [Lec6001x1](lec6001x1.md)
    * [1 intro](lec6001x1.md#1-intro)
    * [2 str branching iter](lec6001x1.md#2-str-branching-iter)
