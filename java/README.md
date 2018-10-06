@@ -1,4 +1,10 @@
 # Java
+* [S3 variables datatypes](s3_variables_datatypes.md)
+   * [Variable](s3_variables_datatypes.md#variable)
+   * [Intellij](s3_variables_datatypes.md#intellij)
+* [S2 start](s2_start.md)
+   * [Hello world](s2_start.md#hello-world)
+   * [Class file](s2_start.md#class-file)
 * [Managing](managing.md)
    * [Installing](managing.md#installing)
    * [Change default version](managing.md#change-default-version)

@@ -68,6 +68,8 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [S3 variables datatypes](java/s3_variables_datatypes.md)
+* [S2 start](java/s2_start.md)
 * [Managing](java/managing.md)
 ---------------
 ### Resource
