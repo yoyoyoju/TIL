@@ -1,4 +1,6 @@
 # Aws
+* [Aws cli](aws_cli.md)
+   * [File commands for s3](aws_cli.md#file-commands-for-s3)
 * [W6 sns sqs](w6_SNS_SQS.md)
    * [Start rds instance](w6_SNS_SQS.md#start-rds-instance)
    * [Turn on the nat instance](w6_SNS_SQS.md#turn-on-the-nat-instance)

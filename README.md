@@ -25,6 +25,7 @@ Today I Learned.
 * [Git](git)
 * [Python](python)
 * [Markdown](markdown)
+* [Java](java)
 * [Resource](resource)
 
 ---------------
@@ -38,6 +39,7 @@ Today I Learned.
 * [Beginners guide](vim/beginners_guide.md)
 ---------------
 ### Aws
+* [Aws cli](aws/aws_cli.md)
 * [W6 sns sqs](aws/w6_SNS_SQS.md)
 * [W5 lambda](aws/w5_lambda.md)
 * [W5 xray](aws/w5_xray.md)
@@ -64,6 +66,9 @@ Today I Learned.
 ### Markdown
 * [Github flavored](markdown/github_flavored.md)
 * [Basic syntax](markdown/basic_syntax.md)
+---------------
+### Java
+* [Managing](java/managing.md)
 ---------------
 ### Resource
 * [Jobsearch](resource/jobsearch.md)
