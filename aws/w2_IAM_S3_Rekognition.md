@@ -14,6 +14,49 @@ IAM: Identity and Access Management. Should not user the root user credentials. 
 #### create a custum policy
 * go to `IAM` dashboard
 * `Policies` from left navigation menu: to create custum policy
+* in the `JSON` tab:
+```JSON
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Sid1",
+            "Effect": "Allow",
+            "Action": [
+                "iam:*",
+                "rds:*",
+                "sns:*",
+                "cloudformation:*",
+                "rekognition:*",
+                "ec2:*",
+                "cognito-idp:*",
+                "sqs:*",
+                "xray:*",
+                "s3:*",
+                "elasticloadbalancing:*",
+                "cloud9:*",
+                "lambda:*",
+                "tag:GetResources",
+                "logs:*",
+                "kms:ListKeyPolicies",
+                "kms:GenerateRandom",
+                "kms:ListRetirableGrants",
+                "kms:GetKeyPolicy",
+                "kms:ListResourceTags",
+                "kms:ReEncryptFrom",
+                "kms:ListGrants",
+                "kms:GetParametersForImport",
+                "kms:ListKeys",
+                "kms:GetKeyRotationStatus",
+                "kms:ListAliases",
+                "kms:ReEncryptTo",
+                "kms:DescribeKey"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
 
 #### create IAM user
 create an user, attach a policy, generate the access keys
@@ -21,12 +64,13 @@ create an user, attach a policy, generate the access keys
 * User from left navigation menu
 * Add user
 * User name
-* choose access, Permission
+* choose access: Programmatic and console
+* Permission: attach existing policies directly
 * download csv
 
 #### EC2 as IAM user
 Launch EC2 instance as the created IAM user.
-* login to the console as the user
+* login to the console as the IAM user
 * launch an instance in VPC
 * connect to the instance using SSH
 
