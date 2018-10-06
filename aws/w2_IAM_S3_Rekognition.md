@@ -1,8 +1,8 @@
 # Week 2
-* upload photos to S3 bucket using API
+* set up IAM
+* upload photos to S3 bucket
 * tag using Rekognition
 
-## API
 
 ### IAM set up Ex4
 IAM: Identity and Access Management. Should not user the root user credentials. Rather create an AWS IAM user for neccessary permission.
