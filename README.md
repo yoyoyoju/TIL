@@ -40,6 +40,7 @@ Today I Learned.
 * [Beginners guide](vim/beginners_guide.md)
 ---------------
 ### Python
+* [Sort](python/sort.md)
 * [Notes](python/notes.md)
 * [Lec6001x1](python/lec6001x1.md)
 * [Lambda filter map](python/lambda_filter_map.md)
@@ -52,6 +53,7 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [Mooc 1](java/mooc_1.md)
 * [S3 variables datatypes](java/s3_variables_datatypes.md)
 * [Managing](java/managing.md)
 * [S2 start](java/s2_start.md)

@@ -1,4 +1,6 @@
 # Java
+* [Mooc 1](mooc_1.md)
+   * [W1 input print condition](mooc_1.md#w1-input-print-condition)
 * [S3 variables datatypes](s3_variables_datatypes.md)
    * [Variable](s3_variables_datatypes.md#variable)
    * [Whole numbers](s3_variables_datatypes.md#whole-numbers)
