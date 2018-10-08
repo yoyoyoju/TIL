@@ -40,6 +40,8 @@ Today I Learned.
 * [Search replace](vim/search_replace.md)
 ---------------
 ### Python
+* [Lec6001x2](python/lec6001x2.md)
+* [Padding](python/padding.md)
 * [Lec6001x1](python/lec6001x1.md)
 * [Sort](python/sort.md)
 * [Copy](python/copy.md)
