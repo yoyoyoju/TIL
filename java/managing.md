@@ -18,3 +18,6 @@ sudo update-alternatives --config java
 ```
 will show available version and you can choose which one to set as the default.
 [reference](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04)
+
+
+
