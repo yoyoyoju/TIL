@@ -40,6 +40,7 @@ Today I Learned.
 * [Beginners guide](vim/beginners_guide.md)
 ---------------
 ### Python
+* [Copy](python/copy.md)
 * [Sort](python/sort.md)
 * [Notes](python/notes.md)
 * [Lec6001x1](python/lec6001x1.md)

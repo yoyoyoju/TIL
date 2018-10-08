@@ -1,4 +1,6 @@
 # Python
+* [Copy](copy.md)
+   * [Copy dictionary](copy.md#copy-dictionary)
 * [Sort](sort.md)
 * [Notes](notes.md)
    * [Dictionary safe way](notes.md#dictionary-safe-way)
