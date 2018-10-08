@@ -1,6 +1,4 @@
 # Java
-* [Mooc 1](mooc_1.md)
-   * [W1 input print condition](mooc_1.md#w1-input-print-condition)
 * [S3 variables datatypes](s3_variables_datatypes.md)
    * [Variable](s3_variables_datatypes.md#variable)
    * [Whole numbers](s3_variables_datatypes.md#whole-numbers)
@@ -11,6 +9,8 @@
    * [Strings](s3_variables_datatypes.md#strings)
    * [Operators](s3_variables_datatypes.md#operators)
    * [Intellij](s3_variables_datatypes.md#intellij)
+* [Mooc 1](mooc_1.md)
+   * [W1 input print condition](mooc_1.md#w1-input-print-condition)
 * [Managing](managing.md)
    * [Installing](managing.md#installing)
    * [Change default version](managing.md#change-default-version)
