@@ -80,3 +80,23 @@ public class Example {
 int number = Integer.parseInt(reader.nextLine());
 ```
 
+#### Conditional statements and truth values
+* program to branch: conditional statements
+`if (condition) {codeblock}`
+* boolean: true or false
+
+
+#### Compare strings
+* cannot use `==` operator.
+* use the method `equals`
+```java
+String text = "example";
+String text2 = "example";  // string have been assigned to some value
+                            // otherwise NullPointerException error
+text.equals("another");
+text.equals(text2);
+```
+
+
+
+
