@@ -75,9 +75,12 @@ public class Example {
 }
 ```
 
+#### parsing the input
 * to read integer: `Integer.parseInt` to convert string into an integer.
+* to read double: `Double.parseDouble` to convert string into a double.
 ```java
 int number = Integer.parseInt(reader.nextLine());
+double doubleNum = Double.parseDouble(reader.nextLine());
 ```
 
 #### Conditional statements and truth values
@@ -97,6 +100,16 @@ text.equals("another");
 text.equals(text2);
 ```
 
-
+#### loop
+Example of while loop:
+```java
+while (true) {
+    System.out.print("Continue?");
+    String command = reader.nextLine();
+    if (command.equals("no")) {
+        break;
+    }
+}
+```
 
 
