@@ -80,4 +80,3 @@ public class Example {
 int number = Integer.parseInt(reader.nextLine());
 ```
 
-# Resume from Exercise 8

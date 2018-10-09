@@ -1,4 +1,6 @@
 # Java
+* [Mooc 1](mooc_1.md)
+   * [W1 input print condition](mooc_1.md#w1-input-print-condition)
 * [S4 expressions codeblocks](s4_expressions_codeblocks.md)
    * [Keywords and expressions](s4_expressions_codeblocks.md#keywords-and-expressions)
    * [Statements whitespace and indenting](s4_expressions_codeblocks.md#statements-whitespace-and-indenting)
@@ -6,8 +8,6 @@
    * [Methods](s4_expressions_codeblocks.md#methods)
    * [Method overload](s4_expressions_codeblocks.md#method-overload)
    * [Constants](s4_expressions_codeblocks.md#constants)
-* [Mooc 1](mooc_1.md)
-   * [W1 input print condition](mooc_1.md#w1-input-print-condition)
 * [S3 variables datatypes](s3_variables_datatypes.md)
    * [Variable](s3_variables_datatypes.md#variable)
    * [Whole numbers](s3_variables_datatypes.md#whole-numbers)

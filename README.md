@@ -56,8 +56,8 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
-* [S4 expressions codeblocks](java/s4_expressions_codeblocks.md)
 * [Mooc 1](java/mooc_1.md)
+* [S4 expressions codeblocks](java/s4_expressions_codeblocks.md)
 * [S3 variables datatypes](java/s3_variables_datatypes.md)
 * [Managing](java/managing.md)
 * [S2 start](java/s2_start.md)
