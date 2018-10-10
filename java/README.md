@@ -1,4 +1,13 @@
 # Java
+* [S6 oop class constructors](s6_OOP_class_constructors.md)
+   * [Classes](s6_OOP_class_constructors.md#classes)
+   * [Constructors](s6_OOP_class_constructors.md#constructors)
+   * [Inheritance](s6_OOP_class_constructors.md#inheritance)
+   * [Reference object instance class](s6_OOP_class_constructors.md#reference-object-instance-class)
+   * [This super](s6_OOP_class_constructors.md#this-super)
+   * [Method overloading overriding](s6_OOP_class_constructors.md#method-overloading-overriding)
+   * [Static instance](s6_OOP_class_constructors.md#static-instance)
+   * [Inheritance challenge](s6_OOP_class_constructors.md#inheritance-challenge)
 * [S5 control flow statements](s5_control_flow_statements.md)
    * [Switch statement](s5_control_flow_statements.md#switch-statement)
    * [For statement](s5_control_flow_statements.md#for-statement)

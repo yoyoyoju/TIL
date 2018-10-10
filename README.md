@@ -56,6 +56,7 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [S6 oop class constructors](java/s6_OOP_class_constructors.md)
 * [S5 control flow statements](java/s5_control_flow_statements.md)
 * [Mooc 1](java/mooc_1.md)
 * [S4 expressions codeblocks](java/s4_expressions_codeblocks.md)
