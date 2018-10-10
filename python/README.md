@@ -1,7 +1,7 @@
 # Python
 * [Lec6001x2](lec6001x2.md)
    * [9 oop](lec6001x2.md#9-oop)
-   * [Oop example](lec6001x2.md#oop-example)
+   * [10 oop example](lec6001x2.md#10-oop-example)
 * [Padding](padding.md)
 * [Lec6001x1](lec6001x1.md)
    * [1 intro](lec6001x1.md#1-intro)
