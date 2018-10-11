@@ -3,7 +3,7 @@
    * [Composition](s7_OOP_composition_encapsulation_polymorphism.md#composition)
    * [Encapsulation](s7_OOP_composition_encapsulation_polymorphism.md#encapsulation)
    * [Polymorphism](s7_OOP_composition_encapsulation_polymorphism.md#polymorphism)
-   * [Oop challenge](s7_OOP_composition_encapsulation_polymorphism.md#oop-challenge)
+   * [Get class name](s7_OOP_composition_encapsulation_polymorphism.md#get-class-name)
 * [S6 oop class constructors](s6_OOP_class_constructors.md)
    * [Classes](s6_OOP_class_constructors.md#classes)
    * [Constructors](s6_OOP_class_constructors.md#constructors)

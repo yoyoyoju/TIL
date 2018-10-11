@@ -142,8 +142,15 @@ class Movie {
 }
 
 public class Main {
+    Movie movie = new Movie(){
+        // here inline modify
+        // to the code
+        // for example override methods
+    }
 }
 ```
 
-### OOP challenge 
-74, 75: 30min
+### get class name
+To refer the class name
+`getClass().getSimpleName()`
+
