@@ -56,6 +56,7 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [S7 oop composition encapsulation polymorphism](java/s7_OOP_composition_encapsulation_polymorphism.md)
 * [S6 oop class constructors](java/s6_OOP_class_constructors.md)
 * [S5 control flow statements](java/s5_control_flow_statements.md)
 * [Mooc 1](java/mooc_1.md)
