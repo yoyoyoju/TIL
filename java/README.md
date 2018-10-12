@@ -1,4 +1,11 @@
 # Java
+* [S8 array list autobox unbox](s8_array_list_autobox_unbox.md)
+   * [Arrays](s8_array_list_autobox_unbox.md#arrays)
+   * [References types vs value types](s8_array_list_autobox_unbox.md#references-types-vs-value-types)
+   * [Scanner](s8_array_list_autobox_unbox.md#scanner)
+   * [List and arraylist](s8_array_list_autobox_unbox.md#list-and-arraylist)
+   * [Autoboxing and unboxing](s8_array_list_autobox_unbox.md#autoboxing-and-unboxing)
+   * [Linkedlist](s8_array_list_autobox_unbox.md#linkedlist)
 * [S7 oop composition encapsulation polymorphism](s7_OOP_composition_encapsulation_polymorphism.md)
    * [Composition](s7_OOP_composition_encapsulation_polymorphism.md#composition)
    * [Encapsulation](s7_OOP_composition_encapsulation_polymorphism.md#encapsulation)
