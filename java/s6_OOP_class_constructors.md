@@ -108,6 +108,18 @@ Account janesAccount = new Account();   // called the constructor with default v
 // this("123", 2.0, "default name");
 ```
 
+#### create
+Can also make a method to return new object:
+(it's a `static` method because we want to use without creating an instance of the class)
+```java
+public static Contact createContact(String name, String phoneNumber) {
+    return new Contact(name, phoneNumber);
+}
+
+// ...
+Contact myContact = createContact("me", "11111");
+```
+
 
 ### Inheritance
 * sharing common characteristics between objects, while having different characteristics, too.

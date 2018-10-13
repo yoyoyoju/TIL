@@ -57,8 +57,8 @@ Today I Learned.
 ---------------
 ### Java
 * [S8 array list autobox unbox](java/s8_array_list_autobox_unbox.md)
-* [S7 oop composition encapsulation polymorphism](java/s7_OOP_composition_encapsulation_polymorphism.md)
 * [S6 oop class constructors](java/s6_OOP_class_constructors.md)
+* [S7 oop composition encapsulation polymorphism](java/s7_OOP_composition_encapsulation_polymorphism.md)
 * [S5 control flow statements](java/s5_control_flow_statements.md)
 * [Mooc 1](java/mooc_1.md)
 * [S4 expressions codeblocks](java/s4_expressions_codeblocks.md)

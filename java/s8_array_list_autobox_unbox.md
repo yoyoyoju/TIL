@@ -151,7 +151,9 @@ arrayList.indexOf("new entry")
 // convert an ArrayList into Array - toArray()
 String[] myArray = new String[arrayList.size()];
 myArray = arrayList.toArray();
+
 ```
+
 
 #### example code
 ```java
@@ -197,9 +199,76 @@ public String findItem(String searchItem) {
 ```
 
 
-Challenge1,2,3,4
-
 ### Autoboxing and Unboxing
+We cannot do:
+```java
+ArrayList<int> intArrayList = new ArrayList<int>();
+```
+The code above gives an error: "Type argument cannot be of primitive type".
+As primitive type is not a class and we need a class reference here.
+(Meanwhile String is a class, we can use String here.)
+We could create class for `int`.
+```java
+ class IntClass {
+    private int myint;
+    // constructor, getters and setters
+ }
+
+ ArrayList<IntClass> myArrayList = new ArrayList<IntClass>();
+```
+but it's messy. neater way to do it is Autoboxing.
+
+* object wrapper (like IntClass above)
+```java
+Integer integer = new Integer(54);
+Double doubleValue = new Double(12.25);
+```
+`Integer` is a class while `int` is not.
+```java
+ArrayList<Integer> intArrayList = new ArrayList<Integer>();
+for (int i=0; i<10; i++) {
+    // Autoboxing (primitive type to Class)
+    intArrayList.add(Integer.valueOf(i));
+}
+for (int i=0; i<10; i++) {
+    // unbox (Class to primitive type)
+    System.out.println( i + " -----> " + intArrayList.get(i).intValue());
+}
+```
+* Autoboxing and Unboxing
+```java
+// Autoboxing
+// convert primitive type into a class 
+Integer.valueOf(56);     // gives Integer object
+// two ways:
+Integer myInt = Integer.valueOf(56);
+Integer myInt = 56;
+
+// Unboxing
+// convert class objective into a primitive type
+myInt.intValue();       // gives int value
+// same as
+int i = myInt;
+int i = myInt.intValue();
+```
+
+#### example for Double
+```java
+ArrayList<Double> myDoubles = new ArrayList<Double>();
+for(double dbl=0.0; dbl<10.0; dbl+=0.5){
+    // Autoboxing
+    // myDoubles.add(Double.valueOf(dbl));
+    myDoubles.add(dbl);
+}
+
+for(int i=0; i<myDoubles.size(); i++) {
+    // Unboxing
+    // double value = myDoubles.get(i).doubleValue();
+    double value = myDoubles.get(i);
+    System.out.println(i + " ----> " + value);
+}
+```
+
 50min
 
 ### LinkedList
