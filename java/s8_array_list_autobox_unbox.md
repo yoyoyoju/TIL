@@ -401,7 +401,12 @@ addInOrder(places, "Sydney");
 addInOrder(places, "Perth");
 ```
 
-
+### for each
+```java
+songs // ArrayList<Song>
+for (Song checkedSong: this.songs) {
+}
+```
 
 50min
 
