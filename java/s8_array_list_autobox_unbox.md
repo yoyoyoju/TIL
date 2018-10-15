@@ -269,9 +269,140 @@ for(int i=0; i<myDoubles.size(); i++) {
 }
 ```
 
-50min
 
 ### LinkedList
+from base address, one can calculate addresses for each indeces.
+For String as elements it does not work: keep the String address instead of the String itself.
+(8 bytes for the address)
+when the variable is no longer needed: the garbage collection 
+
+```java
+public class Customer {
+    private STring name;
+    private double balance;
+
+    // constructor, getters and setters
+    public void setBalance(double num) {
+        this.balance = num;
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Customer cust1 = new Customer("T", 111);
+        Customer cust2 = cust1;
+        // cust2 and cust1 are pointing the same object
+        cust2.setBalance(12.19);
+        // both shows the same balance 12.19
+    }
+
+    ArrayList<Integer> intList = new ArrayList<Integer>();
+    intList.add(1);
+    intList.add(4);
+
+    intList.add(1,2);   // add 2 in the position 1
+    // now the array has 1,2,4
+    // all entries after moves down
+    // slower for large arraylist
+}
+```
+
+```java
+// import
+import java.util.LinkedList;
+// declare
+LinkedList<String> places = new LinkedList<String>();
+// add      - add
+places.add(item);        // add to the end
+places.add(index, item); // insert item in position index
+// remove   - remove
+places.remove(index);    // remove item in the position index
+
+
+// iterator:
+Iterator<String> i = linkedList.iterator();
+// check it has next item
+i.hasNext();
+// return next item
+i.next();
+```
+
+* Example 1: 
+```java
+import java.util.LinkedList;
+
+public class Demo {
+    public static void main(String[] args) {
+        LinkedList<String> places = new LinkedList<String>();
+        places.add("Sydney");
+        places.add("Brisbane");
+        printList(places);
+        places.add(1, "Darwin");    // add to position 1 (insert)
+        places.remove(1);           // remove item in position 1
+    }
+
+    private static void printList(LinkedList<String> linkedList) {
+        // use iterator
+        Iterator<String> i = linkedList.iterator();
+        while(i.hasNext()) {
+            System.out.println(i + "th is " + i.next());
+        }
+    }
+}
+```
+
+Enforce order as add an item:
+use listiterator
+* list iterator is doubly-linked (can go forward and backward)
+    * it uses cursor which can be between items.
+    * `next()`: returns the next elemtns and advances the cursor position
+    * `previous()`: returns the previous element and moves cursor backwards
+    * `hasNext()` and `hasPrevious()`: return boolean if the list has next/previous item
+    * `nextIndex()` and `previousIndex()`
+    * `remove()`: removes the last element that was returned by next() or previous()
+    * `set(E e)`: replaces the last element returned with `e`
+    * `add(E e)`: inserts `e` immediately before the element that would be returned by `next()`
+```java
+ListIterator<String> stringListIterator = linkedList.listIterator();
+stringListIterator.next();
+stringListIterator.previous();
+// both returns the same item in this case
+```
+check example [Demo.java](Demo.java)
+* Example 2:
+```java
+// returning and mutating is not good idea..
+private static boolean addInOrder(LinkedList<String> linkedList, String newCity){
+    ListIterator<String> stringListIterator = linkedList.listIterator();
+    // it is not yet pointing to the first item
+    while(stringlistIterator.hasNext()) {
+        int comparison = stringListIterator.next().compareTo(newCity);
+        if (comparison == 0) {
+            // equal, do not add
+            System.out.println(newCity + " is already included");
+            return false;
+        } else if (comparison > 0) {
+            // newCity shoule apprear before this one
+            // Brisbane -> Adelaide 
+            stringListIterator.previous(); //possible with linkedListIterator
+            stringListIterator.add(newCity);
+            return true;
+        } else if(comparison < 0) {
+            // move on next city
+        }
+    }
+
+    stringListIterator.add(newCity);
+    return true;
+}
+
+LinkedList<String> places = new LinkedList<String>();
+addInOrder(places, "Sydney");
+addInOrder(places, "Perth");
+```
+
+
+
 50min
 
 Challengh1,2,3,
