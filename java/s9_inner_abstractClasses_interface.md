@@ -95,6 +95,67 @@ btnPrint.setOnClickListener(new Button.OnClickListener() {
 ```
 
 ### Abstract Class
+* interface
+    * what has to be done (rather than how it's done)
+    * implemented in class
+    * interface `List`
+
+* Abstract class
+    * cannot be instantiated
+```java
+public abstract class Animal {
+    private String name;
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    // force child class to implement those
+    public abstract void eat();
+    public abstract void breathe();
+
+    // does not need to be abstract
+    public String getName() {
+        return this.name;
+    }
+}
+```
+```java
+public class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+
+    // common to all animals
+    @Override
+    public void eat() {
+        System.out.println(getName() + "eating");
+    }
+
+    @Override
+    public void breathe() {
+        System.out.println("breathe");
+    }
+}
+```
+* is-a: inherit
+* has-a:
+* can: interface
+```java
+public interface CanFly {
+    void fly();
+}
+```
+```java
+public abstract class Bird extends Animal implements CanFly {
+    //constructor, 
+
+    @Override
+    public void fly() {
+        System.out.println("flying");
+    }
+}
+```
+
 2: 25
 
 ### Interface vs Abstract Class
