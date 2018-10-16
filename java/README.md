@@ -1,9 +1,7 @@
 # Java
 * [S9 inner abstractclasses interface](s9_inner_abstractClasses_interface.md)
    * [Interfaces](s9_inner_abstractClasses_interface.md#interfaces)
-   * [Challenge](s9_inner_abstractClasses_interface.md#challenge)
    * [Inner classes](s9_inner_abstractClasses_interface.md#inner-classes)
-   * [Inner class challengh](s9_inner_abstractClasses_interface.md#inner-class-challengh)
    * [Abstract class](s9_inner_abstractClasses_interface.md#abstract-class)
    * [Interface vs abstract class](s9_inner_abstractClasses_interface.md#interface-vs-abstract-class)
    * [Abstract class challenge](s9_inner_abstractClasses_interface.md#abstract-class-challenge)
