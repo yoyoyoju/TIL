@@ -159,8 +159,8 @@ public abstract class Bird extends Animal implements CanFly {
 #### Protected keyword
 
 ### Interface vs Abstract Class
-// should watch this video
-1: 5
+* Interface
+   * unrelated classes 
+   * behavior
+   * separate different behavior
 
-### abstract class challenge
-3: 50
