@@ -100,16 +100,135 @@ myWindow.setVisible(true);
     * file -> project structure -> libraries -> java -> specify the place
 
 
-challenge: 13
-
 ### Scope
-1,2: 30
-challenge: 7
+* visibility
+* in scope: accessable variables
+```java
+public class ScopeCheck {
+    public int publicVar = 0;
+    private int privateVar = 1;
+    private int privateVar2 = 2;
+
+    public void test() {
+        int privateVar = 2; // scope is current method
+        System.out.println(privateVar); // prints 2 (most local is used)
+        for(int i=0; i<2; i++) {
+            // i is limited in this block
+        }
+//        System.out.println(i);      // cannot access to i (out of scope)
+        System.out.println(this.privateVar);    // uses class variable 1
+    }
+    public void test2() {
+        System.out.println(privateVar); // prints 1 
+    }
+
+    public void useInner() {
+        InnerClass innerClass = new InnerClass();
+        System.out.println("varInner" + innerClass.varInner);   
+        // ScopeCheck can access innerClass.varInner
+    }
+
+
+
+    public class InnerClase {
+        public int privateVar = 3;
+        private int varInner = 0;
+
+        public InnerClass() {
+            System.out.println(privateVar);
+        }
+
+        public void test() {
+            ScopeCheck.this.test2();    //  calls the method in the ScopeCheck class
+            System.out.println(privateVar); // prints 3
+            System.out.println(privateVar2); // prints 2 
+            // System.out.println(this.privateVar2); // error
+            System.out.println(ScopeCheck.this.privateVar2); // prints 2
+        }
+    }
+}
+
+// main
+ScopeCheck.InnerClass innerClass = scopeInstance.new InnerClass();
+innerClass.test();
+
+ScopeCheck scopeInstance = new ScopeCheck();
+scopeInstance.useInner();       // 0
+ScopeCheck.InnerClass innderClass = scopeInstance.new InnerClass();
+// innerClass.varInner // not visible
+// visible if varInner is public
+```
+
+
+
+
 
 ### Access Modifiers
+#### Top Level
+only classes, interfaces and enums can exist at the top level,
+everything else must be included within one of these.
+* public
+    * the object is visible to all classes everywhere,
+     whether they are in the same package or
+     have imported the package containing the public class.
+    * `public interface Myinterface { //... }`
+* package-private:
+    * the object is only available within its own package
+    * specified by not specifying. (it is default, there is not keyword for this)
+    * `class Myclass {//...}`
+
+
+#### Member Level
+* public
+    * public class members and methods can be accessed from
+    any other class anywhere, even in a different package
+* package-private
+    * objects with no access modifier
+    * visible to every class within the same package
+    * not visible to classes in external packages
+* private
+    * cannot have private class at the top level
+    * only visible within the class it is declared
+    * not visible anywhere else (including in subclasses of its class)
+* protected
+    * the object is visible anywhere in its own package (like package-private)
+    * also in subclasses even if they are in another package
+
+#### in interface
+* everything is public!
+* but if interface itself is package-private
+the methods in interface are effectively package-private.
+(cause the interface itself is not visible to externals)
+
+
 
 ### static statement
+* static is related to the class itself rather than the instances.
+* all the instances share one copy 
+* if an instance modifies it, it affects all other instances
+* good to make a static method for the methods with the static fields
+* use class name to access it `Classname.staticmethod()`
+* class methods and class variables
+* in its own class, static cannot access non-static
+```java
+public class Main {
+    // public int multiplier = 8;  // exist when instance is created
+    public static int multiplier = 9;
+    public static void main(String[] args) {
+        System.out.println(multiplier); // error
+    }
+
+    public static int multiply(int num) {
+        // without static it does not work
+    }
+}
+```
 
 ### final statement
+* for constant values
+* use when first declare or in constructor
+* cannot be anymore modified after construction
+*
+
 
 
