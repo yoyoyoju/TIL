@@ -228,7 +228,73 @@ public class Main {
 * for constant values
 * use when first declare or in constructor
 * cannot be anymore modified after construction
-*
+```java
+public class MyClass {
+    private static int ClassCounter = 0;
+    public final int instanceNumber;
+    private final String name;
+
+    public MyClass(String name) {
+        this.name = name;
+        ClassCounter++;
+        instanceNumber = classCounter;
+    }
+
+    public getInstanceNumber() {
+        return instanceNumber;
+    }
+}
+//main
+MyClass one = new MyClass("one");
+one.instanceNumber = 5; // error because it is a final variable
+```
+
+* Constance values for static final (do not need to store copies in instances)
+
+* mark constructor as private will prevent to make instances
+    * example: `private Main(){}` in `public final class Math`
+    * class is final: cannot be extended (no sub-class of final class is possible)
+    * method is final: cannot be overriden.
+
+* static initialization block - set static final variables
+```java
+public class SIBTest {
+    public static final String owner;
+
+    static {
+        // static initialization block
+        owner == "me";
+        System.out.println("1 initialization block");
+    }
+
+    public SIBTest() {
+        // SIB constructor
+        System.out.println("constructor");
+    }
+
+    static {
+        // 2nd initialization block
+        System.out.println("2 initialization block");
+    }
+
+    public void someMethod() {
+        System.out.println("method");
+
+    }
+}
+
+// main
+System.out.println("main method");
+SIBTest test = new SIBTest();
+test.someMethod();
+/*
+ * main method
+ * 1 initialization
+ * 2 initialization
+ * constructor
+ * method
+ */
+```
 
 
 
