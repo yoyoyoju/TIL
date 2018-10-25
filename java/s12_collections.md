@@ -252,18 +252,121 @@ public Map<String, Integer> getExits() {
     return new HashMap<String, Integer>(exits);
 }
 
-// main
-
 
 ```
+* split string
+    ```java
+    String[] road = "string this that".split(" ");
+    String[] road2 = "string, this, that".split(", ");
+    ```
 
-* challenge
 
 ### Immutable Classes
+* [document](https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html)
+* cannot be changed once it is created
+* `private final`
+    * final: the field shouldn't be changed
+```java
+public class Location {
+    private final Map<String, Integer> exits;
+    public Location(Map<String, Integer> exits) {
+        this.exits = exits;
+        this.exits.put("Q", 0);
+    }
+}
 
-* challenge
+// main
+private static Map<Integer, Location> locations = new HashMap<~>();
+Map<String, Integer> tempExit = new HashMap<String, Integer>();
+tempExit.put("W", 2);
+
+locations.put(1, new Location(tempExit));
+// I can still change tempExit
+// because it is pointing the same object which is in the Location
+tempExit.remove("W");   // like this
+```
+```java
+// change in the Location constructor:
+        // this.exits = exits;
+        this.exits = new HashMap<String, Integer>(exits);
+```
+* problem with the constructor:
+    * crash when `null` is passed
+    * test before initialize
+```java
+if(exits != null) {
+    this.exits = new HashMap<String, Integer>(exits);
+} else {
+    this.exits = new HashMap<String, Integer>();
+}
+```
+
+* Regular expression: IntelliJ
+    * Edit, Find, Replace..., tick Regex
+    * `location.get\(\d\).addExit`
+    * `tempExit.put`
+
 
 ### sets Hashset
+* Sets:
+    * no defined order (chaotic)
+    * cannot contain duplicates
+    * [compressed Oops](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/performance-enhancements-7.html)
+* methods:
+    * `.addAll()`
+```java
+import java.util.Set;
+
+public final class HeavenlyBody {
+    private final String name;
+    private final double orbitalPeriod;
+    private final Set<HeavenlyBody> satellites;
+
+    public HeavenlyBody(String name, double orbitalPeriod) {
+        this.name = name;
+        this.orbitalPeriod = orbitalPeriod;
+        this.satellites = new HashSet<>()
+    }
+
+    // getters and setters
+
+    public boolean addMoon(HeavenlyBody moon) {
+        return this.satellites.add(moon);
+    }
+
+    public Set<HeavenlyBody> getSatellites() {
+        return new HashSet<>(this.satellites);
+    }
+}
+
+// main
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+private static Map<String, HeavenlyBody> solarSystem = new HashMap<>();
+private static Set<HeavenlyBody> planets = new HashSet<>();
+
+HeavenlyBody temp = new HeavenlyBody("Earth", 365);
+SolarSystem.put(temp.getName(), temp);
+planets.add(temp);
+
+HeavenlyBody tempMoon = new HeavenlyBody("Moon", 27);
+solarSystem.put(tempMoon.getName(), tempMoon);
+temp.addMoon(tempMoon);
+
+for(HeavenlyBody planet : planets) {
+    System.out.println(planet.getName());
+    for(HeavenlyBody planetMoon : planet.getSatellites()) {
+        System.out.println("\t" + planetMoon.getName());
+    }
+}
+
+set<HeavenlyBody> moons = new HashSet<>();
+for(HeavenlyBody planet : planets) {
+    moons.addAll(planet.getSatellites());
+}
+```
 
 
 ### Sets Symmetric Asymmetric
