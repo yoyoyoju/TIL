@@ -12,7 +12,7 @@ Today I Learned.
 - [ ] git - branch
 - [x] vim - covered the basic
 - [ ] python - the previous lecture
-- [ ] python - the current lecture
+- [x] python - the current lecture
 
 
 
@@ -40,6 +40,8 @@ Today I Learned.
 * [Search replace](vim/search_replace.md)
 ---------------
 ### Python
+* [Python fundamentals](python/python_fundamentals.md)
+* [Function design recipe](python/function_design_recipe.md)
 * [Doctest](python/doctest.md)
 * [Lec6001x2](python/lec6001x2.md)
 * [Padding](python/padding.md)
