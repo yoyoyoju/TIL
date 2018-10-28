@@ -1,4 +1,6 @@
 # Python
+* [Doctest](doctest.md)
+   * [Doctest](doctest.md#doctest)
 * [Lec6001x2](lec6001x2.md)
    * [9 oop](lec6001x2.md#9-oop)
    * [10 oop example](lec6001x2.md#10-oop-example)
@@ -16,9 +18,9 @@
    * [6 functions as objects dictionary](lec6001x1.md#6-functions-as-objects-dictionary)
    * [7 testing debugging](lec6001x1.md#7-testing-debugging)
    * [8 exceptions assertions](lec6001x1.md#8-exceptions-assertions)
+* [Sort](sort.md)
 * [Copy](copy.md)
    * [Copy dictionary](copy.md#copy-dictionary)
-* [Sort](sort.md)
 * [Notes](notes.md)
    * [Dictionary safe way](notes.md#dictionary-safe-way)
    * [Multiple exception](notes.md#multiple-exception)
