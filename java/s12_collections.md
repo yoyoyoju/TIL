@@ -314,6 +314,9 @@ if(exits != null) {
     * [compressed Oops](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/performance-enhancements-7.html)
 * methods:
     * `.addAll()`
+
+In this example, the HeavenlyBody is mutable because moons can be added
+but they do not affect the equals and hashCode. So it is okay to be used as key
 ```java
 import java.util.Set;
 
@@ -366,8 +369,111 @@ set<HeavenlyBody> moons = new HashSet<>();
 for(HeavenlyBody planet : planets) {
     moons.addAll(planet.getSatellites());
 }
+
+// two plutos 
+HeavenlyBody pluto = new HeavenlyBody("Pluto", 248);
+plantes.add(pluto);
+pluto = new HeavenlyBody("Pluto", 842);
+plantes.add(pluto);
+```
+### equals hashcode
+* without overriden: 
+    * Object class uses referencial equality (it is default)
+    * equal if both references point to the same object
+    * othewise they are not equal
+* Objects that are equal should have the same hashcode!!!
+* [documentation on equals](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-)
+```java
+Object o = new Object();
+o.equals(o);        // equals from Object class
+"pluto".equals(""); // equals from String class (Overriden)
+```
+```java
+// Override euqals and hashCode of HeavenlyBody
+@Override
+public boolean equals(Object obj) {
+    if (this == obj) {
+        return true;
+    }
+    if (( obj == null) || (obj.getClass() != this.getClass())) {
+        return false;
+    }
+
+    String objName = ((HeavenlyBody) obj).getName();
+    return this.name.equals(objName);
+}
+
+@Override
+public int hashCode() {
+    // 57 is small enough not to cause overflow
+    // it make the hash different from String
+    return this.name.hashCode() + 57;
+}
 ```
 
+### instanceOf geetClass
+* compare getClass make sure it is not subclass
+* when the class is final, do not need to worry too much
+
+```java
+public class Dog {
+    private final String name;
+    public Dog(String name) {
+        this.name = name;
+    }
+    //getter getName
+
+    @Override
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if(obj instanceof Dog) {
+            String objName = ((Dog) obj).getName();
+            return this.name.equals(objName);
+        }
+        return false;
+    }
+}
+
+public class Labrador extends Dog {
+    public Labrador(String name) {
+        super(name);
+    }
+
+    // should not override
+    /* 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if(obj instanceof Labrador) {
+            String objName = ((Labrador) obj).getName();
+            return this.getName().equals(objName);
+        }
+        return false;
+    }
+    */
+}
+
+public class DogMain {
+    public static void main(String[] args) {
+        Labrador rover = new Labrador("Rover");
+        Dog rover2 = new Dog("Rover");
+
+        System.out.println(rover2.equals(rover));   // true
+        // Labrador is a Dog
+        System.out.println(rover.equals(rover2));   // false
+        // Dog is not a Labrador
+    }
+}
+```
+* How to fix? 
+    * do not override equals in Labrador class
+    * mark the equals final -> cannot be overriden
 
 ### Sets Symmetric Asymmetric
 
