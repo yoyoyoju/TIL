@@ -475,9 +475,194 @@ public class DogMain {
     * do not override equals in Labrador class
     * mark the equals final -> cannot be overriden
 
-### Sets Symmetric Asymmetric
+### Sets methods
+* [set interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html)
+* Set Interface Bulk Operations
+    * destructive: modify the set they are called upon
+    * `addAll`, `retainAll`, `containsAll`, `removeAll`
+* all the Collections can take argument and initialize from it.
+    * no argument creates an empty collection
+* `asList`
+    * returns a fixed-size list backed by the specified array
+    * acts as bridge between array-based and collection-based APIs
+```java
+import java.util.HashSet;
+import java.util.Set;
+// main
+Set<Integer> squares = new HashSet<>();
+Set<Integer> cubes = new HashSet<>();
 
-* challenge
+// union
+for(int i = 1; i<=100; i++) {
+    squares.add(i*i);
+    cubes.add(i*i*i);
+}
+Set<Integer> union = new HashSet<>(squares);
+union.addAll(cubes);
+
+// intersection
+Set<Integer> intersection = new HashSet<>(squares);
+intersection.retainAll(cubes);
+for(int i: intersection) {
+    System.out.println(i + " : " + Math.sqrt(i) + " : " + Math.cbrt(i));
+}
+
+// using asList
+Set<String> words = new HashSet<>();
+String sentence = "one day in the ";
+String[] arrayWords = sentence.split(" ");
+words.addAll(Arrays.asList(arrayWords));
+for (String s : words) {
+    System.out.println(s);
+}
+
+// asymmetric difference
+// nature takes divine
+// devine takses nature
+Set<String> nature = new HashSet<>();
+Set<String> divine = new HashSet<>();
+String[] natureWords = {"all", "nature", "is", "but"};
+nature.addAll(Arrays.asList(natureWords));
+String[] divineWords = {"is", "err", "human"};
+devine.addAll(Arrays.asList(divineWords));
+// nature takes divine
+System.out.println("nature - divine: ");
+Set<String diff1 = new HashSet<>(nature);
+diff1.removeAll(divine);
+printSet(diff1);
+
+
+// symmetric difference
+// union - intersection
+Set<String> unionTest = new HashSet<>(nature);
+unionTest.addAll(divine);
+Set<String> intersectionTest = new HashSet<>(nature);
+intersectionTest.removeAll(divine);
+unionTest.removeAll(intersectionTest);
+printSet(unionTest);
+
+// containsAll
+// non destructive
+// check one is superset
+if (nature.containsAll(divine)) {
+    System.out.println("divine is a subset of nature");
+}
+```
+
+```java
+private static void printSet(Set<String> set) {
+    System.out.println("\t");
+    for(String s : set) {
+        System.out.print(s + " ");
+    }
+    System.out.println();
+}
+```
+
+### Example
+* v148
+
+```java
+private final BodyTypes bodyType;
+
+public enum BodyTypes {
+    STAR,
+    PLANET,
+    MOON
+}
+
+public HeavenlyBody(BodyTypes bodyType) {
+    this.bodyType = bodyType;
+}
+
+public BodyTypes getBodyType() {
+    return bodyType;
+}
+
+public boolean addSatellite(HeavenlyBody moon) {
+    return this.satellites.add(moon);
+}
+
+@Override
+public final boolean equals(Object obj) {
+    if (this == obj) {
+        return true;
+    }
+    if(obj instanceof HeavenlyBody) {
+        HeavenlyBody the Object = (HeavenlyBody) obj;
+        if(this.name.equals(theObject.getName())) {
+            return this.bodyType == theObject.getBodyType();
+        }
+    }
+    return false;
+}
+
+@Override
+public final int hashCode() {
+    return this.name.hashCode() + 57 + this.bodyType.hashCode();
+}
+```
+```java
+// Planet subclass
+public class Planet extends HeavenlyBody {
+    public Planet(String name, double orbitalPeriod) {
+        super(name, orbitalPeriod, BodyTypes.PLANET);
+    }
+
+    @Override
+    public boolean addSatellite(HeavenlyBody moon) {
+        if(moon.getBodyType() == BodyTypes.MOON) {
+            return super.addSatellite(moon);
+        } else {
+            return false;
+        }
+    }
+}
+```
+* for the key, create a inner class Key inside of HeavenlyBody
+```java
+public static final class Key {
+    private String name;
+    private BodyTypes bodyType;
+
+    private Key(String name, BodyTypes bodyType) {
+        this.name = name;
+        this.bodyType = bodyType;
+    }
+
+    // getters
+
+    @Override
+    public boolean equals(Object obj) {
+        Key key = (Key) obj;
+        if(this.name.equals(key.getName())) {
+            return (this.bodyType == key.getBodyType());
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode() + 57 + this.bodyType.hashCode();
+    }
+}
+
+
+// use the inner class
+private final Key key;
+
+this.key = new Key(name, bodyType);
+
+// in the equals code
+if(obj instanceof HeavenlyBody) {
+    HeavenlyBody theObject = (HeavenlyBody) obj;
+    return this.key.equals(theObject.getKey());
+}
+
+// in the hashCode
+return this.key.hashCode();
+```
+
 
 ### Sorted Collections
 
