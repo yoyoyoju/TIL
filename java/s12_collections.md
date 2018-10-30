@@ -663,9 +663,86 @@ if(obj instanceof HeavenlyBody) {
 return this.key.hashCode();
 ```
 
-
 ### Sorted Collections
+* linked hash set, linked hash map
+    * loop in order it based on comparTo
+    * the items should implement Comparable
+    * `new LinkedHashMap<>();`
+* methods
+    * `getOrDefault`
+    * `Collections.unmodifiableMap(list);`
+* linked hash map example: v150, v151
+```java
+public class StockItem implements Comparable<StockItem> {
+    private final String name;
+    private double price;
+    private int quantityStock = 0;
+
+    //... 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this) {
+            return true;
+        }
+
+        if ((obj == null) || (obj.getClass() != this.getClass())) {
+            return false;
+        }
+
+        String objName = ((StockItem) obj).getName();
+        return this.name.equals(objName);
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode() + 31;
+    }
+
+    @Override
+    public int compareTo(StockItem o) {
+        if(this == o) {
+            return 0;
+        }
+        
+        if(o != null) {
+            return this.name.compareTo(o.getName());
+        }
+        throw new NullPointerException();
+    }
+    //...
+}
+```
+```java
+// another class using the StockItem
+private final Map<String, StockItem> list;
+StockItem inStock = list.getOrDefault(item.getName() ,item);
+public Map<String, StockItem> Items() {
+    // read only view
+    return Collections.unmodifiableMap(list);
+}
+
+// for loop
+for (Map.Entry<String, StockItem> item : list.entrySet()) {
+    StockItem stockItem = item.getValue();
+    //...
+ }
+```
+
 
 ### TreeMap and Unmodifiable Maps
+* `TreeMap`
+    * alphabetical order
+* un modifiable maps
+    * the individual object in the collection can still be modified
+    * if I don't have get method for the item, I don't want to have get method for the Collection either.
+    ```java
+    public Map<String, Double> PriceList() {
+        Map<String, Double> prices = new LinkedHashMap<>();
+        for(Map.Entry<String, StockItem> item : list.entrySet()) {
+            prices.put(item.getKey(), item.getValue().getPrice());
+        }
+        return Collections.unmodifiableMap(prices);
+    }
+    ```
 
 * challenge
