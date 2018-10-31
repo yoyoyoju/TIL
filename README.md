@@ -59,6 +59,7 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [S13 javafx](java/s13_javaFX.md)
 * [S12 collections](java/s12_collections.md)
 * [S11 naming package static final](java/s11_naming_package_static_final.md)
 * [Package](java/package.md)
