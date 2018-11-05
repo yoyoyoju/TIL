@@ -60,9 +60,10 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [W1 mooc1](java/w1_mooc1.md)
+* [Java basic](java/java_basic.md)
 * [Package](java/package.md)
 * [Override](java/override.md)
-* [Mooc 1](java/mooc_1.md)
 * [Managing](java/managing.md)
 ---------------
 ### Os
