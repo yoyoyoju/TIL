@@ -115,3 +115,9 @@ while (true) {
 --------
 reference
 [mooc.fi](https://mooc.fi/en) Programming with Java 1
+w1: user input, printing on screen, conditional statements
+w2: Loops, basics of methods
+w3: methods, ArrayList
+w4: basics of objects
+w5: more on objects
+w6: tables, sorting, searching

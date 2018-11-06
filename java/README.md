@@ -1,6 +1,8 @@
 # Java
 * [W1 mooc1](w1_mooc1.md)
    * [W1 input print condition](w1_mooc1.md#w1-input-print-condition)
+* [W2 mooc1](w2_mooc1.md)
+   * [W2 loops and basics of methods](w2_mooc1.md#w2-loops-and-basics-of-methods)
 * [Java basic](java_basic.md)
    * [Java](java_basic.md#java)
 * [Package](package.md)
