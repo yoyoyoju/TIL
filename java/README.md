@@ -1,10 +1,11 @@
 # Java
+* [W3 mooc1](w3_mooc1.md)
 * [Java intro](java_intro.md)
    * [Java](java_intro.md#java)
-* [W2 mooc1](w2_mooc1.md)
-   * [W2 loops and basics of methods](w2_mooc1.md#w2-loops-and-basics-of-methods)
 * [W1 mooc1](w1_mooc1.md)
    * [W1 input print condition](w1_mooc1.md#w1-input-print-condition)
+* [W2 mooc1](w2_mooc1.md)
+   * [W2 loops and basics of methods](w2_mooc1.md#w2-loops-and-basics-of-methods)
 * [Package](package.md)
    * [Make a jar](package.md#make-a-jar)
    * [Use the package](package.md#use-the-package)
