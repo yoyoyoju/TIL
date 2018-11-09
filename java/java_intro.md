@@ -32,3 +32,13 @@ System.out.println(pets[i] + " is at home");
 #### how to
 * class (Dog) : the class I want to write
 * testdrive (DogTestDrive) : has main method, to test my class
+
+### Variables
+* primitive and reference
+    * primitive
+        * holds fundamental values
+        * including integers, booleans, floating point numbers
+    * object reference
+        * holds references to objects
+* where to use variables:
+    * as object state, as local variables, as arguments, as return types

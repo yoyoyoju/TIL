@@ -61,6 +61,7 @@ Today I Learned.
 ---------------
 ### Java
 * [Java intro](java/java_intro.md)
+* [W4 mooc1](java/w4_mooc1.md)
 * [W3 mooc1](java/w3_mooc1.md)
 * [W2 mooc1](java/w2_mooc1.md)
 * [W1 mooc1](java/w1_mooc1.md)
