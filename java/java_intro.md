@@ -50,12 +50,10 @@ Type | Bit Depth | Value Range
 -----|-----------|------------
 boolean | JVM-specific | true or false
 char | 16 bits | 0 to 65535
-----|---|----
 byte|8 bits | -128 to 127
 short | 16 bits | -32768 to 32767
 int | 32 bits | -2147483648 to 2147483647
 lone | 64 bits | -huge to huge
-----|---|---
 float | 32 bits | varies
 double|64 bits | varies
 
@@ -87,3 +85,13 @@ Dog john = mydog;
 * give each element an int value : `nums[0] = 1; nums[1] = 5; nums[2] = 49;`
 * Arrays can hold primitive variables or references `Dog[] pets = new Dog[3]; pets[0] = new Dog();`
 
+#### Objects and Classes
+* A method uses parameters. A caller passes arguments.
+* instance variables : declared inside a class (but not within a method)
+    * always get a default value
+        * integers: 0
+        * floating points : 0.0
+        * booleans: false
+        * references: null
+* local variables are declared within a method
+    * must be initialized before use
