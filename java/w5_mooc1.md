@@ -5,5 +5,10 @@
 * constructor overloading
 * to call another constructor: use `this()`
 
-### overloading a method
 
+### Scanner
+```java
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+int myint = Integer.parseInt(sc.nextLine());
+```

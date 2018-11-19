@@ -1,7 +1,7 @@
 # Java
 * [W5 mooc1](w5_mooc1.md)
    * [Multiple constructors](w5_mooc1.md#multiple-constructors)
-   * [Overloading a method](w5_mooc1.md#overloading-a-method)
+   * [Scanner](w5_mooc1.md#scanner)
 * [Java intro](java_intro.md)
    * [Java](java_intro.md#java)
    * [Class](java_intro.md#class)
