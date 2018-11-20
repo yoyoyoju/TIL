@@ -1,4 +1,6 @@
 # Java
+* [W6 mooc1](w6_mooc1.md)
+   * [Array](w6_mooc1.md#array)
 * [W5 mooc1](w5_mooc1.md)
    * [Multiple constructors](w5_mooc1.md#multiple-constructors)
    * [Scanner](w5_mooc1.md#scanner)
