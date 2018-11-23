@@ -60,6 +60,8 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [Equals](java/equals.md)
+* [Comparable](java/comparable.md)
 * [W6 mooc1](java/w6_mooc1.md)
 * [W5 mooc1](java/w5_mooc1.md)
 * [Java intro](java/java_intro.md)

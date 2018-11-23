@@ -1,4 +1,6 @@
 # Java
+* [Equals](equals.md)
+* [Comparable](comparable.md)
 * [W6 mooc1](w6_mooc1.md)
    * [Array](w6_mooc1.md#array)
    * [Stringutils](w6_mooc1.md#stringutils)
