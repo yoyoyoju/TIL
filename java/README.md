@@ -1,4 +1,12 @@
 # Java
+* [Automatictests](automaticTests.md)
+* [Hashmap](hashMap.md)
+   * [Hashmap](hashMap.md#hashmap)
+   * [Loop](hashMap.md#loop)
+   * [Originaltype variables in a hashmap](hashMap.md#originaltype-variables-in-a-hashmap)
+* [Stringclean](stringclean.md)
+* [W7 mooc2](w7_mooc2.md)
+   * [Static class libraries and final](w7_mooc2.md#static-class-libraries-and-final)
 * [Equals](equals.md)
 * [Comparable](comparable.md)
 * [W6 mooc1](w6_mooc1.md)

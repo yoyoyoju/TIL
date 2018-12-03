@@ -60,6 +60,10 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [Automatictests](java/automaticTests.md)
+* [Hashmap](java/hashMap.md)
+* [Stringclean](java/stringclean.md)
+* [W7 mooc2](java/w7_mooc2.md)
 * [Equals](java/equals.md)
 * [Comparable](java/comparable.md)
 * [W6 mooc1](java/w6_mooc1.md)
