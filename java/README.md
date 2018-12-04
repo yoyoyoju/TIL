@@ -1,4 +1,6 @@
 # Java
+* [Enum](enum.md)
+   * [Example](enum.md#example)
 * [Automatictests](automaticTests.md)
 * [Hashmap](hashMap.md)
    * [Hashmap](hashMap.md#hashmap)

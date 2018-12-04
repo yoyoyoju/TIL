@@ -60,6 +60,7 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [Enum](java/enum.md)
 * [Automatictests](java/automaticTests.md)
 * [Hashmap](java/hashMap.md)
 * [Stringclean](java/stringclean.md)
