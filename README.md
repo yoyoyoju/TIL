@@ -60,6 +60,7 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [W8 interfaces](java/w8_Interfaces.md)
 * [Enum](java/enum.md)
 * [Automatictests](java/automaticTests.md)
 * [Hashmap](java/hashMap.md)

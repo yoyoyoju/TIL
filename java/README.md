@@ -1,4 +1,5 @@
 # Java
+* [W8 interfaces](w8_Interfaces.md)
 * [Enum](enum.md)
    * [Example](enum.md#example)
 * [Automatictests](automaticTests.md)
