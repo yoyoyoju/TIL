@@ -32,7 +32,7 @@ public class SMS implements Readable {
 ### Type
 * The type of an object can be different from its class.
 * one can cast, if and only if the variable's type is really what we try to change it into.
-    * but not usually a best practice;
+    * but not usually a best practice
     * one of the only cases where that is legitimate is in connection with the `equals` method.
 * one can create a list containing interface-type objects
 ```java
@@ -49,4 +49,39 @@ SMS message = readable; // not possible
 SMS transformedMessage = (SMS) readable; // works
 ```
 
-from 40.2 
+### Interface as Method Parameter
+* interface can be used in method calls as parameter type
+```java
+public class Printer {
+    public void print(Readerble readable) {
+        System.out.println(readable.read());
+    }
+}
+```
+```java
+public class NumberList implements Readable {
+    private ArrayList<Readable> readables;
+
+    public NumberList() {
+        this.readables = new ArrayList<Readable>();
+    }
+
+    public void add(Readable readable) {
+        this.readables.add(readable);
+    }
+
+    public int howManyReadables() {
+        return this.readables.size();
+    }
+
+    public String read() {
+        String read = "";
+        for(Readable readable: this.readables) {
+            read += readable.read() + "\n";
+        }
+
+        this.readables.clear();
+        return read;
+    }
+}
+```
