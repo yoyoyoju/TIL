@@ -61,6 +61,7 @@ Today I Learned.
 ---------------
 ### Java
 * [W8 interfaces](java/w8_Interfaces.md)
+* [Override](java/override.md)
 * [Enum](java/enum.md)
 * [Automatictests](java/automaticTests.md)
 * [Hashmap](java/hashMap.md)
@@ -76,7 +77,6 @@ Today I Learned.
 * [W1 mooc1](java/w1_mooc1.md)
 * [W2 mooc1](java/w2_mooc1.md)
 * [Package](java/package.md)
-* [Override](java/override.md)
 * [Managing](java/managing.md)
 ---------------
 ### Os

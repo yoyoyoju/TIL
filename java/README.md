@@ -1,5 +1,9 @@
 # Java
 * [W8 interfaces](w8_Interfaces.md)
+   * [Interface](w8_Interfaces.md#interface)
+   * [Type](w8_Interfaces.md#type)
+* [Override](override.md)
+   * [Methods from object class](override.md#methods-from-object-class)
 * [Enum](enum.md)
    * [Example](enum.md#example)
 * [Automatictests](automaticTests.md)
@@ -33,8 +37,6 @@
 * [Package](package.md)
    * [Make a jar](package.md#make-a-jar)
    * [Use the package](package.md#use-the-package)
-* [Override](override.md)
-   * [Tostring](override.md#tostring)
 * [Managing](managing.md)
    * [Installing](managing.md#installing)
    * [Change default version](managing.md#change-default-version)
