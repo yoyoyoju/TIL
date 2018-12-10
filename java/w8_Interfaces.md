@@ -85,3 +85,30 @@ public class NumberList implements Readable {
     }
 }
 ```
+
+### interface as method return value
+* it is good to use interface to reduce dependencies
+    * it is good to depend only on the interface (not the classes itself)
+    * less dependences make it easy to extend a program
+    * interface abstracts their internal functionality
+
+### madeUp interfaces
+* sensible number of made-up interfaces from Java API
+    * List: followings implement List interface
+        * ArrayList: saves the objects into a table
+            * search is quick with a specific index
+            `List<String> strings = new ArrayList<>();`
+        * LinkedList: builds up a list where each item has a reference to the following item
+            * to search, we have to go through all the list items till we reach the index
+            * adding new items is always fast
+    * Map: 
+        * has methods like keySet() (returns Set interface), get(key), values() (Collection interface)
+        * HashMap
+    * Set:
+        * contain 0 or 1 element of a certain type
+        * can be parsed with a for-each loop
+        * HashSet
+    * Collection:
+        * lists and sets are collections
+        * methods: contains, size(),
+        * can be parsed with a for-each loop
