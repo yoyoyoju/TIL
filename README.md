@@ -61,6 +61,7 @@ Today I Learned.
 ---------------
 ### Java
 * [W8 interfaces](java/w8_Interfaces.md)
+* [Generics](java/generics.md)
 * [Override](java/override.md)
 * [Enum](java/enum.md)
 * [Automatictests](java/automaticTests.md)

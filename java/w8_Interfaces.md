@@ -112,3 +112,12 @@ public class NumberList implements Readable {
         * lists and sets are collections
         * methods: contains, size(),
         * can be parsed with a for-each loop
+
+### Collections
+* Collections is a library for collection classes
+    * methods to sort objects (through the interface Comparable or Comparator)
+    * minimum and maximum values (`min`, `max`)
+    * retrieve a specific value (`binarySearch`)
+        * found: returns index of searched key, otherwise: negative value
+        * uses comparable interface (if it returns `0`, considered found)
+    * reverse the list (`reverse`)
