@@ -60,6 +60,7 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [Exceptions](java/exceptions.md)
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
 * [Comparable](java/comparable.md)
 * [W8 interfaces](java/w8_Interfaces.md)

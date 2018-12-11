@@ -1,4 +1,5 @@
 # Java
+* [Exceptions](exceptions.md)
 * [Singleresponsibilityprinciple](singleResponsibilityPrinciple.md)
    * [Package](singleResponsibilityPrinciple.md#package)
 * [Comparable](comparable.md)
