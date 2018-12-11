@@ -1,4 +1,8 @@
 # Java
+* [Singleresponsibilityprinciple](singleResponsibilityPrinciple.md)
+   * [Package](singleResponsibilityPrinciple.md#package)
+* [Comparable](comparable.md)
+   * [Comparator](comparable.md#comparator)
 * [W8 interfaces](w8_Interfaces.md)
    * [Interface](w8_Interfaces.md#interface)
    * [Type](w8_Interfaces.md#type)
@@ -22,7 +26,6 @@
 * [W7 mooc2](w7_mooc2.md)
    * [Static class libraries and final](w7_mooc2.md#static-class-libraries-and-final)
 * [Equals](equals.md)
-* [Comparable](comparable.md)
 * [W6 mooc1](w6_mooc1.md)
    * [Array](w6_mooc1.md#array)
    * [Stringutils](w6_mooc1.md#stringutils)
