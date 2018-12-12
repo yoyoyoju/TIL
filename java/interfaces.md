@@ -121,3 +121,22 @@ public class NumberList implements Readable {
         * found: returns index of searched key, otherwise: negative value
         * uses comparable interface (if it returns `0`, considered found)
     * reverse the list (`reverse`)
+
+### exceptions and interfaces
+* interfaces can also define the exceptions throw
+```java
+public interface FileServer {
+    // they can possibly throw and exception
+    String download(String file) throws Exception;
+    void save(String file, String string) throws Exception;
+}
+
+public class TextServer implements FileServer {
+    // ...
+    @Override
+    public String download(String file) throws Exception {
+        return this.data.get(file);
+    }
+    //...
+```
+```

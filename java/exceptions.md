@@ -9,3 +9,8 @@ try {
 } catch (Exception e) {
     System.out.println("is not proper number");
 }
+```
+
+### methods
+* the class Exception has methods
+    * `printStackTrace()`

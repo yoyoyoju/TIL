@@ -60,10 +60,11 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
+* [Readingfile](java/readingFile.md)
 * [Exceptions](java/exceptions.md)
+* [Interfaces](java/interfaces.md)
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
 * [Comparable](java/comparable.md)
-* [W8 interfaces](java/w8_Interfaces.md)
 * [Generics](java/generics.md)
 * [Override](java/override.md)
 * [Enum](java/enum.md)
