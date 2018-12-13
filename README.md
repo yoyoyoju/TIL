@@ -60,8 +60,11 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Java
-* [Readingfile](java/readingFile.md)
+* [Hashmap](java/hashMap.md)
+* [Sets](java/sets.md)
+* [String](java/string.md)
 * [Exceptions](java/exceptions.md)
+* [Readingfile](java/readingFile.md)
 * [Interfaces](java/interfaces.md)
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
 * [Comparable](java/comparable.md)
@@ -69,7 +72,6 @@ Today I Learned.
 * [Override](java/override.md)
 * [Enum](java/enum.md)
 * [Automatictests](java/automaticTests.md)
-* [Hashmap](java/hashMap.md)
 * [Stringclean](java/stringclean.md)
 * [W7 mooc2](java/w7_mooc2.md)
 * [Equals](java/equals.md)

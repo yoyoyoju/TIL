@@ -41,3 +41,16 @@ for (String key : wordPairs.keySet()) {
     }
     ```
 
+### multiple values
+* to save multiple values under a key, use List or Set
+```java
+Map<String, List<String>> phoneNumbers = new HashMap<>();
+phoneNumbers.put("Lucas", new ArrayList<String>());
+phoneNumbers.get("Lucas").add("011111111");
+phoneNumbers.get("Lucas").add("011111112");
+```
+
+```java
+Map<String, Set<Integer>> doneExercises = new HashMap<>();
+```
+
