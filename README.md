@@ -23,6 +23,7 @@ Today I Learned.
 * [Vim](vim)
 * [Python](python)
 * [Markdown](markdown)
+* [Anki](anki)
 * [Java](java)
 * [Os](os)
 * [Aws](aws)
@@ -58,6 +59,9 @@ Today I Learned.
 ### Markdown
 * [Github flavored](markdown/github_flavored.md)
 * [Basic syntax](markdown/basic_syntax.md)
+---------------
+### Anki
+* [Intro](anki/intro.md)
 ---------------
 ### Java
 * [Hashmap](java/hashMap.md)
