@@ -64,6 +64,8 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Equals](java/equals.md)
+* [Override](java/override.md)
 * [Hashmap](java/hashMap.md)
 * [Sets](java/sets.md)
 * [String](java/string.md)
@@ -73,12 +75,10 @@ Today I Learned.
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
 * [Comparable](java/comparable.md)
 * [Generics](java/generics.md)
-* [Override](java/override.md)
 * [Enum](java/enum.md)
 * [Automatictests](java/automaticTests.md)
 * [Stringclean](java/stringclean.md)
 * [W7 mooc2](java/w7_mooc2.md)
-* [Equals](java/equals.md)
 * [W6 mooc1](java/w6_mooc1.md)
 * [W5 mooc1](java/w5_mooc1.md)
 * [Java intro](java/java_intro.md)
