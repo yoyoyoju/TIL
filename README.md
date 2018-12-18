@@ -64,6 +64,7 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Map](java/map.md)
 * [Equals](java/equals.md)
 * [Override](java/override.md)
 * [Hashmap](java/hashMap.md)

@@ -1,4 +1,6 @@
 # Java
+* [Map](map.md)
+   * [Iteration](map.md#iteration)
 * [Equals](equals.md)
    * [Equals](equals.md#equals)
    * [Hashcode](equals.md#hashcode)
