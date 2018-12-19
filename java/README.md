@@ -1,11 +1,11 @@
 # Java
-* [Polymorphism](polymorphism.md)
 * [Inheritance](inheritance.md)
+   * [Polymorphism](inheritance.md#polymorphism)
    * [Access modifier](inheritance.md#access-modifier)
    * [Superclass](inheritance.md#superclass)
-* [Stringbuilder](stringBuilder.md)
 * [Objectpolymorphism](objectPolymorphism.md)
    * [Example of string](objectPolymorphism.md#example-of-string)
+* [Stringbuilder](stringBuilder.md)
 * [Map](map.md)
    * [Iteration](map.md#iteration)
 * [Equals](equals.md)

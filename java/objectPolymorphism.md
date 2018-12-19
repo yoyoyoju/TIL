@@ -15,5 +15,7 @@ Object fromString = string;
     * `CharSequence` has `int length()`, `char charAt(int index)` for example
 
 
+
+
 ----
 [ref: MOOC2 week10](https://materiaalit.github.io/2013-oo-programming/part2/week-10/)
