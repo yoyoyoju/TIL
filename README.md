@@ -64,6 +64,10 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Polymorphism](java/polymorphism.md)
+* [Inheritance](java/inheritance.md)
+* [Stringbuilder](java/stringBuilder.md)
+* [Objectpolymorphism](java/objectPolymorphism.md)
 * [Map](java/map.md)
 * [Equals](java/equals.md)
 * [Override](java/override.md)
