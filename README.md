@@ -64,6 +64,7 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [String](java/string.md)
 * [Inheritance](java/inheritance.md)
 * [Objectpolymorphism](java/objectPolymorphism.md)
 * [Stringbuilder](java/stringBuilder.md)
@@ -72,7 +73,6 @@ Today I Learned.
 * [Override](java/override.md)
 * [Hashmap](java/hashMap.md)
 * [Sets](java/sets.md)
-* [String](java/string.md)
 * [Exceptions](java/exceptions.md)
 * [Readingfile](java/readingFile.md)
 * [Interfaces](java/interfaces.md)

@@ -17,3 +17,9 @@ public boolean containsAllVowels(String word) {
 * `endsWith`
 * `equals`
 * `trim`
+
+### format
+```java
+String.format("%s %.1f", "some String", 1.0002);
+String.format(Locale.ROOT, "%s %.2f", "when the format uses local decimal point (,) to make sure use (.)", 1.2312);
+```

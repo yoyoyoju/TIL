@@ -1,4 +1,8 @@
 # Java
+* [String](string.md)
+   * [Foreach for string](string.md#foreach-for-string)
+   * [Methods](string.md#methods)
+   * [Format](string.md#format)
 * [Inheritance](inheritance.md)
    * [Polymorphism](inheritance.md#polymorphism)
    * [Access modifier](inheritance.md#access-modifier)
@@ -20,9 +24,6 @@
    * [Multiple values](hashMap.md#multiple-values)
 * [Sets](sets.md)
    * [Hashset](sets.md#hashset)
-* [String](string.md)
-   * [Foreach for string](string.md#foreach-for-string)
-   * [Methods](string.md#methods)
 * [Exceptions](exceptions.md)
    * [Handling exceptions](exceptions.md#handling-exceptions)
    * [Throwing exceptions](exceptions.md#throwing-exceptions)
