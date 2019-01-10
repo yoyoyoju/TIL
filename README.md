@@ -64,6 +64,8 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Lambda](java/lambda.md)
+* [Equals](java/equals.md)
 * [Arraylist](java/arraylist.md)
 * [Abstractclass](java/abstractClass.md)
 * [String](java/string.md)
@@ -71,7 +73,6 @@ Today I Learned.
 * [Objectpolymorphism](java/objectPolymorphism.md)
 * [Stringbuilder](java/stringBuilder.md)
 * [Map](java/map.md)
-* [Equals](java/equals.md)
 * [Override](java/override.md)
 * [Hashmap](java/hashMap.md)
 * [Sets](java/sets.md)

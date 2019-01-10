@@ -27,6 +27,24 @@ public boolean equals(Object object) {
 }
 ```
 
+* Another example using `instanceof`: when the class is final
+```java
+// when the class is final
+@Override
+public boolean equals(Object object) {
+    if (object == this)
+        return true;
+
+    if (!(object instanceof Coordinate))
+        return false;
+
+    Coordinate other = (Coordinate) object;
+
+    return (this.width == other.getWidth()) &&
+            (this.height == other.getHeight());
+}
+```
+
 ### hashCode
 * hashCode: returns hash value
     * used for HashMap keys
@@ -40,6 +58,17 @@ public int hashCode() {
     return this.name.hashCode() + this.publishingYear;
 }
 ```
+
+* another example with two fields
+```java
+@Override
+public int hashCode() {
+    int result = Integer.hashCode(this.width);
+    result = 31 * result + Integer.hashCode(this.height);
+    return result;
+}
+```
+
 
 * type casting: `WantedType variable = (WantedType) oldVariable;`
 

@@ -1,4 +1,8 @@
 # Java
+* [Lambda](lambda.md)
+* [Equals](equals.md)
+   * [Equals](equals.md#equals)
+   * [Hashcode](equals.md#hashcode)
 * [Arraylist](arraylist.md)
    * [Removing objects from an arraylist](arraylist.md#removing-objects-from-an-arraylist)
 * [Abstractclass](abstractClass.md)
@@ -15,9 +19,6 @@
 * [Stringbuilder](stringBuilder.md)
 * [Map](map.md)
    * [Iteration](map.md#iteration)
-* [Equals](equals.md)
-   * [Equals](equals.md#equals)
-   * [Hashcode](equals.md#hashcode)
 * [Override](override.md)
    * [Methods from object class](override.md#methods-from-object-class)
 * [Hashmap](hashMap.md)
