@@ -1,4 +1,6 @@
 # Java
+* [File](file.md)
+   * [Writing to a file](file.md#writing-to-a-file)
 * [Lambda](lambda.md)
 * [Equals](equals.md)
    * [Equals](equals.md#equals)
