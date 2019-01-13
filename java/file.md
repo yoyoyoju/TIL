@@ -1,3 +1,61 @@
+# File
+
+### Read from a File
+* use `Scanner` class
+```java
+File file = new file("file-name.txt");
+Scanner reader = new Scanner(file);
+while (reader.hasNextLine()) {
+    String line = reader.nextLine();
+    System.out.println(line);
+}
+reader.close();
+```
+
+* Exception handling
+* Scanner Constructor throws a FileNotFoundException
+* It should be
+    * handled (by try and catch)
+    * thrown forward
+```java
+// handle it by try catch block
+public void readFile(File f) {
+    Scanner reader = null;
+
+    try {
+        reader = new Scanner(f);
+    } catch (Exception e) {
+        System.out.println("We couldn't read the file. Error: " + e.getMessage());
+        return; // we exit the method
+    }
+
+    while (reader.hasNextLine()) {
+        String line = reader.nextLine();
+        System.out.println(line);
+    }
+
+    reader.close();
+}
+```
+```java
+// delegate the responsibility to the caller
+public void readFile(File f) throws FileNotFoundException {
+    // the file we read
+    Scanner reader = new Scanner(f);
+
+    while (reader.hasNextLine()) {
+        String line = reader.nextLine();
+        System.out.println(line);
+    }
+
+    reader.close();
+}
+```
+
+* Character Set Issues
+    * to specify the character-set (for example UTF-8)
+    `Scanner reader = new Scanner(file, "UTF-8");
+
 
 ### Writing to a File
 * `FileWriter` class

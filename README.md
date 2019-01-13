@@ -64,12 +64,12 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [String](java/string.md)
 * [File](java/file.md)
 * [Lambda](java/lambda.md)
 * [Equals](java/equals.md)
 * [Arraylist](java/arraylist.md)
 * [Abstractclass](java/abstractClass.md)
-* [String](java/string.md)
 * [Inheritance](java/inheritance.md)
 * [Objectpolymorphism](java/objectPolymorphism.md)
 * [Stringbuilder](java/stringBuilder.md)
