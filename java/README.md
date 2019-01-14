@@ -1,7 +1,11 @@
 # Java
-* [Actionevents](actionEvents.md)
 * [Userinterface](userInterface.md)
    * [Swing](userInterface.md#swing)
+   * [Ui components](userInterface.md#ui-components)
+   * [Separation application and ui logic](userInterface.md#separation-application-and-ui-logic)
+   * [Nested container objects](userInterface.md#nested-container-objects)
+* [Actionevents](actionEvents.md)
+   * [Handling objects in the action event listeners](actionEvents.md#handling-objects-in-the-action-event-listeners)
 * [String](string.md)
    * [Foreach for string](string.md#foreach-for-string)
    * [Methods](string.md#methods)

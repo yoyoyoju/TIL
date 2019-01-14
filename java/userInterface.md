@@ -68,7 +68,7 @@ public class Main {
 }
 ```
 
-#### UI Components
+### UI Components
 
 * User Interfaces are composed of
     * a background window (JFrame)
@@ -150,6 +150,100 @@ private void createComponents(Container container) {
     container.add(fist);
 ```
 
+### Separation Application and UI Logic
+* mixing the application logic and user interface in the same classes is not a good idea.
+    * it makes harder to test and read. also harder to modify the program
+* implement user interface:
+1. adding the components to it:
+    * which fields do we need?
+    * which layout do we use?
+2. action event listener:
+    * functionality: 
+        * an object with functionalities (of an interface) is passed to the constructor
+    * which fields are used?: 
+        * the neccessary fiedls are passed to the constructor
+```java
+public interface PersonRecord {
+    // interface with neccessary methods
+    // to perform the functionality
+}
+
+public class PersonRecordListener implements ActionListener {
+    // ... fields
+    public PersonRecordListener(PersonRecord personRecord, JTextField nameField){
+        // set the parameters to the fields
+    }
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        // perform the action
+        // using personRecord and nameField
+    }
+```
+3. add action event listener to the ui components
+    * the object of PersonRecord should be passed to the constructor of UI
+    * create an instance of `PersonRecordListener` and add it to the button
+```java
+public class UserInterface implements Runnable {
+    private JFrame frame;
+    private PersonRecord personRecord;
+    public UserInterface(PersonRecord personRecord) {
+        this.personRecord = personRecord;
+    }
+    //...
+
+    private void createComponents(Container container) {
+        // ...
+        PersonRecordListener listener = new PersonRecordListener(personRecord, nameField);
+        addButton.addActionListener(listener);
+        //...
+    }
+}
+```
+
+### Nested Container Objects
+* we can place Container objects insie each other
+* class `JPanel` allows for nested Container objects
+* one can add an instance of JPanel to a Container object
+* example
+```java
+private void createComponents(Container container) {
+    container.add(new JTextArea());
+    container.add(createPanel(), BorderLayout.SOUTH);
+}
+
+private JPanel createPanel() {
+    // layout as constructor parameter
+    // can be also set with setLayout method
+    JPanel panel = new JPanel(new GridLayout(1, 3));
+    panel.add(new JButton("Execute"));
+    panel.add(new JButton("Test"));
+    panel.add(new JButton("Send"));
+    return panel;
+}
+```
+* another way to do
+```java
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class MenuPanel extends JPanel {
+    public MenuPanel() {
+        super(new GridLayout(1, 3));
+        createComponents();
+    }
+    private void createComponents() {
+        add(new JButton("Execute"));
+        add(new JButton("Test"));
+        add(new JButton("Send"));
+    }
+}
+// int the ui.createComponents
+private void createComponents(Container container) {
+    container.add(new JTextArea());
+    container.add(new MenuPanel(), BorderLayout.SOUTH);
+}
+```
 -----
 references:
 [MOOC.fi week11](https://materiaalit.github.io/2013-oo-programming/part2/week-11/)
