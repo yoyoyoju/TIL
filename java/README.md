@@ -1,4 +1,8 @@
 # Java
+* [Avatar](avatar.md)
+   * [Draw an object into a userinterface](avatar.md#draw-an-object-into-a-userinterface)
+   * [Listen to the keystrokes](avatar.md#listen-to-the-keystrokes)
+   * [Drawingboard repainting](avatar.md#drawingboard-repainting)
 * [Drawing](drawing.md)
    * [Jpanel](drawing.md#jpanel)
 * [Actionevents](actionEvents.md)

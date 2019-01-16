@@ -64,6 +64,7 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Avatar](java/avatar.md)
 * [Drawing](java/drawing.md)
 * [Actionevents](java/actionEvents.md)
 * [Userinterface](java/userInterface.md)
