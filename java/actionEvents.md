@@ -77,6 +77,58 @@ public class AreaCopier implements ActionListener {
 }
 ```
 
+### Handling multiple buttons
+* multiple buttons can be handled by the same ActionListener
+    * to know which source the event is from: `actionEvent.getSource()`
+    * to multiple buttons the same ActionListener instance can be added
+example:
+```java
+// Handler:
+public class EventListener implements ActionListener {
+    private JButton plus;
+    private JButton minus;
+    // more fields
+
+    public EventListener(JButton plus, JButton minus) {    // further parameters) 
+        this.plus = plus;
+        this.minus = minus;
+        // more fields
+    }
+
+    @Override
+    public void actionPerformed(ActionEvenet ae) {
+        if (ae.getSource() == plus) {
+            // do something to add
+        } else if (ae.getSource() == minus) {
+            // do something to subtract
+        } // else
+        // ...
+    }
+}
+```
+```java
+// in the user interface side,
+// in the createComponents method
+public class GraphicCalculator implements Runnable {
+    // fields ...
+    // method run() { ... 
+    // createComponents(frame.getContentPane()); }
+    private void createComponenets(Container container) {
+        // ...
+        JButton plus = new JButton("+");
+        JButton minus = new JButton("-");
+        EventListener handler = new EventListener(plus, minus);
+        plus.addActionListener(handler);
+        minus.addActionListener(handler);
+        JPanel panel = new JPanel(new GridLayout(1, 2));
+        panel.add(plus);
+        panel.add(minus);
+        container.add(panel);
+    }
+    // ...
+}
+```
+
 ----
 reference
 [Mooc.fi week11](https://materiaalit.github.io/2013-oo-programming/part2/week-11/)
