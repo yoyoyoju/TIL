@@ -46,6 +46,7 @@ import javax.swing.JPanel;
 public class DrawingBoard extends JPanel {
     private Avatar avatar;
     public DrawingBoard(Avatar avatar) {
+        super();
         super.setBackground(Color.WHITE);
         this.avatar = avatar;
     }
@@ -53,7 +54,7 @@ public class DrawingBoard extends JPanel {
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
         // let avatar draw
-        avatar.draw(graphics);
+        this.avatar.draw(graphics);
     }
 }
 ```
@@ -165,5 +166,38 @@ private void createComponents(Container container) {
     DrawingBoard drawingBoard = new DrawingBoard(avatar);
     container.add(drawingBoard);
     frame.addKeyListener(new KeyboardListener(avatar, drawingBoard));
+}
+```
+
+* one can saparate the createComponents and add Listeners
+```java
+public class UserInterface implements Runnable {
+    private JFrame frame;
+    private DrawingBoard board;
+    private Figure figure;
+
+    public UserInterface(Figure figure) {
+        this.figure = figure;
+    }
+    @Override
+    public void run() {
+        frame = new JFrame();
+        frame.setPreferredSize(new Dimension(400, 400));
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        createComponents(frame.getContentPane());
+        addListeners();
+        frame.pack();
+        frame.setVisible(true);
+    }
+    priavet void craeteComponents(Container container) {
+        board = new DrawingBoard(figure);
+        container.add(board);
+    }
+    private void addListeners() {
+        frame.addKeyListener(new KeyboardListener(board, figure));
+    }
+    public JFrame getFrame() {
+        return frame;
+    }
 }
 ```
