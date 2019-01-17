@@ -32,7 +32,8 @@ list.removeAll(toBeRemoved);
 ```
 
 #### ConcurrentModificationException
-* check also [iterator](iterator.md)
+* the for each statement "gets all worked up"
+* to delete a part of the objects while parsing the list, use [iterator](iterator.md)
 ```java
 // this method causes error!!!!
 public class Hand {
