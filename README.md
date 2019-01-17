@@ -65,9 +65,12 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
-* [Iterator](java/iterator.md)
+* [Comparator](java/comparator.md)
+* [Comparable](java/comparable.md)
 * [Arraylist](java/arraylist.md)
 * [Enum](java/enum.md)
+* [Loops](java/loops.md)
+* [Iterator](java/iterator.md)
 * [Regularexpressions](java/regularExpressions.md)
 * [Avatar](java/avatar.md)
 * [Drawing](java/drawing.md)
@@ -89,7 +92,6 @@ Today I Learned.
 * [Readingfile](java/readingFile.md)
 * [Interfaces](java/interfaces.md)
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
-* [Comparable](java/comparable.md)
 * [Generics](java/generics.md)
 * [Automatictests](java/automaticTests.md)
 * [Stringclean](java/stringclean.md)

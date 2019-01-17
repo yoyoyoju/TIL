@@ -48,6 +48,12 @@ public class Hand {
 }
 ```
 
-
+### List and Set
+* List to Set
+`Set set = new HashSet(list);`
+* Set to List
+`List list = new ArrayList(set);`
+* JDK 8:
+`List list = set.stream().collect(Collectors.toList());`
 ------
 reference [Removing Objects from an ArrayList: mooc.fi week10 50.9](https://materiaalit.github.io/2013-oo-programming/part2/week-10/)
