@@ -1,4 +1,6 @@
 # Markdown
+* [Links](links.md)
+   * [Relative link](links.md#relative-link)
 * [Github flavored](github_flavored.md)
    * [Code blocks](github_flavored.md#code-blocks)
    * [Double code blocks](github_flavored.md#double-code-blocks)

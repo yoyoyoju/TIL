@@ -31,5 +31,22 @@ for (Object object : list) {
 list.removeAll(toBeRemoved);
 ```
 
+#### ConcurrentModificationException
+* check also [iterator](iterator.md)
+```java
+// this method causes error!!!!
+public class Hand {
+    // ...
+    public void deleteWorst(int value) {
+        for (Card card : cards) {
+            if (card.getValue() < value) {
+                cards.remove(card);
+            }
+        }
+    }
+}
+```
+
+
 ------
 reference [Removing Objects from an ArrayList: mooc.fi week10 50.9](https://materiaalit.github.io/2013-oo-programming/part2/week-10/)

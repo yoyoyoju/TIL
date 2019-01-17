@@ -57,6 +57,7 @@ Today I Learned.
 * [Mistakes](python/mistakes.md)
 ---------------
 ### Markdown
+* [Links](markdown/links.md)
 * [Github flavored](markdown/github_flavored.md)
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
@@ -64,6 +65,9 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Iterator](java/iterator.md)
+* [Arraylist](java/arraylist.md)
+* [Enum](java/enum.md)
 * [Regularexpressions](java/regularExpressions.md)
 * [Avatar](java/avatar.md)
 * [Drawing](java/drawing.md)
@@ -73,7 +77,6 @@ Today I Learned.
 * [File](java/file.md)
 * [Lambda](java/lambda.md)
 * [Equals](java/equals.md)
-* [Arraylist](java/arraylist.md)
 * [Abstractclass](java/abstractClass.md)
 * [Inheritance](java/inheritance.md)
 * [Objectpolymorphism](java/objectPolymorphism.md)
@@ -88,7 +91,6 @@ Today I Learned.
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
 * [Comparable](java/comparable.md)
 * [Generics](java/generics.md)
-* [Enum](java/enum.md)
 * [Automatictests](java/automaticTests.md)
 * [Stringclean](java/stringclean.md)
 * [W7 mooc2](java/w7_mooc2.md)
