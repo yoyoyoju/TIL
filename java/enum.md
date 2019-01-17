@@ -1,3 +1,44 @@
+# enum
+* enum
+    * an enumerated type 
+    * in addition to classes and interfaces, enumerated types are also a class type of their own
+    * use when we already know the possible values of our variables
+    * are defined with the keyword `enum`
+    * are usually created in their own file, in the same way as classes and interfaces
+    * [tutorial from Oracle](http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
+```java
+public enum Suit {
+    // lists its constant values
+    // Enum constants are usually in capital letters
+    DIAMONDS, SPADES, CLUBS, HEARTS
+}
+```
+following Card class uses enum Suit:
+```java
+public class Card {
+    private int value;
+    private Suit suit;
+    public Card(int value, Suit suit) {
+        this.value = value;
+        this.suit = suit;
+    }
+    @Override
+    public String toString() {
+        return suit + " " + value;
+    }
+    //...
+}
+```
+usage of the Card class
+```java
+// in main method
+Card first = new Card(10, Suit.HEARTS);
+if (first.getSuit() == Suit.CLUBS) {
+    System.out.println("It's clubs");
+}
+```
+
+
 ### example
 ```java
 interface IntegerMath {
@@ -36,4 +77,6 @@ interface IntegerMath {
  }   
 ```
 
-
+------
+reference
+[mooc.fi week12](https://materiaalit.github.io/2013-oo-programming/part2/week-12/)

@@ -39,6 +39,8 @@ if (num.matches("01[0-9]{7}")) {
     * `[145]` means `(1|4|5)`
     * `[2-36-9]` means `(2|3|6|7|8|9)`
     * `[a-c]*` a string made only of characters ("", "a", "b", "c", "ab", ...)
+* example
+    * valid time expression?: `string.matches("([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]");`
 
 ----
 reference
