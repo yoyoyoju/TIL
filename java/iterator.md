@@ -2,7 +2,7 @@
 * Iterable interface
     * object containers, which implements Collection interface, implements indirectly Iterable interface
     * objects, which implements Iterable, can be parsed (or iterated) with statements such as for each
-    * ConcurrentModificationException: one cannot delete objects from a list while parsing it [more](iterator.md#ConcurrentModificationException)
+    * ConcurrentModificationException: one cannot delete objects from a list while parsing it. [more](arraylist.md#ConcurrentModificationException)
 * iterator
     * object containers can also be iterated using `iterator`
     * iterator parses a particular object collection
