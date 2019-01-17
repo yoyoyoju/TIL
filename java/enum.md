@@ -38,6 +38,38 @@ if (first.getSuit() == Suit.CLUBS) {
 }
 ```
 
+### Enum with object variables
+
+#### Enumerated Type Constructor Parameters
+* enum type can contain object variables
+* the object variable values have to be set up in the constructor
+* enum-type classes cannot have public constructors
+```java
+public enum Colour {
+    // the constructor parameters are defined as constant values when they are read
+    RED("red"), 
+    GREEN("green"),
+    BLUE("blue");
+
+    // object variable
+    private String name;
+
+    // constructor
+    private Colour(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+}
+
+// can be used as:
+System.out.println(Colour.GREEN.getName());
+```
+
+
+
 
 ### example
 ```java
