@@ -65,6 +65,9 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Sets](java/sets.md)
+* [Stringbuilder](java/stringBuilder.md)
+* [Parameters](java/parameters.md)
 * [Comparator](java/comparator.md)
 * [Comparable](java/comparable.md)
 * [Arraylist](java/arraylist.md)
@@ -83,11 +86,9 @@ Today I Learned.
 * [Abstractclass](java/abstractClass.md)
 * [Inheritance](java/inheritance.md)
 * [Objectpolymorphism](java/objectPolymorphism.md)
-* [Stringbuilder](java/stringBuilder.md)
 * [Map](java/map.md)
 * [Override](java/override.md)
 * [Hashmap](java/hashMap.md)
-* [Sets](java/sets.md)
 * [Exceptions](java/exceptions.md)
 * [Readingfile](java/readingFile.md)
 * [Interfaces](java/interfaces.md)

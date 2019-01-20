@@ -13,3 +13,11 @@ myset.add(1);
 ### HashSet
 * HashSet implements Set interface
 
+
+### TreeSet
+* TreeSet implements SortedSet
+* methods:
+    * boolean add 
+        * // adds if it is not already present
+        * // returns false if it already present
+    * boolean contains
