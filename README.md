@@ -65,6 +65,8 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Ex wormgame](java/ex_wormgame.md)
+* [Timer](java/timer.md)
 * [Sets](java/sets.md)
 * [Stringbuilder](java/stringBuilder.md)
 * [Parameters](java/parameters.md)
@@ -75,7 +77,7 @@ Today I Learned.
 * [Loops](java/loops.md)
 * [Iterator](java/iterator.md)
 * [Regularexpressions](java/regularExpressions.md)
-* [Avatar](java/avatar.md)
+* [Ex avatar](java/ex_avatar.md)
 * [Drawing](java/drawing.md)
 * [Actionevents](java/actionEvents.md)
 * [Userinterface](java/userInterface.md)
