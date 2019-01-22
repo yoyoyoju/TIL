@@ -23,6 +23,7 @@ Today I Learned.
 * [Vim](vim)
 * [Python](python)
 * [Markdown](markdown)
+* [J2ee](j2ee)
 * [Anki](anki)
 * [Java](java)
 * [Os](os)
@@ -60,6 +61,9 @@ Today I Learned.
 * [Links](markdown/links.md)
 * [Github flavored](markdown/github_flavored.md)
 * [Basic syntax](markdown/basic_syntax.md)
+---------------
+### J2ee
+* [Glassfish start](j2ee/glassfish_start.md)
 ---------------
 ### Anki
 * [Intro](anki/intro.md)
