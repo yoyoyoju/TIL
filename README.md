@@ -21,12 +21,13 @@ Today I Learned.
 ## Category
 
 * [Vim](vim)
+* [Tomcat](tomcat)
 * [Python](python)
 * [Markdown](markdown)
 * [Maven](maven)
-* [J2ee](j2ee)
 * [Anki](anki)
 * [Java](java)
+* [Jee](jee)
 * [Os](os)
 * [Aws](aws)
 * [Resource](resource)
@@ -41,6 +42,9 @@ Today I Learned.
 * [Search replace](vim/search_replace.md)
 * [Fold](vim/fold.md)
 * [Beginners guide](vim/beginners_guide.md)
+---------------
+### Tomcat
+* [Install](tomcat/install.md)
 ---------------
 ### Python
 * [Python quality code](python/python_quality_code.md)
@@ -65,9 +69,6 @@ Today I Learned.
 ---------------
 ### Maven
 * [Maven basic](maven/maven_basic.md)
----------------
-### J2ee
-* [Glassfish start](j2ee/glassfish_start.md)
 ---------------
 ### Anki
 * [Intro](anki/intro.md)
@@ -116,6 +117,9 @@ Today I Learned.
 * [W2 mooc1](java/w2_mooc1.md)
 * [Package](java/package.md)
 * [Managing](java/managing.md)
+---------------
+### Jee
+* [Glassfish start](jee/glassfish_start.md)
 ---------------
 ### Os
 * [Mistakes](os/mistakes.md)
