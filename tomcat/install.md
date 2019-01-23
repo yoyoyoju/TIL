@@ -26,6 +26,8 @@
             CATALINA_PID="$CATALINA_BASE/tomcat.pid"
             ```
         * set the variables by editting the `bin/catalina.sh`
+        * set the variables before execute the Tomcat
+            `CATALINA_BASE=/tmp/tomcat_base1 bin/catalina.sh start`
         * write a script to start the tomcat [(ref)](https://stackoverflow.com/questions/6172258/how-to-set-java-home-or-catalina-home-if-i-have-more-than-1-version-used-for-pro)
             ```shell
             JAVA_HOME=/path/to/jdk
