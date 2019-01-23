@@ -23,6 +23,7 @@ Today I Learned.
 * [Vim](vim)
 * [Python](python)
 * [Markdown](markdown)
+* [Maven](maven)
 * [J2ee](j2ee)
 * [Anki](anki)
 * [Java](java)
@@ -61,6 +62,9 @@ Today I Learned.
 * [Links](markdown/links.md)
 * [Github flavored](markdown/github_flavored.md)
 * [Basic syntax](markdown/basic_syntax.md)
+---------------
+### Maven
+* [Maven basic](maven/maven_basic.md)
 ---------------
 ### J2ee
 * [Glassfish start](j2ee/glassfish_start.md)
@@ -114,6 +118,8 @@ Today I Learned.
 * [Managing](java/managing.md)
 ---------------
 ### Os
+* [Mistakes](os/mistakes.md)
+* [Verifying](os/verifying.md)
 * [Installing](os/installing.md)
 ---------------
 ### Aws
