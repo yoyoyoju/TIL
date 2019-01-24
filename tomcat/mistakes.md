@@ -13,6 +13,12 @@ One can put it into the ~/.bash_profile file like this too:
 ```bash
 alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
 ```
+---
+in Ubuntu,
+```shell
+sudo update-alternatives --config java
+```
+and select the version I want to use
 
 ### using BASE
 I tried to use CATALINA_BASE but it did not really work well for unknown reason...
