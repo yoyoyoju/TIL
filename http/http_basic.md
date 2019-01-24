@@ -30,13 +30,18 @@ a basic HTML document example
         * `dir` language-related attribute, specify text direction
     * empty element (like `<br>`) cannot take content, it may not have an end tag
     * elements example: [(see more)](https://en.wikipedia.org/wiki/HTML#HTML_versions_timeline)
+        * `<html>...</html>` define boundaries of the HTML document
         * `<head>...</head>` Header of the HTML document
         * `<title>...</title>` title (included in the head)
+        * `<body>...</body>` document's body
         * `<h1>...</h2>` headings (h1 to h6)
         * `<p>...</p>` paragraphs (sections the page into paragraphs)
         * `<br>` line breaks (without altering the semantic structure of the page - empty element
-        * `<a>` can create a link by using `href` attribute to hold the URL
+        * `<a>` anchor
+            * can create a link by using `href` attribute to hold the URL
+        * `<form>` define a form (usually provides input field)
         * `<input>` inputs
+            * `<input type>` define an input widget to a form
             * `<input type="text" />` for text input
             * `<input type="file" />` for uploading files
             * `<input type="checkbox" />` for checkboxes

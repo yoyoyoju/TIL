@@ -36,4 +36,31 @@
             export JAVA_HOME JAVA_OPTS CATALINA_HOME CATALINA_BASE
             $CATALINA_HOME/bin/catalina.sh start
             ```
-    * more `README.md` and `RUNNING.txt` files in the tomcat distribution
+            as example of JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64 (ubuntu)
+                                     /Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home (mac)
+            as example of CATALINA_HOME: /home/ubuntu/apache-tomcat-9.0.14 (ubuntu)
+
+    * to use CATALINA_BASE
+        * create the directory tree used by CATALINA_BASE
+        * `lib`: further resources to be added on classpath
+        * `logs`
+        * `webapps`: for automatically loaded web app
+        * `work`: temporary working directories
+        * `temp`: temporary files
+        * `conf`: copy all conf files from `CATALINA_HOME/conf`
+            * minimum: CATALINA_BASE must contain `conf/server.xml` `conf/web.xml` (otherwise fail)
+
+    * start the server
+        * `$CATALINA_HOME/bin/startup.sh` or
+        * `$CATALINA_HOME/bin/catalina.sh start`
+    * `http://localhost:8080/`
+    * shut down
+        * `$CATALINA_HOME/bin/shutdown.sh` or
+        * `$CATALINA_HOME/bin/catalina.sh stop`
+
+
+* reference
+    * `README.md` and `RUNNING.txt` files in the tomcat distribution
+    * also [the website](https://tomcat.apache.org/tomcat-9.0-doc/introduction.html)
+
+
