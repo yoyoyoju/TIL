@@ -3,27 +3,31 @@ From HeadFirst Servlet&JSP Ch3:
 
 The development environment is to say:
     `~/MyProjects/beerV1/`
+
 The deployment environment is to say:
     `~/tomcat/webapps/Beer-v1/`
 
 #### 4a. deploy and test a simple html page
 * html file
-1. create the opening page html in the development environment
-    under ~/MyProjects/beerV1/web/
-2. copy the file into
-    ~/tomcat/webapps/Beer-v1/WEB-INF/
+    1. create the opening page html in the development environment
+        under ~/MyProjects/beerV1/web/
+    2. copy the file into
+        ~/tomcat/webapps/Beer-v1/WEB-INF/
 
 * deployment descripter ([DD](web.xml))
     (maps between servletName - servletClass - url-pattern)
-3. create DD under /beerV1/etc/
-4. copy the file into tomcat/webapps/Beer-v1/WEB-INF
+    3. create DD under /beerV1/etc/
+    4. copy the file into tomcat/webapps/Beer-v1/WEB-INF
 
-5. Start Tomcat
-6. test the page (http://localhost:8080/Beer-v1/form.html)
+* to test
+    5. Start Tomcat
+    6. test the page (http://localhost:8080/Beer-v1/form.html)
 
 
-* html
-In this example, the form.html file has a form with action
+* form.html file
+    * has a form with action 
+    * when the form is submitted, request URL is generated based on this information
+    * from DD file the container looks up servlet by this URL-pattern
 ```html
 <!--in some where in the body of html-->
 <form method="POST"
@@ -66,10 +70,14 @@ public class BeerSelect extends HttpServlet {
          * to write into html file to send 
          * as the response back to the client
          **/
+        
+        // get the posted information from the request
+        String c = request.getParameter("color");
+
+        // make html as a response (using String c)
         response.setContentType("test/html");
         PrintWriter out = response.getWriter();
         out.println("Beer Selection Advice<br>");
-        String c = request.getParameter("color");
         out.println("<br>Got beer color " + c);
     }
 }
@@ -100,16 +108,18 @@ BeerExpert be = new BeerExpert();
 List result = be.getBrands(c);
 // print the result with out
 ```
+
 ##### the specs for the model in our example:
-    * the package should be com.example.model
-    * directory structure whould be `/WEB-INF/classes/com/example/model`
-    * exposes one method `public List<String> getBrands(String color)`
+* the package should be com.example.model
+* directory structure whould be `/WEB-INF/classes/com/example/model`
+* exposes one method `public List<String> getBrands(String color)`
+
 ##### the basic flow:
-    * build the test class for the model
-    * build and test the model
-        * `javac -d classes src/com/example/model/BeerExpert.java`
-    * edit the servlet to use the BeerExpert
-    * recompile and deploy the class into tomcat
+* build the test class for the model
+* build and test the model
+    * `javac -d classes src/com/example/model/BeerExpert.java`
+* edit the servlet to use the BeerExpert
+* recompile and deploy the class into tomcat
 
 
 #### 4e. Use JSP view
@@ -123,8 +133,8 @@ List result = be.getBrands(c);
     * View: result.jsp 
     * Controller: BeerSelect extends HttpServlet
 
-##### what does each part do?
-* BeerExpert class has a method to be called and returns a List
+##### each part in our example
+* *Model*: BeerExpert class has a method to be called and returns a List
 ```java
 public class BeerExpert {
     public List<String> getBrands(String color) {
@@ -134,7 +144,7 @@ public class BeerExpert {
     }
 }
 ```
-* servlet has a method doPost(request, response), 
+* *Controller*: servlet has a method doPost(request, response), 
  which is called as the form.html page "POST"ed a form
 * what the doPost does:
     * get parameter from the form using request.getParameter("color")
@@ -174,7 +184,7 @@ public class BeerSelect extends HttpServlet {
     }
 }
 ```
-* JSP to make the view
+* *View*: JSP to produce html
     * in the development env: under /web/
     * in the deployment env: under /Beer-v1/
 ```JSP
