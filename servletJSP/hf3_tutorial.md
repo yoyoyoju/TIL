@@ -1,16 +1,12 @@
 # Ch3 Mini MVC Tutorial
-From HeadFirst Servlet&JSP.
-
-As the very first step:
-deplay and test the opening page
-
+From HeadFirst Servlet&JSP Ch3: 
 
 The development environment is to say:
     `~/MyProjects/beerV1/`
-
 The deployment environment is to say:
     `~/tomcat/webapps/Beer-v1/`
 
+#### 4a. deploy and test a simple html page
 * html file
 1. create the opening page html in the development environment
     under ~/MyProjects/beerV1/web/
@@ -41,7 +37,10 @@ In this example, the form.html file has a form with action
 </form>
 ```
 
-#### from the request to the Servlet 
+
+#### 4b. introduce a servlet as a controller
+
+##### simplified flow how the servlet work
 * as the form is submitted the browser generates the request URL:
     * `/Beer-v1/SelectBeer.do` 
     * the form action attribute "SelectBeer.do" is relative to the URL the page it's on
@@ -50,7 +49,7 @@ In this example, the form.html file has a form with action
     and passes the request to the thread
 * the container sends the response back to the client
 
-#### First Version of the controller servlet:
+##### how to
 * make a servlet code to acept the posted information
     * write a class extends HttpServlet
     * uses HttpServletRequest interface to 
@@ -58,6 +57,23 @@ In this example, the form.html file has a form with action
     * uses HttpServletResponse interface to
         * setContentType("text/html");
         * getWriter();
+```java
+public class BeerSelect extends HttpServlet {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) 
+        throws IOException, ServletException {
+
+        /** 
+         * to write into html file to send 
+         * as the response back to the client
+         **/
+        response.setContentType("test/html");
+        PrintWriter out = response.getWriter();
+        out.println("Beer Selection Advice<br>");
+        String c = request.getParameter("color");
+        out.println("<br>Got beer color " + c);
+    }
+}
+```
 * compile with
     `javac -classpath /Users/tomcat/apache-tomcat-9.0.14/lib/servlet-api.jar:classes:. -d classes src/com/example/web/BeerSelect.java`
     * the path to the servlet-api.jar should be adjusted
@@ -69,26 +85,34 @@ In this example, the form.html file has a form with action
 * go to `http://localhost:8080/Beer-v1/form.html`
 
 
-#### Use model class
+#### 4c. 4d. Use model class
 * in MVC(model view controller) design pattern,
   the model tends to be the 'back-end' of the application
 * it should be in its own utility packages (not tied down to a single web app)
 * create the java to deal with model
 * edit servlet to use the model
-
-
-* the specs for the model in our example:
+    * simply add
+```java
+import com.example.model.*;
+//...
+// in the doPost method of the servlet add
+BeerExpert be = new BeerExpert();
+List result = be.getBrands(c);
+// print the result with out
+```
+##### the specs for the model in our example:
     * the package should be com.example.model
     * directory structure whould be `/WEB-INF/classes/com/example/model`
     * exposes one method `public List<String> getBrands(String color)`
-* the basic flow:
+##### the basic flow:
     * build the test class for the model
     * build and test the model
         * `javac -d classes src/com/example/model/BeerExpert.java`
     * edit the servlet to use the BeerExpert
     * recompile and deploy the class into tomcat
 
-#### Use JSP view
+
+#### 4e. Use JSP view
 * we want to use JSP to generate a page for the container 
  using the model
 * request dispatching:
@@ -159,7 +183,9 @@ public class BeerSelect extends HttpServlet {
 <%@ page import="java.util.*" %>
 <html><body>
 <%
-  // scriptlet code: standard Java sitting inside <% tags 
+  /**
+   * scriptlet code: standard Java sitting inside <% tags 
+  **/
 
   // get an attribute from the request object
   List<String> styles = (List) request.getAttribute("styles");
