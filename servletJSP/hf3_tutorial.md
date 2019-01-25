@@ -1,5 +1,5 @@
 # Ch3 Mini MVC Tutorial
-From HeadFirst Servlet&JSP Ch3: 
+From HeadFirst Servlet&JSP Ch3
 
 The development environment is to say:
     `~/MyProjects/beerV1/`
@@ -9,19 +9,18 @@ The deployment environment is to say:
 
 #### 4a. deploy and test a simple html page
 * html file
-    1. create the opening page html in the development environment
-        under ~/MyProjects/beerV1/web/
-    2. copy the file into
-        ~/tomcat/webapps/Beer-v1/WEB-INF/
+1. create the opening page html in the development environment
+    under ~/MyProjects/beerV1/web/
+2. copy the file into
+    ~/tomcat/webapps/Beer-v1/WEB-INF/
 
-* deployment descripter ([DD](web.xml))
-    (maps between servletName - servletClass - url-pattern)
-    3. create DD under /beerV1/etc/
-    4. copy the file into tomcat/webapps/Beer-v1/WEB-INF
+* deployment descripter ([DD](web.xml)) (maps between servletName - servletClass - url-pattern)
+3. create DD under /beerV1/etc/
+4. copy the file into tomcat/webapps/Beer-v1/WEB-INF
 
 * to test
-    5. Start Tomcat
-    6. test the page (http://localhost:8080/Beer-v1/form.html)
+5. Start Tomcat
+6. test the page (http://localhost:8080/Beer-v1/form.html)
 
 
 * form.html file
@@ -134,7 +133,7 @@ List result = be.getBrands(c);
     * Controller: BeerSelect extends HttpServlet
 
 ##### each part in our example
-* *Model*: BeerExpert class has a method to be called and returns a List
+* **Model**: BeerExpert class has a method to be called and returns a List
 ```java
 public class BeerExpert {
     public List<String> getBrands(String color) {
@@ -144,7 +143,7 @@ public class BeerExpert {
     }
 }
 ```
-* *Controller*: servlet has a method doPost(request, response), 
+* **Controller**: servlet has a method doPost(request, response), 
  which is called as the form.html page "POST"ed a form
 * what the doPost does:
     * get parameter from the form using request.getParameter("color")
@@ -184,7 +183,7 @@ public class BeerSelect extends HttpServlet {
     }
 }
 ```
-* *View*: JSP to produce html
+* **View**: JSP to produce html
     * in the development env: under /web/
     * in the deployment env: under /Beer-v1/
 ```JSP
