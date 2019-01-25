@@ -37,7 +37,7 @@ In this example, the form.html file has a form with action
 </form>
 ```
 
-* from the request to the Servlet 
+#### from the request to the Servlet 
     * as the form is submitted the browser generates the request URL:
         * `/Beer-v1/SelectBeer.do` 
         * the form action attribute "SelectBeer.do" is relative to the URL the page it's on
@@ -46,7 +46,41 @@ In this example, the form.html file has a form with action
         and passes the request to the thread
     * the container sends the response back to the client
 
-* First Version of the controller servlet:
+#### First Version of the controller servlet:
+* make a servlet code to acept the posted information
+    * write a class extends HttpServlet
+    * uses HttpServletRequest interface to 
+        * getParameter("color"); (set the `<select name attribute>`)
+    * uses HttpServletResponse interface to
+        * setContentType("text/html");
+        * getWriter();
+* compile with
+    `javac -classpath /Users/tomcat/apache-tomcat-9.0.14/lib/servlet-api.jar:classes:. -d classes src/com/example/web/BeerSelect.java`
+    * the path to the servlet-api.jar should be adjusted
+    * run the commend in ~/MyProjects/beerV1
+* deploy the servlet
+    * make a copy of the class files into
+    * /Beer-v1/WEB-INF/classes/com/example/web/
+* restart tomcat
+* go to `http://localhost:8080/Beer-v1/form.html`
+
+
+#### model class
+* in MVC(model view controller) design pattern,
+  the model tends to be the 'back-end' of the application
+* it should be in its own utility packages (not tied down to a single web app)
+
+
+* the specs for the model in our example:
+    * the package should be com.example.model
+    * directory structure whould be `/WEB-INF/classes/com/example/model`
+    * exposes one method `public List<String> getBrands(String color)`
+* build the test class for the model
+* build and test the model
+    * `javac -d classes src/com/example/model/BeerExpert.java`
+* edit the servlet to use the BeerExpert
+* deploy the class into tomcat
+
 
 ----
 HeadFirst Servlet & JSP
