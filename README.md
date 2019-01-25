@@ -28,6 +28,7 @@ Today I Learned.
 * [Anki](anki)
 * [Java](java)
 * [Http](http)
+* [Servletjsp](servletJSP)
 * [Jee](jee)
 * [Os](os)
 * [Aws](aws)
@@ -45,6 +46,7 @@ Today I Learned.
 * [Search replace](vim/search_replace.md)
 ---------------
 ### Tomcat
+* [Mistakes](tomcat/mistakes.md)
 * [Install](tomcat/install.md)
 ---------------
 ### Python
@@ -122,15 +124,21 @@ Today I Learned.
 ### Http
 * [Http basic](http/http_basic.md)
 ---------------
+### Servletjsp
+* [Hf3 tutorial](servletJSP/hf3_tutorial.md)
+* [Servlet basic](servletJSP/servlet_basic.md)
+---------------
 ### Jee
 * [Glassfish start](jee/glassfish_start.md)
 ---------------
 ### Os
 * [Verifying](os/verifying.md)
+* [Apt](os/apt.md)
 * [Mistakes](os/mistakes.md)
 * [Installing](os/installing.md)
 ---------------
 ### Aws
+* [Tomcat confonaws](aws/tomcat_confOnAWS.md)
 * [Aws cli](aws/aws_cli.md)
 * [W2 iam s3 rekognition](aws/w2_IAM_S3_Rekognition.md)
 * [W6 sns sqs](aws/w6_SNS_SQS.md)

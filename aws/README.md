@@ -1,4 +1,6 @@
 # Aws
+* [Tomcat confonaws](tomcat_confOnAWS.md)
+   * [Install tomcat on ec2 instance](tomcat_confOnAWS.md#install-tomcat-on-ec2-instance)
 * [Aws cli](aws_cli.md)
    * [File commands for s3](aws_cli.md#file-commands-for-s3)
 * [W2 iam s3 rekognition](w2_IAM_S3_Rekognition.md)

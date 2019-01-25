@@ -1,5 +1,6 @@
 # Os
 * [Verifying](verifying.md)
+* [Apt](apt.md)
 * [Mistakes](mistakes.md)
    * [Xcode](mistakes.md#xcode)
 * [Installing](installing.md)
