@@ -1,4 +1,7 @@
 # Os
+* [Macports](macports.md)
+   * [Port command](macports.md#port-command)
+   * [Common tasks](macports.md#common-tasks)
 * [Verifying](verifying.md)
 * [Apt](apt.md)
 * [Mistakes](mistakes.md)
