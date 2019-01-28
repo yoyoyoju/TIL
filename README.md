@@ -125,6 +125,7 @@ Today I Learned.
 * [Http basic](http/http_basic.md)
 ---------------
 ### Servletjsp
+* [Hf4 servlet](servletJSP/hf4_servlet.md)
 * [Hf3 tutorial](servletJSP/hf3_tutorial.md)
 * [Servlet basic](servletJSP/servlet_basic.md)
 ---------------
