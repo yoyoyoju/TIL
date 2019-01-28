@@ -109,7 +109,7 @@ The client gets the response
     * override the HTTP methods I need, 
         * such as doPost(HttpServletReqeust, HttpServletResponse)
 
-#### Three big lifecycle moments
+#### big lifecycle moments
 0. find and load the servlet classes
     * When it is done:
         * when the Container starts up
@@ -123,6 +123,7 @@ The client gets the response
             * the container loads the servlet class using normal Java class loading facilities
         * instantiating the class:
             * call the constructor to make an object
+            * constructor has no argument
             * constructor should NOT be overwriten
             * (cannot be used until init() is called, though)
 1. init()
@@ -208,13 +209,14 @@ The client gets the response
 
 #### the inheritance hierarchy
 
-##### Request
+##### Request interface
 * **ServletRequest** interface
     * javax.servlet.ServletRequest
     * methods:
         * getAttribute(String): Object
         * getContentLength(): int
         * getInputStream(): ServletInputStream
+            * an input stream from the request
         * getLocalPort(): int
         * getParameter(String): String
         * getParameterNames(): Enumeration
@@ -226,13 +228,18 @@ The client gets the response
     * methods:
         * getContextPath(): String
         * getCookies(): Cookie[]
+            * the cookies associated with this request
+        * getIntHeader(String): int
         * getHeader(String): String
+            * the client's platform and browser info
         * getQueryString(): String
         * getSession(): HttpSession
+            * the session associated with this client
         * getMehod(): String
+            * the HTTP method of the request
         * // MANY more methods
 
-##### Response
+##### Response interface
 * **ServletResponse** interface
     * javax.servlet.ServletResponse
     * methods:
@@ -254,15 +261,19 @@ The client gets the response
         * // MANY more methods
 
 
+### Request
+
 #### the HTTP Method
 * HTTP 1.1 Methods and the correspondings
     * GET - doGet()
         * to get the thing(resource/file) at the requested URL
+        * HTTP 1.1 spec declares GET idempotent
     * POST - doPost()
         * askes the server to accept the body info attached to the reqeust
         * and give it to the thing at the requested URL
     * HEAD - doHead()
         * askes for only the header part of whatever a GET would return
+        * HTTP 1.1 spec declares HEAD idempotent
     * TRACE - doTrace()
         * askes for a loopback of the request message
         * so that the client can see what's being received on the other end
@@ -271,6 +282,7 @@ The client gets the response
         * akses for a list of the HTTP methods to which the thing at the requested URL can respond
     * PUT - doPut()
         * says to put the enclosed info at the requested URL
+        * HTTP 1.1 spec declares PUT idempotent
     * DELETE - doDelete()
         * says to delete the thing(resource/file) at the requested URL
     * CONNECT - no mechanism to handle this in servlet API
@@ -279,6 +291,139 @@ The client gets the response
 * GET and POST
     * POST has a body
     * GET requests can be bookmarked; POST requests cannot
-    * GET: the parameter shouws up after URL
+    * GET: the parameter shows up after URL
+    * GET: only the request header info (no body to care about)
     * GET: for getting things (do not make any changes on the server)
     * POST: send data to be processed (to change somthing on the server)
+    * GET: idempotent; POST: not idempotent
+        * you can do the same thing over and over again, with no unwanted side effects
+
+#### more about methods
+* when I want to support both GET and POST from a single servlet
+    * put logic in doGet() then have the doPost() delegate to the doGet() method if neccessary
+    ```java
+    public void doPost(...) throws ... {
+        doGet(request, response);
+    }
+    ```
+* InputStream
+    * when the body is large
+    * when the body holds textual or binary content to be processed
+    * -> use getReader or getInputStream methods
+    * these streams will only contain the body of the HTTP request (not the headers)
+* getHeader and getIntHeader
+    * getIntHeader: when we know the header value is an int (no step to parse)
+    ```java
+    String forwards = request.getHeader("Max-Forwards");
+    int forwardsNum = Integer.parseInt(forwards);
+    // can be done as
+    int forwardsNum = request.getIntHeader("Max-Forwards");
+    ```
+* getServerPort(), getLocalPort(), getRemotePort()
+    * getRemotePorst(): get the client's port (remote means client from servlet)
+    * getServerPort(): to which port was the request originally sent?
+        * the requests are sent to a single port (where the server is listening)
+    * getLocalPort(): on which port did the request endup?
+        * the server turns around and finds a different local port for each thread 
+        * so that the app can handle multiple clients at the same time
+
+#### GET or POST
+* what determines whether the browser sends a GET or POST request?
+* GET
+    * a simple hyperlink always means a GET
+    `<A HREF="httpL//www.example.com/index.html/">click here</A>`
+    * default form is GET
+    `<form action="SelectBeer.do">` when the mothod is not specified: GET request
+* POST
+    * form, wich method attribut is POST
+    ```html
+    <form method="POST" action="SelectBeer.do">
+        <select name="color" size="1">
+            <option>light
+            <!--more options-->
+        </select>
+        <center>
+            <input type="SUBMIT">
+        </center>
+    </form>
+    ```
+    
+
+#### sending and using form examples
+* a two parameter
+    * HTML form
+    ```html
+    <form method="POST" action="SelectBeerTaste.do">
+        Select beer characteristics<p>
+        COLOR:
+        <select name="color" size="1">
+            <option>light
+            <option>amber
+            <option>brown
+        </select>
+        BODY:
+        <select name="body" size="1">
+            <option>light
+            <option>medium
+        </select>
+        <center>
+            <input type="SUBMIT">
+        </center>
+    </form>
+    ```
+    * HTTP POST request
+        * it has both parameters in the body
+    ```HTTP
+    POST /advisor/SelectBeerTaste.do HTTP/1.1
+    Host: www.example.com
+    ...
+    color=dark&body=heavy
+    ```
+    * Servlet class
+    ```java
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws IOException, ServletException {
+        String colorParam = request.getParameter("color");
+        String bodyParam = request.getParameter("body");
+        // ...
+    }
+    ```
+* multiple values for a single parameter
+    * getParameterValues(): returns array
+    * some form input types, like a set of checkboxes, can have more than one value
+    ```html
+    <!--html-->
+    <form method=POST action="SelectBeer.do">
+        Select beer characteristics<p>
+        Can Sizes: <p>
+        <input type=checkbox name=sizes value="12oz"> 12 oz.<br>
+        <input type=checkbox name=sizes value="16oz"> 16 oz.<br>
+        <input type=checkbox name=sizes value="22oz"> 22 oz.<br>
+        <br><br>
+        <center>
+            <input type="SUBMIT">
+        </center>
+    </form>
+    ```
+    ```java
+    // in servlet, under doPost method
+    // use getParameterValues() method
+    String one = request.getParameterValues("sizes")[0];
+    String[] sizes = request.getParameterValues("sizes");
+    // to See everything in the array
+    String[] sizes = request.getParameterValuse("sizes");
+    for(int x=0; x<sizes.length; x++) {
+        // out is a PrintWriter from response
+        out.println("<br>sizes: " + sizes[x]);
+    }
+    ```
+
+
+### Response
+* response: what goes back to the client
+* the browser gets, parses, renders for the user
+* typically,
+    * set content type (setContentType())
+    * get output stream (like a Writer) from the response object (getWriter())
+    * use the output stream to write the HTML that goes back to the client
+        ( doing I/O to write HTML like println())
