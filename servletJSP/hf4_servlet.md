@@ -429,7 +429,7 @@ The client gets the response
         ( doing I/O to write HTML like println())
 * but there are other possible cases
 
-#### case. send a JAR to the client
+#### send a JAR to the client
 * instead of sending back an HTML page,
  the response contains the bytes representing the JAR
 * need to: 
@@ -441,9 +441,10 @@ The client gets the response
     * The Browser sends an HTTP request to the server with the name of the requeste servlet(Code.do)
     * The Container sends the request to the `CodeReturn` servlet
         * the `CodeReturn` servlet is mapped to `Code.do` in the DD
-    * The `CodeReturn` servlet gets the bytes for the JAR
-    * The `CodeReturn` servlet gets and output stream from the response
-    * The `CodeReturn` servlet wrties out the bytes representing the JAR
+    * The `CodeReturn` servlet 
+        * gets the bytes for the JAR
+        * gets and output stream from the response
+        * wrties out the bytes representing the JAR
     * The HTTP seponse now holds the bytes representing the JAR
     * the JAR starts downloading onto the client's machine
 * `CodeReturn` servlet in the above scenario, to download the JAR
@@ -516,3 +517,59 @@ The client gets the response
     out.write(aByteArray);
     ```
 
+#### setHeader addHeader
+* `response.addHeader("foo", "bar");`
+    * if "foo" is not already in the response header:
+        * add a new header "foo" and the value "bar"
+    * if "foo" is already exist in the header
+        * add "bar" as an additional value
+* `response.setHeader("foo", "bar");`
+    * if "foo" is not already in the response header:
+        * add a new header "foo" and the value "bar"
+    * if "foo" is already exist in the header
+        * replace existing value with "bar"
+* `response.setIntHeader("foo", 42);` for header with int value
+    * if "foo" is not already in the response header:
+        * add a new header "foo" and the value "bar"
+    * if "foo" is already exist in the header
+        * replace existing value with 42
+
+
+#### Redirect
+* redirect the request to a completely different URL
+    * the servlet calls sendRedirect(aString) on the response
+        `response.sendRedirect("http://www.google.com");`: redirect to google
+        * sendRedirect takes a String, which is an URL
+        * NOT URL object
+    * the HTTP response has a status code "301" and a "Location" header with URL as its value
+    * the brwser 
+        * gets the 301 status code 
+        * looks for the "Location" header 
+        * makes a new request using the value of "Location" header URL
+    * the user sees the new URL in the browser
+* using relative URLs in sendRedirect()
+    * starting with forward slash (`/`) : relative from root
+    * starting without forward slash: relative from the original URL
+    * example:
+        * original request URL: `http://www.example.com/myApp/cool/bar.do`
+        * `sendRedirect("foo/stuff.html");` : starts without `/`
+            * `http://www.example.com/myApp/cool/foo/stuff.html`
+        * `sendRedirect("/foo/stuff.html");` : starts with `/` (root)
+            * `http://www.example.com/foo/stuff.html`
+* throws IllegalStateException if you try to invoke it after the response has already been committed
+    * 'committed': response has been sent, the data has been flushed to the stream
+    * cannot write to the response and then call sendRedirect()
+
+
+#### request dispatch
+* the server do the work (not on the client side)
+* example scenario
+    * the servlet decides that the request should go to another part of the web app (like JSP)
+    * the servlet calls
+    ```java
+    requestDispatcher view = request.getRequestDispatcher("result.jsp");
+    view.forward(request, response);
+    ```
+    * the JSP takes over the response
+    * the browser gets the response tin the usual way and renders it
+    * the URL in the browser bar doesn't change
