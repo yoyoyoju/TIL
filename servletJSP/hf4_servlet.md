@@ -427,3 +427,92 @@ The client gets the response
     * get output stream (like a Writer) from the response object (getWriter())
     * use the output stream to write the HTML that goes back to the client
         ( doing I/O to write HTML like println())
+* but there are other possible cases
+
+#### case. send a JAR to the client
+* instead of sending back an HTML page,
+ the response contains the bytes representing the JAR
+* need to: 
+    * read the bytes fo the JAR file
+    * write them to the response's output stream
+* example scenario
+    * `code.jar` link was clicked
+        * the link refers to a servlet named `Code.do`
+    * The Browser sends an HTTP request to the server with the name of the requeste servlet(Code.do)
+    * The Container sends the request to the `CodeReturn` servlet
+        * the `CodeReturn` servlet is mapped to `Code.do` in the DD
+    * The `CodeReturn` servlet gets the bytes for the JAR
+    * The `CodeReturn` servlet gets and output stream from the response
+    * The `CodeReturn` servlet wrties out the bytes representing the JAR
+    * The HTTP seponse now holds the bytes representing the JAR
+    * the JAR starts downloading onto the client's machine
+* `CodeReturn` servlet in the above scenario, to download the JAR
+    ```java
+    // imports code here
+
+    public class CodeReturn extends HttpServlet {
+        public void doGet(HttpServletRequest request, HttpServletResponse response)
+                throws IOException, ServletException {
+            // let the browser recognize that this is a JAR (not HTML)
+            response.setContentType("application/jar");
+            
+            ServletContext ctx = getServletContext();
+            // give me an input stream for the resource named bookCode.jar
+            InputStream is = ctx.getResourceAsStream("/bookCode.jar");
+
+            int read = 0;
+            byte[] bytes = new byte[1024];
+
+            OutputStream os = response.getOutputStream();
+            // read the JAR bytes
+            // then write the bytes to the output stream
+            while ((read = is.read(bytes)) != -1) {
+                os.write(bytes, 0, read);
+            }
+            os.flush();
+            os.close();
+        }
+    }
+    ```
+* the JAR file location
+    * `/`, represents the root of the web app
+    * for example, if the web app's name is JarDownload, it is `JarDownload/bookCode.jar`
+* content type: MIME type
+    * `response.setContentType("application/jar");`
+    * tell the browser what I am sending back, so the browser can do the right thing
+    * it should be set BEFORE  the metods for the output stream (such as getWriter() or getOutputStream())
+    * Common MIME type
+        * text/html
+        * application/pdf
+        * video/quichtime
+        * application/java
+        * image/jpeg
+        * application/jar
+        * application/octet-stream
+        * application/x-zip
+
+
+#### two choices for output
+* ServletResponse interface gives only two streams to choose from:
+    * character data: PrintWriter
+    * bytes: ServletOutputStream
+* PrintWriter
+    * it wraps the ServletOutPUtStream 
+        * (it has a reference to the ServletOutputStream and delegates calls to it)
+    * it adds higher-level character-friendly methods
+    * use it for:
+        * printing text data to a character stream
+    * example
+    ```java
+    PrintWriter writer = response.getWriter();
+    writer.println("some text and HTML");
+    ```
+* OutputStream
+    * use it for:
+        * writing anything else 
+    * example
+    ```java
+    ServletOutputStream out = response.getOutputStream();
+    out.write(aByteArray);
+    ```
+
