@@ -26,7 +26,12 @@
 
 
 ### Init Parameters
-* initialization parameter
+* initialization parameters
+    * deploy-time constants
+    * one cannot set them
+    * to change it, one should re-deploy the web-app
+* for some people, 'init parameter' refers to 'servlet init parameter'
+* only String can be the parameter
 
 
 #### servlet init parameters
@@ -44,24 +49,24 @@
     * HOW TO USE IT:
         * in the deployment descriptor (web.xml) file:
             * INSIDE the <servlet> element
-        ```xml
-        <servlet>
-            <servlet-name>BeerParamTests</servlet-name>
-            <servlet-class>TestInitParams</servlet-class>
+            ```xml
+            <servlet>
+                <servlet-name>BeerParamTests</servlet-name>
+                <servlet-class>TestInitParams</servlet-class>
 
-            <init-param>
-                <param-name>adminEmail</param-name>
-                <param-value>example@example.com</param-value>
-            </init-param>
-        </servlet>
-        ```
+                <init-param>
+                    <param-name>adminEmail</param-name>
+                    <param-value>example@example.com</param-value>
+                </init-param>
+            </servlet>
+            ```
         * in the servlet code
             * every servlet inherits a getServletConfig() method
             * getServletConfig() returns servletConfig
             * servletConfig has getInitParameter() method
-        ```java
-        out.println(getServletConfig().getInitParameter("adminEmail"));
-        ```
+            ```java
+            out.println(getServletConfig().getInitParameter("adminEmail"));
+            ```
     * NOTES:
         * servletConfig is available only after initialization
             * getServletConfig, cannot called in constructor
@@ -72,7 +77,7 @@
                 * creates a new ServletConfig instance for this servlet
                 * creates a name String and a value String for each servlet init parameter
                     * assume we have only one
-                * gives the ServletConfig references to the name/value init parameters
+                * gives the ServletConfig the references to the name/value init parameters
                 * creates a new instance of the servlet class
                 * calls the servlet's init method with arguments (`init(ServletConfig)`)
                     * passing the reference to the ServletConfig 
@@ -147,34 +152,69 @@
 
 
 #### context init parameters
-* init parameters available to the entire webapp
-    * any servlet and JSP in the app automatically has access to the context init parameters
-    * ServletContext is one per web app
-        * all the parts of the web app share it
-        * if the application is distributed across multiple servers, one ServletContext per JVM
+* `ServletContext`
+    * init parameters available to the entire webapp
+        * any servlet and JSP in the app automatically has access to the context init parameters
+        * ServletContext is one per web app
+            * all the parts of the web app share it
+            * if the application is distributed across multiple servers, one ServletContext per JVM
+        * it is read only once, when the web-app is ployed
     * HOW TO USE IT:
         * in the deployment descriptor (web.xml) file:
             * OUTSIDE any <servlet> declaration
             * inside the <web-app>
             * use `<context-param>` element
-        ```xml
-        <web-app ....>
-            <servlet>
-                <servlet-name>BeerParamTests</servlet-name>
-                <servlet-class>TestInitParams</servlet-class>
-            </servlet>
+            ```xml
+            <web-app ....>
+                <servlet>
+                    <servlet-name>BeerParamTests</servlet-name>
+                    <servlet-class>TestInitParams</servlet-class>
+                </servlet>
 
-            <context-param>
-                <param-name>adminEmail</param-name>
-                <param-value>admin@example.org</param-value>
-            </context-param>
-        </web-app>
-        ```
+                <context-param>
+                    <param-name>adminEmail</param-name>
+                    <param-value>admin@example.org</param-value>
+                </context-param>
+            </web-app>
+            ```
         * in the servlet code:
             * every servlet inherits a getServletContext() method
             * getServletContext() returns a ServletContext object
             * ServletContext objects have getInitParameter(String)
-        ```java
-        out.println(getServletContext().getInitParameter("adminEmail"));
-        ```
+            ```java
+            out.println(getServletContext().getInitParameter("adminEmail"));
+            ```
+    * Web-app initialization: when the web app is deployed, the Container does followings
+        * reads the deployment descriptor 
+        * creates a name/value String pair for each <context-param>
+        * creates a new instance of ServletContext
+        * gives the ServletContext a reference to each name/value pair 
+            * every servlet and JSP deployed as part of a single web app has access to that same ServletContext
+    * `ServletContext` interface (javax.servlet.ServletContext): methods
+        * getInitParameter(String)
+        * getIniParameterNames()
+        * getAttribute(String)
+        * getAttributeNames()
+        * setAttribute(String, Object)
+        * removeAttribute(String)
+        * getMajorVersion()
+        * getServerInfo()
+        * getRealPath(String)
+        * getResourceAsStream(String)
+        * getRequestDispatcher(String)
+        * log(String) : write server's log file(vendor-specific) or System.out
+            * but it's more practical to use other way to log such as,
+            * [Log4j](http://logging.apache.org/log4j) or loggin API(java.util.logging)
+        * // more methods
+    * to get the ServletContext
+        * `getServletConfig().getServletContext().getInitParameter()`
+            * a servlet's ServletConfig object always holds a reference to the ServletContext
+            * if the class is not a servlet and a ServletConfig is passed, one can use this
+        * `this.getServletContext().getInitParameter()`
+            * `getServletContext()` method comes from GenericServlet
+            * class, which inherits GenericServlet (or HttpServlet), can use this method
 
+
+
+### Listener
+* when one need to initialize the web-app, before doing anything else
