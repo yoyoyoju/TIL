@@ -1,5 +1,5 @@
-# HTTP
-(based on HTTP5, [webpage](https://www.w3.org/TR/html52/introduction.html), Jan2019)
+# HTML
+(based on HTML5, [webpage](https://www.w3.org/TR/html52/introduction.html), Jan2019)
 
 ### quick intro
 a basic HTML document example
