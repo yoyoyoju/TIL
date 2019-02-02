@@ -8,18 +8,18 @@
         <servlet-class>com.example.web.BeerSelect</servlet-class>
     </servlet>
 
-    <servlet-mapping>
-        <servlet-name>Ch3 Beer</servlet-name>
-        <url-pattern>/SelectBeer.do</url-pattern>
-    </servlet-mapping>
-
     <servlet>
         <servlet-name>OutstreamEx</servlet-name>
         <servlet-class>com.example.web.OutstreamEx</servlet-class>
     </servlet>
 
     <servlet-mapping>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <url-pattern>/SelectBeer.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
         <servlet-name>OutstreamEx</servlet-name>
-        <servlet-class>/OutstreamEx.do</url-pattern>
-    </servlet>
+        <url-pattern>/OutstreamEx.do</url-pattern>
+    </servlet-mapping>
 </web-app>
