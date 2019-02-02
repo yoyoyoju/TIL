@@ -18,6 +18,11 @@
         <servlet-class>com.example.web.MultiChoiceEx</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>RedirectEx</servlet-name>
+        <servlet-class>com.example.web.RedirectExample</servlet-class>
+    </servlet>
+
 
     <servlet-mapping>
         <servlet-name>Ch3 Beer</servlet-name>
@@ -32,5 +37,10 @@
     <servlet-mapping>
         <servlet-name>MultipleChoice</servlet-name>
         <url-pattern>/MultipleParam.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RedirectEx</servlet-name>
+        <url-pattern>/RedirectEx.do</url-pattern>
     </servlet-mapping>
 </web-app>
