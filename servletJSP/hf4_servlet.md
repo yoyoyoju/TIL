@@ -411,10 +411,13 @@ The client gets the response
     String one = request.getParameterValues("sizes")[0];
     String[] sizes = request.getParameterValues("sizes");
     // to See everything in the array
-    String[] sizes = request.getParameterValuse("sizes");
+    String[] sizes = request.getParameterValues("sizes");
+    // getParameterValues returns null if nothing is check!!!
+    if (sizes != null) {
     for(int x=0; x<sizes.length; x++) {
         // out is a PrintWriter from response
         out.println("<br>sizes: " + sizes[x]);
+    }
     }
     ```
 

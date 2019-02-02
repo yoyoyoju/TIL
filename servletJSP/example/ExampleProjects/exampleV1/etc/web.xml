@@ -13,6 +13,12 @@
         <servlet-class>com.example.web.OutstreamEx</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>MultipleChoice</servlet-name>
+        <servlet-class>com.example.web.MultiChoiceEx</servlet-class>
+    </servlet>
+
+
     <servlet-mapping>
         <servlet-name>Ch3 Beer</servlet-name>
         <url-pattern>/SelectBeer.do</url-pattern>
@@ -21,5 +27,10 @@
     <servlet-mapping>
         <servlet-name>OutstreamEx</servlet-name>
         <url-pattern>/OutstreamEx.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>MultipleChoice</servlet-name>
+        <url-pattern>/MultipleParam.do</url-pattern>
     </servlet-mapping>
 </web-app>

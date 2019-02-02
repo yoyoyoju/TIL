@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>multiple parameters</title>
+    </head>
+    <body>
+        <h1>to use multiple parameters</h1>
+        <form method="POST" action="MultipleParam.do">
+            Select anything<p>
+            ANIMAL:
+            <select name="animal" size="1">
+                <option>dog
+                <option>cat
+                <option>dolphin
+                <option>horse
+            </select>
+            COLOR:
+            <select name="color" size="1">
+                <option>red
+                <option>blue
+                <option>white
+                <option>black
+            </select>
+            <br>
+            ADJECTIVES:<br>
+            <input type=checkbox name=adjectives value="tired"> tired <br>
+            <input type=checkbox name=adjectives value="great"> great <br>
+            <input type=checkbox name=adjectives value="fluffy"> fluffy <br>
+            <center>
+                <input type="SUBMIT">
+            </center>
+        </form>
+        <p>
+        the corresponding servlet is: com.example.web.MultiChoiceEx
+        </p>
+    </body>
+</html>
