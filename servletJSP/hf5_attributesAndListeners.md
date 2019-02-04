@@ -217,4 +217,41 @@
 
 
 ### Listener
-* when one need to initialize the web-app, before doing anything else
+* a class gets notified in the key events of ServletContext (initialization , destruction)
+* the class can do:
+    * when the context is initialized (the app is being deployed)
+        * get the context init parameters from the ServletContext
+        * use the init parameter lookup name to make a database connection
+        * store the database connection as an attribute, so that all parts of the web app can access it
+    * when the context is destroyed (the app is undeployed or goes down)
+        * close the database connection
+* **ServletContextListener** interface
+    * contextInitialized(ServletContextEvent)
+    * contextDestoryed(ServletContextEvent)
+* how to use
+    * create a listener class
+    * it can be deployed into `/WEB-INF/classes`
+    * put a `<listener>` element in the web.xml Deployment Descriptor
+        ```xml
+        <listener>
+            <listener-class>
+                com.example.MyServletContextListener
+            </listener-class>
+        </listener>
+        ```
+* example
+    ```java
+    import javax.servlet.*;
+
+    public class MyServletContextListener implements ServletContextListener {
+        public void contextInitialized(ServletContextEvent event) {
+            ServletContext sc
+            // code to initialize the database connection
+            // and store it as a context attribute
+        }
+        public void contextDestroyed(ServletContextEvent event) {
+            // code to close the database connection
+        }
+    }
+    ```
+    
