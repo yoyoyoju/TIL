@@ -77,6 +77,9 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Booleanexpressions](java/booleanExpressions.md)
+* [Arraylist](java/arraylist.md)
+* [Casting](java/casting.md)
 * [Developingclass](java/developingClass.md)
 * [Timer](java/timer.md)
 * [Sets](java/sets.md)
@@ -96,7 +99,6 @@ Today I Learned.
 * [Drawing](java/drawing.md)
 * [Comparator](java/comparator.md)
 * [Comparable](java/comparable.md)
-* [Arraylist](java/arraylist.md)
 * [Actionevents](java/actionEvents.md)
 * [Abstractclass](java/abstractClass.md)
 * [Override](java/override.md)

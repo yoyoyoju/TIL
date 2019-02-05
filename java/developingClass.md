@@ -3,6 +3,7 @@
 * list the instance variables and methods
 * write prepcode for the methods
     * prepcode: a form of pseudocode to focus on the logic
+    * write about what to do (not how to do it)
 * write test code for the methods
 * implement the class
 * test the methods
