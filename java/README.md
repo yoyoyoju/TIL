@@ -1,5 +1,7 @@
 # Java
 * [Developingclass](developingClass.md)
+   * [Prepcode](developingClass.md#prepcode)
+   * [Extreme programming](developingClass.md#extreme-programming)
 * [Timer](timer.md)
 * [Sets](sets.md)
    * [Hashset](sets.md#hashset)
