@@ -77,6 +77,7 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Inheritance](java/inheritance.md)
 * [Booleanexpressions](java/booleanExpressions.md)
 * [Arraylist](java/arraylist.md)
 * [Casting](java/casting.md)
@@ -104,7 +105,6 @@ Today I Learned.
 * [Override](java/override.md)
 * [Objectpolymorphism](java/objectPolymorphism.md)
 * [Map](java/map.md)
-* [Inheritance](java/inheritance.md)
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
 * [Readingfile](java/readingFile.md)
 * [Interfaces](java/interfaces.md)

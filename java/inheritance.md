@@ -1,6 +1,16 @@
 # inheritance
-* superclass and subclass
 * use `extends` keyword
+    * subclass *extends* the superclass
+    * the subclass inherits the members (instance variables, methods) of the superclass
+    * IS-A test: subclass IS-A superclass
+        * Triangle IS-A Shape, Cat IS-A Feline
+        * if it is X HAS-A Y, X does not extend Y, rather X has a reference to Y
+* how to design the inheritance tree
+    * look for objects that have common attributes and behaviors
+    * design a class that represents the common state and behavior
+    * decide if a subclass needs behaviors (method implementations) that are specific to that particular subclass type
+    * look for more opportunities to use abstraction, by finding two or more subclasses that might need common behavior
+
 ```java
 public class Person {
     private String name;
@@ -28,6 +38,10 @@ public class Student extends Person {
 }
 ```
 
+### override 
+* override:
+    * the subclass redefines one of its inherited methods when it needs to change or extend the behavior of that method
+
 ### polymorphism
 ```java
 Person lucas = new Student("lucas", 1);
@@ -40,7 +54,10 @@ lucas.toString();   // work with toString definded in Student
     * Objects are diverse, which means they can be used through different variable types.
     * The execution method does always depend of the object's actual type.
     * if the actual class does not have the method, move to its parent class.
+        * the compiler guarantees that a particular method is callable for a specific reference type
+        * JVM picks the right one (most specific one) at runtime
     * `lucas` is actually `Student`: use `Student`'s `toString` method.
+    * *the lowest one wins*: the lowest (on the inheritance tree) version of method is called
 
 ### access modifier
 * private
@@ -62,3 +79,8 @@ lucas.toString();   // work with toString definded in Student
     }
     ```
 
+
+----
+reference:
+* MOOC.fi java
+* *headfirst java* chapter 7
