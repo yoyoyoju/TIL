@@ -1,11 +1,25 @@
 # Abstract Class
-
-* abstract classes do not produce instances
-    * but the subclasses can create instances
+* class that cannot be instantiated
+    * abstract classes cannot produce instances
+    * can use abstract type as a reference type
+    * the class must be extended
+    * *concrete* class: it's okay to make objects of that type
 * abstract class can contain normal and abstract methods
 * use keyword `abstract` for abstract classes or abstract method
     * `public abstract class ClassName`
     * `public abstract returnType methodName`
+* example codes
+    ```java
+    abstract public class Canine extends Animal {...}
+    public class MakeCanine {
+        public void go() {
+            Canine c;   // abstract class as a reference type
+            c = new Dog();  // Dog is a concrete class
+            c = new Canine();   // compile error, as Canine is abstract
+            ...
+        }
+    }
+
 ```java
 public abstract class Operation {
     private String name;
@@ -89,6 +103,14 @@ ui.addOperation(new Addition());
 ui.start();
 ```
 
+
+### abstract method
+* method can also be abstract
+    * the method must be overridden to be used
+    * the class must be abstract too
+    * for methods that there is no proper generic method implementation
+    * abstract methods have not body
+        `public abstract void eat();`
 
 -----------
 Codes from [mooc.fi](https://materiaalit.github.io/2013-oo-programming/part2/week-10/)
