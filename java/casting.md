@@ -1,6 +1,25 @@
 ### Casting
 * cast an object reference back to its real type
     * see also [inheritance](inheritance.md#polymorphism)
+    * to call a class-specific methods, the reference type should match
+    ```java
+    // example by custom Class Dog
+    Object dog = new Dog(); // the reference type is not dog
+    // Dog-specific methods does not work, such as
+    // dog.bark(); // NOT work!
+
+    Dog realDog = (Dog) dog;    // cast the object back to a Dog
+    realDog.bark(); //works now
+    ```
+    * to make sure:
+        * when it goes wrong, ClassCastException at runtime
+    ```java
+    if (o instanceof Dog) {
+        Dog d = (Dog) dog;
+    }
+    ```
+
+
 
 
 ### Casting Primitives
