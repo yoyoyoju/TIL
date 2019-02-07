@@ -80,6 +80,20 @@ public class Student extends Person {
         ```java
         Animal myDog = new Dog(); // the reference type is superclass of the objecttype
         ```
+        * another example
+        ```java
+        ArrayList<Object> myDogs = new ArrayList<>();
+        Dog aDog = new Dog();   // the reference type is Dog
+        myDogs.add(aDog);       
+        // does not work!!!
+        Dog d = myDogs.get(0);  // get methods returns type Object
+        // works
+        Object o = myDogs.get(0);          // the reference type is Object
+        // does not work
+        o.bark();       // bark is a method from Dog class; Object class doe not have it
+        // o can only do methods from Object class
+        o.hashCode();   // works
+        ```
 * advantage:
     * can write flexible, cleaner and efficient code
     * easier to extend

@@ -1,4 +1,9 @@
-# Casting Primitives
+### Casting
+* cast an object reference back to its real type
+    * see also [inheritance](inheritance.md#polymorphism)
+
+
+### Casting Primitives
 
 * shove bigger size primitive into smaller size (without casting) won't work
 ```java

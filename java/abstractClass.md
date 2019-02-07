@@ -109,8 +109,13 @@ ui.start();
     * the method must be overridden to be used
     * the class must be abstract too
     * for methods that there is no proper generic method implementation
-    * abstract methods have not body
+    * abstract methods does not have body
         `public abstract void eat();`
+    * the first concrete class class in the inheritance tree must implement all abstract methods
+* advantage:
+    * define part of the protocol for a group of subtypes, without implementing the actual method
+
+
 
 -----------
 Codes from [mooc.fi](https://materiaalit.github.io/2013-oo-programming/part2/week-10/)
