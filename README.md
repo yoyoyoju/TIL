@@ -77,8 +77,9 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
-* [Casting](java/casting.md)
 * [Inheritance](java/inheritance.md)
+* [Interfaces](java/interfaces.md)
+* [Casting](java/casting.md)
 * [Object](java/object.md)
 * [Abstractclass](java/abstractClass.md)
 * [Booleanexpressions](java/booleanExpressions.md)
@@ -108,7 +109,6 @@ Today I Learned.
 * [Map](java/map.md)
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
 * [Readingfile](java/readingFile.md)
-* [Interfaces](java/interfaces.md)
 * [Hashmap](java/hashMap.md)
 * [Generics](java/generics.md)
 * [Exceptions](java/exceptions.md)

@@ -164,6 +164,14 @@ public class Student extends Person {
 * final keyword: it's the end of the inheritance line
 * private constructors: if a class has only private constructors, it cannot be subclassed
 
+
+### no multiple inheritance for java
+* multiple inheritance:
+    * having multiple superclasses
+    * java does not allow to do multiple inheritance
+    * *Deadly diamond of death*
+        * there might be potential ambiguities, which needs extra rules to solve
+        * for example both of the supler classes have a method with same name: which method of those should be used?
 ----
 reference:
 * MOOC.fi java
