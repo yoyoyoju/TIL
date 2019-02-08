@@ -8,7 +8,7 @@
 
 #### Objectives
 
-1. initializaation parameters:
+1. initialization parameters:
     * servlet code to access initialization parameters
     * deployment descriptor elements to declare initialization parameters
 2. fundamental servlet attribute scopes (request, session, and context)
@@ -193,7 +193,7 @@
     * `ServletContext` interface (javax.servlet.ServletContext): methods
         * getInitParameter(String)
         * getIniParameterNames()
-        * getAttribute(String)
+        * getAttribute(String)  // returns Object: need to cast the return
         * getAttributeNames()
         * setAttribute(String, Object)
         * removeAttribute(String)
@@ -229,9 +229,13 @@
     * contextInitialized(ServletContextEvent)
     * contextDestoryed(ServletContextEvent)
 * how to use
-    * create a listener class
-    * it can be deployed into `/WEB-INF/classes`
-    * put a `<listener>` element in the web.xml Deployment Descriptor
+    1. create a listener class (implements ServletContextListener)
+        * gets the context init parameters
+        * does things with the parameter
+        * sets things as context attribute
+    2. it can be deployed into `/WEB-INF/classes`
+    3. put a `<listener>` element in the web.xml Deployment Descriptor
+        * to tell the Container that we have a listener for this app
         ```xml
         <listener>
             <listener-class>
@@ -240,18 +244,90 @@
         </listener>
         ```
 * example
+    * the Listener
     ```java
+    package com.example;
+
     import javax.servlet.*;
 
+    // my Listener class implements javax.servlet.ServletContextListener
     public class MyServletContextListener implements ServletContextListener {
         public void contextInitialized(ServletContextEvent event) {
-            ServletContext sc
-            // code to initialize the database connection
-            // and store it as a context attribute
+            /**
+             * code to initialize the database connection
+             * and store it as a context attribute
+             **/
+
+            // get ServletContext from event
+            ServletContext sc = event.getServletContest();
+
+            // get init parameter from the context
+            String dogBreed = sc.getInitParameter("breed");
+
+            // make new dog
+            Dog d = new Dog(dogBreed);
+
+            // use the context to set an attribute
+            // (name/object) pair
+            // now other parts of the app will be able to get the value of the attribute
+            sc.setAttribute("dog", d);
         }
+
         public void contextDestroyed(ServletContextEvent event) {
-            // code to close the database connection
+            /**
+             * code to close the database connection
+             **/
+
+            // the dog does not need to be cleaned up
         }
     }
     ```
-    
+    * the servlet to test the listener above
+    ```java
+    package com.example;
+
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+    import java.io.*;
+
+    public class ListenerTester extends HttpServlet {
+        public void doGet (HttpServletRequest request, HttpServletResponse response)
+                throws IOException, ServletException {
+            response.setContentType("text/html");
+            PrintWriter out = response.getWrite();
+
+            out.println("test context attributes set by listener<br>");
+            out.prtinln("<br>");
+            // use the dog created by Listener
+            // getAttribute returns Object: need to cast the return
+            Dog dog = (Dog) getServletContext().getAttribute("dog");
+            out.println("Dog's breed is: " + dog.getBreed());
+        }
+    }
+    ```
+    * Deployment Descriptor
+    ```xml
+    <!-- /WEB-INF/web.xml -->
+    <web-app ...>
+        <servlet>
+            <servlet-name>ListenerTester</servlet-name>
+            <servlet-class>com.example.ListenerTester</servlet-class>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>ListenerTester</servlet-name>
+            <url-pattern>/ListenTest.do</url-pattern>
+        </servlet-mapping>
+
+        <context-param>
+            <param-name>breed</param-name>
+            <param-value>Great Dane</param-value>
+        </context-param>
+
+        <listener>
+            <listener-class>
+                com.example.MyServletContextListener
+            </listener-class>
+        </listener>
+    </web-app>
+    ```
