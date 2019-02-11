@@ -3,24 +3,32 @@
 ### why interface
 * as an alternative of multiple inheritance:
     * having the polymorphic benefit
-    * without the pain from the Deadly Diamond of Death [(see more)](inheritance.md#access+modifier)
-    * (inheritance.md#no%20multiple%20inheritance%20for%20java)
+    * without the pain from the Deadly Diamond of Death [(see; no multiple inheritance for java)](inheritance.md)
     * by making all the methods abstract:
         * the subclass must implemnt the method,
         * so at runtime, no confusion about which version of method to be called
 
+
+----
+ref: headfirst java, ch8
+
 ### Interface
 * Interface
+    * IS-A relation
     * an instrument we have to define the functionality our classes should have
     * behavioural agreement
     * `public interface InterfaceName {}`
-    * access modifier is not specified, because it is always public
-    * class implements interface
+    * the methods are always `public` and `abstract`: no need to type them
+    * class implements interface (can implement multiple interfaces)
+    * interfaces define roles you can play (parent class defines who you are)
 ```java
+// to DEFINE an interface: use the keyword "interface"
 public interface Readable {
+    // all methods are abstract
     String read();
 }
 
+// IMPLEMENT an interface: use the keyword "implement"
 public class SMS implements Readable {
     private String content;
 
