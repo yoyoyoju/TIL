@@ -1,5 +1,13 @@
 # Interfaces
 
+### why interface
+* as an alternative of multiple inheritance:
+    * having the polymorphic benefit
+    * without the pain from the Deadly Diamond of Death [(see more)](inheritance.md#no multiple inheritance for java)
+    * by making all the methods abstract:
+        * the subclass must implemnt the method,
+        * so at runtime, no confusion about which version of method to be called
+
 ### Interface
 * Interface
     * an instrument we have to define the functionality our classes should have

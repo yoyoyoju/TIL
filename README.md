@@ -77,8 +77,8 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
-* [Inheritance](java/inheritance.md)
 * [Interfaces](java/interfaces.md)
+* [Inheritance](java/inheritance.md)
 * [Casting](java/casting.md)
 * [Object](java/object.md)
 * [Abstractclass](java/abstractClass.md)
