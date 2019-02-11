@@ -5,6 +5,7 @@
     * constructor: File(String pathname)
     * the contents can be read using Scanner class
     * public Scanner (File source)
+        * `import java.util.*`
         * `Scanner`'s method `nextLine()` does not reture a new line at the end
         * `hasNext()` boolean true if the file contains something more to read
         * `next()` reads the following word as String object
@@ -13,6 +14,7 @@
             * `new Scanner(f, "UTF-8");` // use UTF-8 character set
             * use environment variable: JAVA_TOOL_OPTIONS "-Dfile.encoding=UTF8"
 ```java
+    import java.io.File;
     // filename.txt in the project root
     File file = new File("filename.txt"); 
 

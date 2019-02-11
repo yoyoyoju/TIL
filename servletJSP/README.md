@@ -1,9 +1,9 @@
 # Servletjsp
+* [Mistakes](mistakes.md)
+   * [Getparametervalues](mistakes.md#getparametervalues)
 * [Hf5 attributesandlisteners](hf5_attributesAndListeners.md)
    * [Init parameters](hf5_attributesAndListeners.md#init-parameters)
    * [Listener](hf5_attributesAndListeners.md#listener)
-* [Mistakes](mistakes.md)
-   * [Getparametervalues](mistakes.md#getparametervalues)
 * [Hf4 servlet](hf4_servlet.md)
    * [Servlet lifecycle](hf4_servlet.md#servlet-lifecycle)
    * [Request and response](hf4_servlet.md#request-and-response)
