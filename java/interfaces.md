@@ -3,7 +3,8 @@
 ### why interface
 * as an alternative of multiple inheritance:
     * having the polymorphic benefit
-    * without the pain from the Deadly Diamond of Death [(see more)](inheritance.md#no%20multiple%20inheritance%20for%20java)
+    * without the pain from the Deadly Diamond of Death [(see more)](inheritance.md#access%20modifier)
+    * (inheritance.md#no%20multiple%20inheritance%20for%20java)
     * by making all the methods abstract:
         * the subclass must implemnt the method,
         * so at runtime, no confusion about which version of method to be called
