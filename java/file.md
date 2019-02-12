@@ -54,7 +54,7 @@ public void readFile(File f) throws FileNotFoundException {
 
 * Character Set Issues
     * to specify the character-set (for example UTF-8)
-    `Scanner reader = new Scanner(file, "UTF-8");
+    `Scanner reader = new Scanner(file, "UTF-8");`
 
 
 ### Writing to a File
@@ -90,3 +90,33 @@ public class FileHandler {
         `FileWriter writer = new FileWriter(filename);`
     * true: append text at the end of the already existing file
         `FileWriter writer = new FileWriter(filename, true);  //append=true`
+
+
+
+
+
+# Related Classes
+
+### Class File
+* java.io.File
+    * public class File extends Object implements Serializable, Comparable<File>
+* method
+    * String getName() : returns the name of the file or directory
+    * String getPath() : converts this abstract pathname into a pathname string
+
+
+###  Class Files
+* java.nio.file.Files
+    * public final class Files extends Object
+    * since 1.7
+* method
+    * public static Stream<Path> walk(Path start, int maxDepth, FileVisitOption... options) throws IOException
+    * public static Stream<Path> walk(Path start, FileVisitOption... options) throws IOException
+        * example [(from stackOverflow)](https://stackoverflow.com/questions/1844688/how-to-read-all-files-in-a-folder-from-java)
+        ```java
+        try (Stream<Path> paths = Files.walk(Paths.get("/home/you/example"))) {
+            paths
+                .filter(Files::isRegularFile)
+                .forEach(System.out::println);
+        }
+        ```
