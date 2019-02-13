@@ -148,8 +148,14 @@ public class Student extends Person {
 
 
 ### superclass
-* call `super` in constructor to call the constructor of superclass
-    * super call must always be in the first line
+* superclass constructors
+    * all the constructors in an object's inheritance tree must run when you make a new object
+    * even abstract classes have constructors
+    * `super()`
+        * call `super` in constructor to call the constructor of superclass
+        * super call must always be in the first statement in each constructor
+            * (or, call another overloaded constructor by `this()`)
+        * superclass constructor must finish before its subclass constructor
 * `super` prefix to call the methods defined in the superclass
     ```java
     @Override
@@ -157,6 +163,10 @@ public class Student extends Person {
         return super.toString() + "\n and additional message";
     }
     ```
+
+
+---
+*headfirst java* chapter9 *constructors and gc*
 
 
 ### cannot be subclassed
