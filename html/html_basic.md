@@ -52,3 +52,24 @@ a basic HTML document example
         * `<em>...</em>` emphasized text
         * `<img src="image.gif" alt="description" width="50" height="50" border="0">` image
         * `<abbr id="ID" class="jargon" style="color:purple;" title="HTML">HTML</abbr>` abbreviation element
+
+
+### block inline
+* block elements:
+    * `<h1>`, `<h6>`, `<p>`, `<blockquote>`
+    * display its own
+* inline elements:
+    * `<q>`, `<a>`, `<em>`
+
+
+### void elements
+* void elements
+    * does not have any content
+    * `<br>`, `<img>`
+
+
+### more elements
+* `<code>` to display code from a computer program
+* `<time>` the content is a date or time
+* `<strong>` toe emphasize with extra strength
+* `<pre>` show the text exactly as I type it
