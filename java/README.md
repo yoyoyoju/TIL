@@ -1,4 +1,8 @@
 # Java
+* [Final](final.md)
+* [Static](static.md)
+   * [Static variable](static.md#static-variable)
+   * [Static initializer](static.md#static-initializer)
 * [Stackheap](stackHeap.md)
 * [Readingfile](readingFile.md)
    * [File api](readingFile.md#file-api)

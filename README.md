@@ -77,6 +77,8 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Final](java/final.md)
+* [Static](java/static.md)
 * [Stackheap](java/stackHeap.md)
 * [Readingfile](java/readingFile.md)
 * [Inheritance](java/inheritance.md)
