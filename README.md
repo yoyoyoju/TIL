@@ -77,6 +77,8 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Import](java/import.md)
+* [Calendar](java/calendar.md)
 * [String](java/string.md)
 * [Wrapping](java/wrapping.md)
 * [Math](java/math.md)
