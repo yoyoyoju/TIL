@@ -77,6 +77,8 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Midi](java/midi.md)
+* [Exceptions](java/exceptions.md)
 * [Import](java/import.md)
 * [Calendar](java/calendar.md)
 * [String](java/string.md)
@@ -117,7 +119,6 @@ Today I Learned.
 * [Map](java/map.md)
 * [Override](java/override.md)
 * [Hashmap](java/hashMap.md)
-* [Exceptions](java/exceptions.md)
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
 * [Generics](java/generics.md)
 * [Automatictests](java/automaticTests.md)
