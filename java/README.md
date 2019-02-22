@@ -1,5 +1,6 @@
 # Java
 * [Jframe](jframe.md)
+   * [Graphics](jframe.md#graphics)
    * [User event](jframe.md#user-event)
 * [Midi](midi.md)
    * [What do we need](midi.md#what-do-we-need)
