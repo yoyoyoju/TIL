@@ -15,6 +15,18 @@
     2. Make a widget(button, text field, etc) `JButton button = new JButton("click me");`
     3. Add the widget to the pane of the frame `frame.getContentPane().add(button);`
     4. Display it (give it a size and make it visible) `frame.setSize(300, 300); frame.setVisible(true);`
+    ```java
+    public void go() {
+        JFrame frame = new JFrame();
+        JButton button = new JButton("Click");
+        Font bigFont = new Font("serif", Font.BOLD, 28);
+        button.setFont(bigFont);
+        frame.getContentPane().add(BorderLayout.NORTH, button);
+        frame.setSize(200, 200);
+        frame.setVisible(true);
+    }
+    ```
+
 
 
 ### graphics
@@ -26,6 +38,51 @@
     * make a subclass of JPanel and override a method, `paintComponenet(Graphics g)`
     * all the graphics code goes inside the paintComponent method
     * I don't call the paintComponent myslef.
+* Graphics and Graphics2D
+    * methods for Graphics
+        * drawImage()
+        * drawLine()
+        * drawPolygon
+        * drawRect()
+        * drawOval()
+        * fillRect()
+        * fillRoundRect()
+        * setColor()
+    * Graphics2D g2d = (Graphics2D) g;
+        * fill3DRect()
+        * draw3DRect()
+        * rotate()
+        * scale()
+        * shear()
+        * transform()
+        * setRenderingHints()
+* examples
+    ```java
+    import java.awt.*;
+    import javax.swing.*;
+
+    class MyDrawPanel extends JPanel {
+        public void paintComponent(Graphics g) {
+            g.setColor(Color.orange);
+            g.fillRect(20, 50, 100, 100);
+
+            // jpg file
+            Image image = new ImageIcon("catzilla.jpg").getImage();
+            // or, for IDE
+            // Image image = new ImageIcon(getClass().getResource("catzilla.jpg")).getImage();
+            g.drawImage(image, 3, 4, this); // 3 pixel from the left edge of the panel, 4 pixel from the top
+
+            // randomly-colored circle on a black background
+            g.fillRect(0, 0, this.getWidth(), this.getHeight()); // fill with default(black) color
+            int red = (int) (Math.random() * 256);
+            int green = (int) (Math.random() * 256);
+            int blue = (int) (Math.random() * 256);
+            Color randomColor = new Color(red, green, blue);
+            g.setColor(randomColor);
+            g.fillOval(70,70,100,100);
+        }
+    }
+    ```
 
 
 ### User event
@@ -101,5 +158,89 @@
     }
     ```
 
+
+### two buttons
+* How to deal with two different buttons: options
+    1. Register the same listener with both buttons
+        ```java
+        class MyGui implements ActionListener {
+            public void go() {
+                colorButton = new JButton();
+                labelButton = new JButton();
+                colorButton.addActionListener(this);
+                labelButton.addActionListener(this);
+            }
+            public void actionPerformed(ActionEvent event) {
+                if(event.getSource() == colorButton) {
+                    frame.repaint();
+                } else {
+                    label.setText("new text");
+                }
+            }
+        }
+        ```
+    2. Create two separate ActionListener classes
+    ```java
+    public class TwoButtons {
+        JFrame frame;
+        JLabel label;
+        public static void main(String[] args) {
+            TwoButtons gui = new TwoButtons();
+            gui.go();
+        }
+
+        public void go() {
+            frame = new JFrame();
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            JButton labelButton = new JButton("Change Label");
+            labelButton.addActionListener(new LabelListener());
+
+            JButton colorButton = new JButton("Change Circle");
+            colorButton.addActionListener(new ColorListener());
+
+            label = new JLabel("label");
+            MyDrawPanel drawPanel = new MyDrawPanel();
+
+            frame.getContentPane().add(BorderLayout.SOUTH, colorButton);
+            frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
+            frame.getContentPane().add(BorderLayout.EAST, labelButton);
+            frame.getContentPane().add(BorderLayout.WEST, label);
+
+            frame.setSize(300, 300);
+            frame.setVisible(true);
+        }
+
+        class LabelListener implements ActionListener {
+            public void actionPerformed(ActionEvent event) {
+                label.setText("changed");
+            }
+        }
+
+        class ColorListener implements ActionListener {
+            public void actionPerformed(ActionEvent event) {
+                frame.repaint();
+            }
+        }
+    }
+    ```
+
+
+### Layout
+* *headfirst java* ch13
+* Big three layout managers:
+    * BorderLayout
+        * default layout for a frame `frame.getContentPane().add(BorderLayout.EAST, button);`
+        * five regions, one component per region
+            * BorderLayout.EAST, WEST, NORTH, SOUTH, CENTER
+    * FlowLayout
+        * each components added left to right
+        * wrapping to a new line when needed
+        * each component is the size it wants to be
+        * default layout for a panel
+    * BoxLayout
+        * stack the components vertically (or horizontally)
+        * each component gets to have its own size
+        * placed in the order in which they're added
 --- 
 *headfirst java* ch12 getting gui

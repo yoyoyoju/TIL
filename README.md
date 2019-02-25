@@ -78,6 +78,8 @@ Today I Learned.
 ---------------
 ### Java
 * [Jframe](java/jframe.md)
+* [Animation](java/animation.md)
+* [Innerclass](java/innerclass.md)
 * [Midi](java/midi.md)
 * [Exceptions](java/exceptions.md)
 * [Import](java/import.md)
