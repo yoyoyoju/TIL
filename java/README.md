@@ -4,6 +4,7 @@
    * [User event](jframe.md#user-event)
    * [Two buttons](jframe.md#two-buttons)
    * [Layout](jframe.md#layout)
+   * [Swing components](jframe.md#swing-components)
 * [Animation](animation.md)
 * [Innerclass](innerclass.md)
    * [Make an inner class from outside](innerclass.md#make-an-inner-class-from-outside)

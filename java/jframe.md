@@ -232,15 +232,104 @@
     * BorderLayout
         * default layout for a frame `frame.getContentPane().add(BorderLayout.EAST, button);`
         * five regions, one component per region
-            * BorderLayout.EAST, WEST, NORTH, SOUTH, CENTER
+            * BorderLayout.EAST, WEST: preferred width, height is upto layout manager
+            * NORTH, SOUTH: get preferred height, width is upto layout manager
+            * CENTER: gets left over space (unless you use pack())
     * FlowLayout
-        * each components added left to right
+        * each components added left to right (or top to bottom)
+        * in order they were addded
         * wrapping to a new line when needed
         * each component is the size it wants to be
-        * default layout for a panel
+        * default layout for a panel (use panel.setLayout() on the panel to set something else)
     * BoxLayout
         * stack the components vertically (or horizontally)
         * each component gets to have its own size
         * placed in the order in which they're added
+        ```java
+        public void go() {
+            JFrame frame = new JFrame();
+            JPanel panel = new JPanel();
+            panel.setBackground(Color.darkGray);
+            panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+            JButton button = new JButton("one");
+            JButton buttonTwo = new JButton("two");
+            panel.add(button);
+            panel.add(buttonTwo);
+            frame.getContentPane().add(BorderLayout.EAST, panel);
+            frame.setSize(250, 200);
+            frame.setVisible(true);
+        }
+        ```
+
+
+### swing components
+* JTextField
+    * `JTextField field = new JTextField(20); // 20 columns of the preferred width`
+    * `JTextField field = new JTextField("name");`
+    * methods
+        * field.getText(): get text out of it
+        * field.setText("text"): put text in it; setText(""): clears the field
+        * field.addActionListener(myActionListener); 
+            * get an actionevent when the user presses return or enter
+            * can also register for keyevents if want to hear about it every time the user presses a key
+        * field.selectAll(); select/highlight the text in the field
+        * field.requestFocus(); put the cursor back in the field
+* JTextArea
+    * can have more than one line of text
+    * to make a JTextArea scroll, have to stick it in a ScrollPane
+    * `JTextArea text = new JTextArea(10, 20);` 10 lines, 20 columns
+    * methods
+        * make it have a vertical scrollbar only
+            ```java
+            JScrollPane scroller = new JScrollPane(text); // text is a JTextArea
+            text.setLineWrap(true);
+            scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+            scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+            panel.add(scroller);
+            ```
+        * replace the text that's in it `text.setText("...");`
+        * append to the text that's int it `text.append("...");`
+        * select/highlight the text in the field `text.selectAll();`
+        * put the cursor back in the field `text.requestFocus();`
+* JCheckBox
+    * `JCheckBox check = new JCheckBox("...");`
+    * methods
+        * listen for an item event(when it is selected or deselected)
+            `check.addItemListener(this);`
+        * handle the event (and find out whether or not it's selected)
+            ```java
+            public void itemStateChanged(ItemEvent ev) {
+                String onOrOff = "off";
+                if (check.isSelected()) onOrOff = "on";
+                System.out.println("check bos is " + onOrOff);
+            }
+            ```
+        * select or deselect it in code `check.setSelected(true);`
+* JList
+    * constructor takes an array of any object type
+    ```java
+    String[] listEntries = {"one", "two"};
+    JList list = new JList(listEntries);
+    ```
+    * methods
+        * make it have a vertical scrollbar
+        ```java
+        JScrollPane scroller = new JScrollPane(list);
+        scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        panel.add(scroller);
+        ```
+        * set the number of lines to show before scrolling `list.setVisibleRowCount(4);`
+        * restrict the user to select only one thing at a time `list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);`
+        * register for list selection events `list.addListSelectionListener(this);`
+        * handle event (find out which thing in the list was selected)
+        ```java
+        public void valueChanged(ListSelectionEvent lse) {
+            if (!lse.getValueIsAdjusting()) {
+                String selection = (String) list.getSelectedValue();
+                System.out.println(selection);
+            }
+        }
+        ```
 --- 
 *headfirst java* ch12 getting gui
