@@ -77,6 +77,7 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Serialize](java/serialize.md)
 * [Jframe](java/jframe.md)
 * [Animation](java/animation.md)
 * [Innerclass](java/innerclass.md)

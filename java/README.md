@@ -1,4 +1,9 @@
 # Java
+* [Serialize](serialize.md)
+   * [Write a serialized object to a file](serialize.md#write-a-serialized-object-to-a-file)
+   * [Connection and chain](serialize.md#connection-and-chain)
+   * [Serializable](serialize.md#serializable)
+   * [Deserialize](serialize.md#deserialize)
 * [Jframe](jframe.md)
    * [Graphics](jframe.md#graphics)
    * [User event](jframe.md#user-event)
