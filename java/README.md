@@ -1,4 +1,5 @@
 # Java
+* [Test](test.md)
 * [Serialize](serialize.md)
    * [Write a serialized object to a file](serialize.md#write-a-serialized-object-to-a-file)
    * [Connection and chain](serialize.md#connection-and-chain)

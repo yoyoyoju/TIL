@@ -77,6 +77,7 @@ Today I Learned.
 * [Intro](anki/intro.md)
 ---------------
 ### Java
+* [Test](java/test.md)
 * [Serialize](java/serialize.md)
 * [Readingfile](java/readingFile.md)
 * [Bufferedwriter](java/bufferedWriter.md)
