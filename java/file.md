@@ -61,6 +61,8 @@ public void readFile(File f) throws FileNotFoundException {
 * `FileWriter` class
 
 ```java
+// the IOException should be declared or caught
+// if the file does not exist, create it
 FileWriter writer = new FileWriter("file.txt");
 writer.write("Hi file!\n"); // line break has to be written
 writer.write("add more");
@@ -100,12 +102,26 @@ public class FileHandler {
 ### Class File
 * java.io.File
     * public class File extends Object implements Serializable, Comparable<File>
+    * `File f = new File("MyCode.txt");`
 * method
     * String getName() : returns the name of the file or directory
     * String getPath() : converts this abstract pathname into a pathname string
+    * make a new directory `File dir = new File("ch4"); dir.mkdir();`
+    * list the contents of a directory
+        ```java
+        if (dir.isDirectory()) {
+            String[] dirContents = dir.list();
+            for (int i=0; i<dirContents.length; i++) {
+                System.out.println(dirContents[i]);
+            }
+        }
+        ```
+    * get the absolute path of a file or directory `dir.getAbsolutePath();`
+    * delete a file or directory (returns true if successful) `boolean isDeleted = f.delete();`
 
 
-###  Class Files
+
+### Class Files
 * java.nio.file.Files
     * public final class Files extends Object
     * since 1.7

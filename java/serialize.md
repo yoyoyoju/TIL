@@ -74,3 +74,10 @@ os.close();
     6. the object's instance varibales are given the values from the serialized state.
         Transient variables are given a value of null for object references and defaults for primitives.
     7. static variables are not saved, and when an object is deserialized, it will have whatever static variable its class currently has.
+
+
+### serialVersionUID
+* each serialized object has an serialVersionUID. if the class has different serialVersionUID, the deserialization fails.
+* one can manually set the serialVersionUID. Then, the responsibility to make the versions of the class compatible to each other is on you.
+    1. use the `serialver` command-line tool to get the version ID
+    2. paste the output into your class `static final long serialVersionUID = -12342L;`
