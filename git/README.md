@@ -1,11 +1,11 @@
 # Git
-* [Branch git](branch_git.md)
-   * [Basic](branch_git.md#basic)
 * [Status options](status_options.md)
    * [Output](status_options.md#output)
    * [Ignore option](status_options.md#ignore-option)
    * [Porcelain format](status_options.md#porcelain-format)
    * [Branch headers](status_options.md#branch-headers)
+* [Branch git](branch_git.md)
+   * [Basic](branch_git.md#basic)
 * [Basic git](basic_git.md)
    * [Git config](basic_git.md#git-config)
    * [First config](basic_git.md#first-config)
