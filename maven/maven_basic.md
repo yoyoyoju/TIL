@@ -5,9 +5,12 @@
 * `$ mvn --version` to see the version
 
 * create a project
-`$ mvn archetype:generate -DgroupID=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false`
+    * example for app
+`$ mvn archetype:generate -DgroupId=com.company -DartifactId=project -Dpackage=com.company.project -Dversion=1.0-SNAPSHOT -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false`
+    * example for webapp
+`$ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=com.company.app -DartifactId=my-webapp`
 
-* `pon.xml` is the core of a project's configuration in maven
+* `pom.xml` is the core of a project's configuration in maven
 
 * to build `mvn package`
 * for clean install `mvn clean install`

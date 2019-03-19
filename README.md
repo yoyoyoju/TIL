@@ -72,12 +72,13 @@ Today I Learned.
 ---------------
 ### Maven
 * [Maven basic](maven/maven_basic.md)
+* [Build plugins](maven/build_plugins.md)
+* [Dependencies](maven/dependencies.md)
 ---------------
 ### Anki
 * [Intro](anki/intro.md)
 ---------------
 ### Java
-* [Test](java/test.md)
 * [Serialize](java/serialize.md)
 * [Readingfile](java/readingFile.md)
 * [Bufferedwriter](java/bufferedWriter.md)
