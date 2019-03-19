@@ -10,3 +10,4 @@
 * `pon.xml` is the core of a project's configuration in maven
 
 * to build `mvn package`
+* for clean install `mvn clean install`
