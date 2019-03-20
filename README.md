@@ -71,8 +71,9 @@ Today I Learned.
 * [Basic syntax](markdown/basic_syntax.md)
 ---------------
 ### Maven
-* [Maven basic](maven/maven_basic.md)
+* [Usejdkversions](maven/useJdkVersions.md)
 * [Build plugins](maven/build_plugins.md)
+* [Maven basic](maven/maven_basic.md)
 * [Dependencies](maven/dependencies.md)
 ---------------
 ### Anki

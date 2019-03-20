@@ -1,6 +1,10 @@
 # Maven
-* [Maven basic](maven_basic.md)
+* [Usejdkversions](useJdkVersions.md)
+   * [Using toolchain](useJdkVersions.md#using-toolchain)
+   * [Switch java home](useJdkVersions.md#switch-java-home)
 * [Build plugins](build_plugins.md)
    * [Exec maven plugin](build_plugins.md#exec-maven-plugin)
+   * [To find lates version](build_plugins.md#to-find-lates-version)
+* [Maven basic](maven_basic.md)
 * [Dependencies](dependencies.md)
    * [Mysql connector](dependencies.md#mysql-connector)

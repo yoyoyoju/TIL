@@ -20,3 +20,19 @@
   </plugins>
 </build>
 ```
+
+### to find lates version 
+* to find latest plugin or dependency versions for your modules
+* `$ mvn versions:display-plugin-updates`
+* use `-N` flag like `$ mvn -N ...` from the projects root directory
+    to just check the parent POM
+```xml
+<plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>versions-maven-plugin</artifactId>
+    <version>2.5</version>
+    <configuration>
+        <generateBackupPoms>false</generateBackupPoms>
+    </configuration>
+</plugin>
+```
