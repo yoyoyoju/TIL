@@ -38,6 +38,8 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Git](git)
 
 ---------------
+
+
 ---------------
 
 ### Vim
@@ -48,12 +50,14 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Move](vim/move.md)
 * [Fold](vim/fold.md)
 * [Beginners guide](vim/beginners_guide.md)
+
 ---------------
 
 ### Tomcat
 
 * [Mistakes](tomcat/mistakes.md)
 * [Install](tomcat/install.md)
+
 ---------------
 
 ### Python
@@ -72,6 +76,7 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Doctest](python/doctest.md)
 * [Copy](python/copy.md)
 * [Algorithms](python/algorithms.md)
+
 ---------------
 
 ### Markdown
@@ -79,6 +84,7 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Links](markdown/links.md)
 * [Github flavored](markdown/github_flavored.md)
 * [Basic syntax](markdown/basic_syntax.md)
+
 ---------------
 
 ### Maven
@@ -87,15 +93,18 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Build plugins](maven/build_plugins.md)
 * [Maven basic](maven/maven_basic.md)
 * [Dependencies](maven/dependencies.md)
+
 ---------------
 
 ### Anki
 
 * [Intro](anki/intro.md)
+
 ---------------
 
 ### Java
 
+* [Trywithresources](java/tryWithResources.md)
 * [Serialize](java/serialize.md)
 * [Readingfile](java/readingFile.md)
 * [Bufferedwriter](java/bufferedWriter.md)
@@ -157,6 +166,7 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Animation](java/animation.md)
 * [Actionevents](java/actionEvents.md)
 * [Abstractclass](java/abstractClass.md)
+
 ---------------
 
 ### Html
@@ -165,6 +175,7 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Html list](html/html_list.md)
 * [Html basic](html/html_basic.md)
 * [Character entity](html/character_entity.md)
+
 ---------------
 
 ### Servletjsp
@@ -174,11 +185,13 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Hf5 attributesandlisteners](servletJSP/hf5_attributesAndListeners.md)
 * [Hf4 servlet](servletJSP/hf4_servlet.md)
 * [Hf3 tutorial](servletJSP/hf3_tutorial.md)
+
 ---------------
 
 ### Jee
 
 * [Glassfish start](jee/glassfish_start.md)
+
 ---------------
 
 ### Os
@@ -188,11 +201,11 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Macports](os/macports.md)
 * [Installing](os/installing.md)
 * [Apt](os/apt.md)
+
 ---------------
 
 ### Aws
 
-* [W4 cognito](aws/w4_cognito.md)
 * [W6 sns sqs](aws/w6_SNS_SQS.md)
 * [W5 xray](aws/w5_xray.md)
 * [W5 lambda](aws/w5_lambda.md)
@@ -203,11 +216,13 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 * [Tomcat confonaws](aws/tomcat_confOnAWS.md)
 * [Mistakes](aws/mistakes.md)
 * [Aws cli](aws/aws_cli.md)
+
 ---------------
 
 ### Resource
 
 * [Jobsearch](resource/jobsearch.md)
+
 ---------------
 
 ### Git

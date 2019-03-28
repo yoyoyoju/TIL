@@ -40,8 +40,10 @@ for x in os.listdir('.'):
 # list the files under the corresponding category
 readme_file.write('\n')
 readme_file.write('---------------\n')
+readme_file.write('\n')
 for category in os.listdir('.'):
     if os.path.isdir(category) and check_dir_name(category):
+        readme_file.write('\n')
         readme_file.write('---------------\n')
         readme_file.write('\n')
         readme_file.write('### ' + category.capitalize() + '\n')
