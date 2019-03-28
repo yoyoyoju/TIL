@@ -89,10 +89,11 @@ The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 
 ### Maven
 
-* [Usejdkversions](maven/useJdkVersions.md)
+* [Reporting plugin](maven/reporting_plugin.md)
 * [Build plugins](maven/build_plugins.md)
-* [Maven basic](maven/maven_basic.md)
 * [Dependencies](maven/dependencies.md)
+* [Usejdkversions](maven/useJdkVersions.md)
+* [Maven basic](maven/maven_basic.md)
 
 ---------------
 
