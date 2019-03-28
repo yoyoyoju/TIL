@@ -1,6 +1,7 @@
 # TIL
 
 Today I Learned.
+The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 
 -----------------
 
@@ -9,7 +10,7 @@ Today I Learned.
 - [x] markdown
 - [x] generateREADME code
 - [x] git - basic
-- [ ] git - branch
+- [x] git - branch
 - [x] vim - covered the basic
 - [x] python - the previous lecture
 - [x] python - the current lecture
