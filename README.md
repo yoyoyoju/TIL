@@ -1,7 +1,6 @@
 # TIL
 
 Today I Learned.
-The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 
 -----------------
 
