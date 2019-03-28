@@ -28,6 +28,7 @@ basereadme_file.close()
 # list the directory as category
 readme_file.write('---------------\n')
 readme_file.write('---------------\n')
+readme_file.write('\n')
 readme_file.write('## Category\n')
 readme_file.write('\n')
 
@@ -42,7 +43,9 @@ readme_file.write('---------------\n')
 for category in os.listdir('.'):
     if os.path.isdir(category) and check_dir_name(category):
         readme_file.write('---------------\n')
+        readme_file.write('\n')
         readme_file.write('### ' + category.capitalize() + '\n')
+        readme_file.write('\n')
 
         ## Write a README.md inside of the directory
         dir_readme_file = open(category + '/README.md', 'w')
