@@ -1,6 +1,7 @@
 # TIL
 
 Today I Learned.
+The project website is [yoyoyoju.github.io/TIL](https://yoyoyoju.github.io/TIL)
 
 -----------------
 
@@ -9,7 +10,7 @@ Today I Learned.
 - [x] markdown
 - [x] generateREADME code
 - [x] git - basic
-- [ ] git - branch
+- [x] git - branch
 - [x] vim - covered the basic
 - [x] python - the previous lecture
 - [x] python - the current lecture
@@ -166,11 +167,11 @@ Today I Learned.
 * [Apt](os/apt.md)
 ---------------
 ### Aws
+* [W4 cognito](aws/w4_cognito.md)
 * [W6 sns sqs](aws/w6_SNS_SQS.md)
 * [W5 xray](aws/w5_xray.md)
 * [W5 lambda](aws/w5_lambda.md)
 * [W4 polly](aws/w4_polly.md)
-* [W4 cognito](aws/w4_cognito.md)
 * [W3 db loadbalancer](aws/w3_DB_loadbalancer.md)
 * [W2 iam s3 rekognition](aws/w2_IAM_S3_Rekognition.md)
 * [W1 start](aws/w1_start.md)
