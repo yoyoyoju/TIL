@@ -111,6 +111,7 @@ Today I Learned.
 
 ### Java
 
+* [Socketconnection](java/socketConnection.md)
 * [Trywithresources](java/tryWithResources.md)
 * [Serialize](java/serialize.md)
 * [Readingfile](java/readingFile.md)

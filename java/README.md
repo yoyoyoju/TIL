@@ -1,4 +1,6 @@
 # Java
+* [Socketconnection](socketConnection.md)
+   * [Java api netwroking package](socketConnection.md#java-api-netwroking-package)
 * [Trywithresources](tryWithResources.md)
 * [Serialize](serialize.md)
    * [Write a serialized object to a file](serialize.md#write-a-serialized-object-to-a-file)
