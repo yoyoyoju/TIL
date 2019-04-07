@@ -1,22 +1,35 @@
+# Comparator
+
+* used in `Collections.sort(List<T> list, Comparator<? super T> c)`
+
 
 ### Comparator
-* want to compare in different ways
-* make use of different classes which execute the comparison
-* implements Comparator<T>
-* method, compare(T t1, T t2) (negative `t1 < t2`, positive, `t1 > t2`)
-```java
-import java.util.Comparator;
-public class SortAgainstSuit implements Comparator<Card> {
-    public int compare(Card card1, Card card2) {
-        return card1.getSuit() - card2.getSuit();
+
+* java.util.Comparator
+    ```java
+    public interface Comparator<T> {
+        int compare(T o1, T o2);
     }
-}
-```
+    ```
+    * external to the element type you're comparing - it is a separate class
+    * use when you want to compare in different ways
+* make use of different classes which execute the comparison
+* `implements Comparator<T>`
+* method, compare(T t1, T t2) (negative `t1 < t2`, positive, `t1 > t2`)
+* example: 
+    ```java
+    import java.util.Comparator;
+    public class SortAgainstSuit implements Comparator<Card> {
+        public int compare(Card card1, Card card2) {
+            return card1.getSuit() - card2.getSuit();
+        }
+    }
+    ```
 * one can sort based on this:
-```java
-SortAgainstSuit suitSorter = new SortAgainstSuit();
-Collections.sort(cards, suitSorter); // cards is ArrayList of Card
-```
+    ```java
+    SortAgainstSuit suitSorter = new SortAgainstSuit();
+    Collections.sort(cards, suitSorter); // cards is ArrayList of Card
+    ```
 
 #### examples
 * using a map to sort

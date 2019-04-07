@@ -111,6 +111,11 @@ Today I Learned.
 
 ### Java
 
+* [Collection](java/collection.md)
+* [Sets](java/sets.md)
+* [Comparator](java/comparator.md)
+* [Comparable](java/comparable.md)
+* [Generics](java/generics.md)
 * [Thread](java/thread.md)
 * [Socketconnection](java/socketConnection.md)
 * [Trywithresources](java/tryWithResources.md)
@@ -134,7 +139,6 @@ Today I Learned.
 * [Static](java/static.md)
 * [Stackheap](java/stackHeap.md)
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
-* [Sets](java/sets.md)
 * [Regularexpressions](java/regularExpressions.md)
 * [Parameters](java/parameters.md)
 * [Package](java/package.md)
@@ -155,7 +159,6 @@ Today I Learned.
 * [Inheritance](java/inheritance.md)
 * [Import](java/import.md)
 * [Hashmap](java/hashMap.md)
-* [Generics](java/generics.md)
 * [Final](java/final.md)
 * [Exceptions](java/exceptions.md)
 * [Ex wormgame](java/ex_wormgame.md)
@@ -165,8 +168,6 @@ Today I Learned.
 * [Drawing](java/drawing.md)
 * [Developingclass](java/developingClass.md)
 * [Compile](java/compile.md)
-* [Comparator](java/comparator.md)
-* [Comparable](java/comparable.md)
 * [Casting](java/casting.md)
 * [Calendar](java/calendar.md)
 * [Booleanexpressions](java/booleanExpressions.md)

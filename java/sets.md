@@ -1,4 +1,5 @@
 # Set
+
 * Set has only unique entries.
 * the same object can not be contained twice in a set
 * (the sameness is based on `equals` and `hashCode`)
@@ -11,10 +12,12 @@ myset.add(1);
 ```
 
 ### HashSet
+
 * HashSet implements Set interface
 
 
 ### TreeSet
+
 * TreeSet implements SortedSet
 * methods:
     * boolean add 
