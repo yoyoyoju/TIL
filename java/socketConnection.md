@@ -35,6 +35,7 @@ Socket connection for a chat room; example from HeadFirst Java Chapeter 15.
 
 
 #### write data to a Socket
+
 * use PrintWriter
 * How to:
     1. Make a Socket connection
@@ -47,3 +48,16 @@ Socket connection for a chat room; example from HeadFirst Java Chapeter 15.
     ```
     3. Write something
     `writer.println("message");`
+
+
+### Writing a simple server
+
+* ServerSocket: waits for client requests
+* Socker: client makes one 
+* How to:
+    1. Server application makes a ServerSocket, on a specific port
+    `ServerSocket serverSocket = new ServerSocket(4242);`
+    2. Client makes a Socket connection to the Server application
+    `Socket socket = new Socket("127.0.0.1", 4242);`
+    3. Server makes a new socket to communicate with this client
+    `Socket sock = serverSocket.accept();`
