@@ -111,11 +111,14 @@ Today I Learned.
 
 ### Java
 
+* [Generics](java/generics.md)
 * [Collection](java/collection.md)
+* [Hashmap](java/hashMap.md)
+* [Treeset](java/treeSet.md)
+* [Equals](java/equals.md)
 * [Sets](java/sets.md)
 * [Comparator](java/comparator.md)
 * [Comparable](java/comparable.md)
-* [Generics](java/generics.md)
 * [Thread](java/thread.md)
 * [Socketconnection](java/socketConnection.md)
 * [Trywithresources](java/tryWithResources.md)
@@ -158,12 +161,10 @@ Today I Learned.
 * [Innerclass](java/innerclass.md)
 * [Inheritance](java/inheritance.md)
 * [Import](java/import.md)
-* [Hashmap](java/hashMap.md)
 * [Final](java/final.md)
 * [Exceptions](java/exceptions.md)
 * [Ex wormgame](java/ex_wormgame.md)
 * [Ex avatar](java/ex_avatar.md)
-* [Equals](java/equals.md)
 * [Enum](java/enum.md)
 * [Drawing](java/drawing.md)
 * [Developingclass](java/developingClass.md)

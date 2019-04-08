@@ -1,4 +1,12 @@
+# HashMap
+
+* Map interface
+    * part of Java collections but do not implement the Collection interface
+    * each element has key and value
+    * may have duplicate values but not duplicate keys
+
 ### HashMap
+
 ```java
 import java.util.HashMap;
 import java.util.Map;

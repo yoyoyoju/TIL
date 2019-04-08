@@ -3,6 +3,12 @@
 * note from HeadFirst java chapter 16
 
 
+### Array and Collection
+
+* Array types are checked again at runtime,
+* but collection type checks happen only when you compile
+
+
 ### Collection interfaces
 
 * Three main interfaces:
@@ -30,6 +36,8 @@
         * SortedSet interface
             * TreeSet
                 * Keeps the elements sorted and prevents duplicates
+                * uses object's compareTo() method as default
+                * can pass Comparator to the TreeSet constructor instead
         * HashSet
             * Prevents duplicates in the collection, and given an element, can find that element in the collection quickly
         * LinkedHashSet

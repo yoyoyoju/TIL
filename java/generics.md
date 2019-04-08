@@ -102,3 +102,77 @@ public class ClubMember implements Comparable<ClubMember> {
 
         ```
 
+
+
+### Array and Collection
+
+* in Array
+    ```java
+    // let's say Dog and Cat are subtype of Animal
+    public void takeAnimals(Animal[] animals) {
+        for (Animal a : animals) {
+            // if Dog override the eat method, the overriden method will executed.
+            a.eat();
+        }
+    }
+
+    // one can pass Animal[] as well as Dog[]
+    public void go() {
+        Animal[] animals = {new Dog(), new Cat()};
+        Dog[] dogs = {new Dog()};
+        takeAnimals(animals);
+        takeAnimals(dogs);  // this works, too.
+    }
+
+    public void replaceToCat(Animal[] animals) {
+        // the type was checked in runtime
+        // if Dog[] was passed, it will give an error:
+        // ArrayStoreException
+        animals[0] = new Cat();
+    }
+    ```
+* in ArrayList
+    ```java
+    public void takeAnimals(ArrayList<Animal> animals) {
+        // ...
+    }
+
+    // one cannot pass ArrayList<Dog>
+    public void go() {
+        ArrayList<Animal> animals = new ArrayList<>();
+        animals.add(new Dog());
+        takeAnimals(animals);
+
+        ArrayList<Dog> dogs = new ArrayList<>();
+        takeAnimals(dogs);  // NOT WORK
+    }
+
+    // cannot pass ArrayList<Dog> to this.
+    // collection type checks happen only when you compile.
+    // If it were possible to pass ArrayList<Dog>, nothing will stop to add a Cat here
+    // because there is no runtime type check for ArrayList.
+    // So, it is not allowed to pass ArrayList<Dog> here.
+    public void addCat(ArrayList<Animal> animals) {
+        animals.add(new Cat());
+    }
+    ```
+* generic with a wildcard
+    * what if you want a method for `ArrayList<Dog>` and `ArrayList<Cat>`?
+        ```java
+        // can invoke methods on the elements in the list
+        // the compiler will stop you from add elements to the list
+        public void takeAnimals(ArrayList<? extends Animal> animals) {
+            // this is ok
+            for (Animal a : animals) {
+                a.eat();
+            }
+
+            // this is not ok
+            animals.add(new Cat());
+        }
+        ```
+    * another way to write it
+        ```java
+        public <T extends Animal> void takeThing(ArrayList<T> list)
+        ```
+
