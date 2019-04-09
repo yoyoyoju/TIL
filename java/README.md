@@ -1,4 +1,6 @@
 # Java
+* [Stream](stream.md)
+   * [Map](stream.md#map)
 * [Generics](generics.md)
    * [Intro](generics.md#intro)
    * [Interface with generics](generics.md#interface-with-generics)

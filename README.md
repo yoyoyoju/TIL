@@ -111,6 +111,7 @@ Today I Learned.
 
 ### Java
 
+* [Stream](java/stream.md)
 * [Generics](java/generics.md)
 * [Collection](java/collection.md)
 * [Hashmap](java/hashMap.md)
