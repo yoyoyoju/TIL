@@ -27,6 +27,9 @@
         ```txt
         Main-Class: MyApp
         ```
+        ```txt
+        Main-Class: com.example.MyApp
+        ```
 * run the jar tool to create a JAR file that contains everything in the classes directory, plus the manifest
     ```shell
     % cd MyProject/classes
