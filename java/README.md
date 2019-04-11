@@ -1,4 +1,8 @@
 # Java
+* [Package](package.md)
+   * [Make a jar](package.md#make-a-jar)
+   * [Make jar executable](package.md#make-jar-executable)
+   * [Use the package](package.md#use-the-package)
 * [Stream](stream.md)
    * [Map](stream.md#map)
 * [Generics](generics.md)
@@ -92,9 +96,6 @@
 * [Regularexpressions](regularExpressions.md)
 * [Parameters](parameters.md)
    * [Variable number of method parameters](parameters.md#variable-number-of-method-parameters)
-* [Package](package.md)
-   * [Make a jar](package.md#make-a-jar)
-   * [Use the package](package.md#use-the-package)
 * [Override](override.md)
    * [Methods from object class](override.md#methods-from-object-class)
 * [Objectpolymorphism](objectPolymorphism.md)

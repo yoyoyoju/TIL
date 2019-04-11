@@ -111,6 +111,7 @@ Today I Learned.
 
 ### Java
 
+* [Package](java/package.md)
 * [Stream](java/stream.md)
 * [Generics](java/generics.md)
 * [Collection](java/collection.md)
@@ -145,7 +146,6 @@ Today I Learned.
 * [Singleresponsibilityprinciple](java/singleResponsibilityPrinciple.md)
 * [Regularexpressions](java/regularExpressions.md)
 * [Parameters](java/parameters.md)
-* [Package](java/package.md)
 * [Override](java/override.md)
 * [Objectpolymorphism](java/objectPolymorphism.md)
 * [Object](java/object.md)
