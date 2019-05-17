@@ -34,6 +34,8 @@
     ```shell
     % cd MyProject/classes
     % jar -cvmf manifest.txt app1.jar *.class
+    # for package
+    % jar -cvmf manifest.txt packEx.jar com
     ```
 * Run the executable JAR
     ```shell
@@ -53,6 +55,10 @@
 * run
     * `java -cp '.:myjar.jar' Main`
 * cp for classpath
+* list the contents of a JAR
+    `% jar -tf packEx.jar # -tf for TableFile` 
+* extract the contents of a JAR
+    `% jar -xf packEx.jar # -xf for Extract File`
 
 
 --- 
