@@ -111,6 +111,7 @@ Today I Learned.
 
 ### Java
 
+* [Jws](java/jws.md)
 * [Package](java/package.md)
 * [Stream](java/stream.md)
 * [Generics](java/generics.md)
@@ -183,6 +184,7 @@ Today I Learned.
 
 ### Html
 
+* [Html5 basic](html/html5_basic.md)
 * [Quote](html/quote.md)
 * [Html list](html/html_list.md)
 * [Html basic](html/html_basic.md)
