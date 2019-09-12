@@ -195,6 +195,7 @@ Today I Learned.
 
 ### Android
 
+* [Colorresource](android/colorResource.md)
 * [Vectorassetstudio](android/vectorAssetStudio.md)
 
 ---------------
