@@ -2,11 +2,11 @@
 
 reference: https://youtu.be/wlR5gYd6um0
 
-## repeat
+### repeat
 
 dot(`.`) for repeat the previous command
 
-## Verbs in Vim
+### Verbs in Vim
 
 - `d`: Delete
 - `c`: Change 
@@ -15,15 +15,15 @@ dot(`.`) for repeat the previous command
 - `y`: Yank
 
 
-## Nouns
+### Nouns
 
-### Nouns in Vim -- Motions
+#### Nouns in Vim -- Motions
 
 - `w`: word
 - `b`: back (back by a "word")
 - `2j`: down 2 lines
 
-### Nouns in Vim -- Text Objects
+#### Nouns in Vim -- Text Objects
 
 - `iw`: inner word
 - `it`: inner tag (content of xml or html tags)
@@ -35,7 +35,7 @@ Usage example:
 Type `di"` when the cursor is inside of a quotes 
 will delte everything in the quotes.
 
-### Nouns in Vim -- Parameterized Text Objects
+#### Nouns in Vim -- Parameterized Text Objects
 
 - `f, F`: "find" the next character (including the character)
 - `t, T`: "find" the next character (excluding the character)
