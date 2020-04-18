@@ -45,6 +45,7 @@ Today I Learned.
 
 ### Vim
 
+* [Resources](vim/resources.md)
 * [Vimrc](vim/vimrc.md)
 * [Search replace](vim/search_replace.md)
 * [Number change](vim/number_change.md)
