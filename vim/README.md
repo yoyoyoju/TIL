@@ -1,8 +1,8 @@
 # Vim
-* [Resources](resources.md)
-   * [Nouns in vim -- motions](resources.md#nouns-in-vim----motions)
-   * [Nouns in vim -- text objects](resources.md#nouns-in-vim----text-objects)
-   * [Nouns in vim -- parameterized text objects](resources.md#nouns-in-vim----parameterized-text-objects)
+* [Vim language](vim_language.md)
+   * [Nouns in vim -- motions](vim_language.md#nouns-in-vim----motions)
+   * [Nouns in vim -- text objects](vim_language.md#nouns-in-vim----text-objects)
+   * [Nouns in vim -- parameterized text objects](vim_language.md#nouns-in-vim----parameterized-text-objects)
 * [Vimrc](vimrc.md)
    * [Set number](vimrc.md#set-number)
    * [Indent](vimrc.md#indent)
