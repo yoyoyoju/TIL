@@ -10,6 +10,7 @@
 - zt: put the current line to the top of the screen
 - zb: put the current line to the bottom of the screen
 - n%: go to n% point of the file, where n is a number (like 10%)
+- ctrl + o: move back to where you were
 
 
 ### scroll
@@ -55,6 +56,8 @@
 
 ### paragraphs
 
+- (, ): jump between sentences
+- {, }: jump between paragraphs
 - [{, ]}: jump to opening/ closing bracket in {  } block
 - [(, ]): jump to opening/ closing bracket in (  ) block 
 - [#, ]#: jump to prev/ next #ifdef, #else, #endif
