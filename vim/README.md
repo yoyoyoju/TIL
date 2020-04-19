@@ -1,4 +1,13 @@
 # Vim
+* [Navigation](navigation.md)
+   * [Move cursor](navigation.md#move-cursor)
+   * [Scroll](navigation.md#scroll)
+   * [Move within a line](navigation.md#move-within-a-line)
+   * [Search](navigation.md#search)
+   * [Wordwise](navigation.md#wordwise)
+   * [Mark](navigation.md#mark)
+   * [Paragraphs](navigation.md#paragraphs)
+   * [Parenthesis](navigation.md#parenthesis)
 * [Vim language](vim_language.md)
    * [Repeat](vim_language.md#repeat)
    * [Verbs in vim](vim_language.md#verbs-in-vim)
