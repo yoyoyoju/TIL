@@ -45,12 +45,12 @@ Today I Learned.
 
 ### Vim
 
+* [Change](vim/change.md)
+* [Vanilla vim](vim/vanilla_vim.md)
 * [Navigation](vim/navigation.md)
 * [Vim language](vim/vim_language.md)
 * [Vimrc](vim/vimrc.md)
 * [Search replace](vim/search_replace.md)
-* [Number change](vim/number_change.md)
-* [Move](vim/move.md)
 * [Fold](vim/fold.md)
 * [Beginners guide](vim/beginners_guide.md)
 
