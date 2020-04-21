@@ -116,3 +116,38 @@ it might take some time. To put the `i` out, use `:set complete-=i`
     " - <CR>/v/t to open in an h-split/v-split/tab
     " - check |netrw-browse-maps| for more mappings
 
+
+#### Usage
+
+Use by `:edit .` or `:edit /path/to/open` to open file browser
+
+
+### Snippets
+
+Save a snippet in a path and make a key map
+to read the snippet by a key stroke.
+
+    " Read an empty HTML template and move cursor to title
+    nnoremap ,html :read $HOME/.vim/snippets/html_skeleton.html<CR>3jwf>a
+    " nnoremap ,html :-1read $HOME/.vim/snippets/html_skeleton.html<CR>3jwf>a
+    " the -1 make it insert one line above
+
+#### Usage
+
+type `,html` in normal mode to insert the snippet
+
+
+### Build Integration
+
+see https://www.philipbradley.net/posts/rspec-into-vim-with-quickfix/
+
+    " Configure the `make` command to run RSpec
+    set makeprg=bundle\ exec\ rspec\ -f\ QuickfixFormatter
+
+    " NOW WE CAN:
+    " - Run :make to run RSpec
+    " - :cl to list errors
+    " - :cc# to jump to error by number
+    " - :cn and :cp to navigate forward and back
+    y"+a
+    ":"

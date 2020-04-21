@@ -4,18 +4,6 @@ Today I Learned.
 
 -----------------
 
-## To Do List
-
-- [x] markdown
-- [x] generateREADME code
-- [x] git - basic
-- [x] git - branch
-- [x] vim - covered the basic
-- [x] python - the previous lecture
-- [x] python - the current lecture
-
-
-
 ---------------
 ---------------
 
@@ -45,8 +33,10 @@ Today I Learned.
 
 ### Vim
 
-* [Change](vim/change.md)
+* [Use help](vim/use_help.md)
 * [Vanilla vim](vim/vanilla_vim.md)
+* [File browsing](vim/file_browsing.md)
+* [Change](vim/change.md)
 * [Navigation](vim/navigation.md)
 * [Vim language](vim/vim_language.md)
 * [Vimrc](vim/vimrc.md)
