@@ -34,6 +34,7 @@ Today I Learned.
 ### Vim
 
 * [Navigation](vim/navigation.md)
+* [Terminal](vim/terminal.md)
 * [Use help](vim/use_help.md)
 * [Vanilla vim](vim/vanilla_vim.md)
 * [File browsing](vim/file_browsing.md)

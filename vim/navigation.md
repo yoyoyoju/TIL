@@ -12,6 +12,7 @@
 - n%: go to n% point of the file, where n is a number (like 10%)
 - ctrl + o / ctrl + i: cycle through `:jumps`
 - g; / g,: cycle through `:changes`
+- gf: to go to the file under the cursor
 
 
 ### scroll

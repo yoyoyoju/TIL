@@ -8,6 +8,7 @@
    * [Mark](navigation.md#mark)
    * [Paragraphs](navigation.md#paragraphs)
    * [Parenthesis](navigation.md#parenthesis)
+* [Terminal](terminal.md)
 * [Use help](use_help.md)
    * [Key map](use_help.md#key-map)
 * [Vanilla vim](vanilla_vim.md)
