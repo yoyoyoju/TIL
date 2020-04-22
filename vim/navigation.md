@@ -10,7 +10,8 @@
 - zt: put the current line to the top of the screen
 - zb: put the current line to the bottom of the screen
 - n%: go to n% point of the file, where n is a number (like 10%)
-- ctrl + o: move back to where you were
+- ctrl + o / ctrl + i: cycle through `:jumps`
+- g; / g,: cycle through `:changes`
 
 
 ### scroll

@@ -33,11 +33,11 @@ Today I Learned.
 
 ### Vim
 
+* [Navigation](vim/navigation.md)
 * [Use help](vim/use_help.md)
 * [Vanilla vim](vim/vanilla_vim.md)
 * [File browsing](vim/file_browsing.md)
 * [Change](vim/change.md)
-* [Navigation](vim/navigation.md)
 * [Vim language](vim/vim_language.md)
 * [Vimrc](vim/vimrc.md)
 * [Search replace](vim/search_replace.md)
