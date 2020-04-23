@@ -7,6 +7,7 @@
 * `:vs path/to/file.txt` to open in a vertical split
 * `:sp path/to/file.txt` to open in a horizontal split
 * `:tabnew path/to/file.txt` to open in a new tab
+* `:vert sf {file}` vertical split a file (use auto complete)
 
 
 ### netrw
@@ -53,3 +54,6 @@ Example setup
     augroup END
 
 
+### show dir
+
+- `:20vs .` create 20 character-wide vertical split to show the current tree

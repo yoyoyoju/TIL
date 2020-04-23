@@ -98,6 +98,9 @@ The default is `complete=.,w,b,u,t,i`.
 The `i` option scans all included files. When the path includes `**`,
 it might take some time. To put the `i` out, use `:set complete-=i`
 
+- `**`: any (recursive) directory
+- you can use like `args **/*.yaml` to add all yaml file into the arg list
+
 
 ### File Browsing
 

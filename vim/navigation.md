@@ -70,3 +70,43 @@
 ### parenthesis
 
 - %: to the matching parenthesis
+
+
+### buffers and args
+
+- `:bn` go to next buffer
+- `:b {filename}` go to buffer `{filename}`
+- `:bd` delete current buffer
+- `:buffers` or `:ls` print out all buffers
+- `:bufdo {cmd}` execute `{cmd}` for all buffers
+- `:n` go to the next file (based on arg list)
+- `:prev` go to the prev file (based on arg list)
+- `:arga {filename}` add `{filename}` to arg list
+- `:argl {files}` make a local arg copy via `{files}`
+- `:args` print out all arguments
+- `:sall` split all args
+- `:vert sall` vertically split all args
+
+
+### windows
+
+- `<Ctrl-w> s` split window
+- `<Ctrl-w> v` split window vertically
+- `<Ctrl-w> q` close window
+- `<Ctrl-w> w` alternate window
+- `<Ctrl-w> r` rotate window
+- `<Ctrl-w> o` make the current split the only
+- `:windo {cmd}` execute `{cmd}` for all windows
+    - `:windo difft` diff for every file in the window
+- `:sf {FILE}` split window and `:find {FILE}`
+- `:vert {cmd}` make any split `{cmd}` be vertical
+
+
+### tabs
+
+- `gt` go to next tab
+- `gT` go to prev tab
+- `:tabc` close tab
+- `:tabe` open tab
+- `:tabo` close all other tabs
+- `:tabf {filename}` to open a file in a new tab

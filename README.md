@@ -34,14 +34,14 @@ Today I Learned.
 ### Vim
 
 * [Navigation](vim/navigation.md)
-* [Terminal](vim/terminal.md)
-* [Use help](vim/use_help.md)
+* [Search replace](vim/search_replace.md)
 * [Vanilla vim](vim/vanilla_vim.md)
 * [File browsing](vim/file_browsing.md)
+* [Terminal](vim/terminal.md)
+* [Use help](vim/use_help.md)
 * [Change](vim/change.md)
 * [Vim language](vim/vim_language.md)
 * [Vimrc](vim/vimrc.md)
-* [Search replace](vim/search_replace.md)
 * [Fold](vim/fold.md)
 * [Beginners guide](vim/beginners_guide.md)
 
