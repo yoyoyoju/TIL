@@ -1,4 +1,7 @@
 # Vim
+* [Vim python](vim_python.md)
+   * [Install](vim_python.md#install)
+   * [Vimrc](vim_python.md#vimrc)
 * [Navigation](navigation.md)
    * [Move cursor](navigation.md#move-cursor)
    * [Scroll](navigation.md#scroll)

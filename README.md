@@ -33,6 +33,7 @@ Today I Learned.
 
 ### Vim
 
+* [Vim python](vim/vim_python.md)
 * [Navigation](vim/navigation.md)
 * [Search replace](vim/search_replace.md)
 * [Vanilla vim](vim/vanilla_vim.md)
