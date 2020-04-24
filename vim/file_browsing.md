@@ -57,3 +57,11 @@ Example setup
 ### show dir
 
 - `:20vs .` create 20 character-wide vertical split to show the current tree
+
+
+### filename completion
+
+When specifying a file to read or write,
+use the standard shell wildcards for the system
+`:read ~/vim/lib*.[ch]`
+

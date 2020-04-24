@@ -33,17 +33,20 @@ Today I Learned.
 
 ### Vim
 
-* [Vim python](vim/vim_python.md)
-* [Navigation](vim/navigation.md)
-* [Search replace](vim/search_replace.md)
+* [Fold](vim/fold.md)
+* [Block mode](vim/block_mode.md)
 * [Vanilla vim](vim/vanilla_vim.md)
 * [File browsing](vim/file_browsing.md)
+* [Search replace](vim/search_replace.md)
+* [Insertions](vim/insertions.md)
+* [Navigation](vim/navigation.md)
+* [Case sensitivity](vim/case_sensitivity.md)
+* [Vim python](vim/vim_python.md)
 * [Terminal](vim/terminal.md)
 * [Use help](vim/use_help.md)
 * [Change](vim/change.md)
 * [Vim language](vim/vim_language.md)
 * [Vimrc](vim/vimrc.md)
-* [Fold](vim/fold.md)
 * [Beginners guide](vim/beginners_guide.md)
 
 ---------------

@@ -102,6 +102,13 @@ it might take some time. To put the `i` out, use `:set complete-=i`
 - you can use like `args **/*.yaml` to add all yaml file into the arg list
 
 
+#### Defined symbol completion
+
+- `<Ctrl-X>``<Ctrl-D>` completes predefined C preprocessor symbols
+
+    #define def_FUNC_CALL f(o*p)
+    result = my de          # use ^x ^d to autocomplete
+
 ### File Browsing
 
     " FILE BROWSING:

@@ -14,3 +14,8 @@ g is for global: in all lines
 
 - `:args **/*.py` to add all `py` file into my arg list
 - `:vim /somthing/ ##`: search from all my arg list
+
+
+- prefix regexes with `\v` 
+    - `\v\d+`
+    - `\vfoo|bar`

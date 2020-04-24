@@ -47,6 +47,7 @@
 - w: 'small' word 
 - W: 'big' word (this is a-word-together another-thing)
 - e,E,b,B: the same for end, backward
+- ge: move backwards to the end of the prev word
 
 
 ### mark
