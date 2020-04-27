@@ -33,6 +33,7 @@ Today I Learned.
 
 ### Vim
 
+* [Statusline](vim/statusline.md)
 * [Fold](vim/fold.md)
 * [Block mode](vim/block_mode.md)
 * [Vanilla vim](vim/vanilla_vim.md)

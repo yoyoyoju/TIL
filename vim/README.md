@@ -1,4 +1,5 @@
 # Vim
+* [Statusline](statusline.md)
 * [Fold](fold.md)
    * [Open and close folds](fold.md#open-and-close-folds)
    * [Automatic folding](fold.md#automatic-folding)
