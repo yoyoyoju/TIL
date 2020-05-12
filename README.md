@@ -68,6 +68,7 @@ Today I Learned.
 
 ### Python
 
+* [Venv](python/venv.md)
 * [Sort](python/sort.md)
 * [Python quality code](python/python_quality_code.md)
 * [Python fundamentals](python/python_fundamentals.md)
