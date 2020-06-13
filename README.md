@@ -18,6 +18,7 @@ Today I Learned.
 * [Anki](anki)
 * [Java](java)
 * [Html](html)
+* [Unix](unix)
 * [Android](android)
 * [Servletjsp](servletJSP)
 * [Jee](jee)
@@ -190,6 +191,12 @@ Today I Learned.
 * [Html list](html/html_list.md)
 * [Html basic](html/html_basic.md)
 * [Character entity](html/character_entity.md)
+
+---------------
+
+### Unix
+
+* [Ide](unix/ide.md)
 
 ---------------
 
