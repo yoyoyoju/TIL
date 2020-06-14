@@ -65,6 +65,7 @@ For more information and example check out `man find`
     $ find . -exec echo {} \;           # echo all the results
     $ find . -type f -exec cat {} \;    # concatenate all the files 
         # it means cat file1; cat file2; ...
+    $ find . -path '*test*' -exec grep somevar {} \; 
 
     # `+` for all of the results on one invocation
     $ find . -type f -exec diff {} +    # it only works there is two files
@@ -75,3 +76,38 @@ For more information and example check out `man find`
         # then one can use `:vert sall` to open all the args vertically
         # put number like `:vert sall2` to set maximum number of window
     
+
+#### Searching Files
+
+Use `grep`.
+
+Useful flags:
+* `-R, -r`: recursively search
+* `-F, --fixed-strings`: `fgrep` interpret pattern as a set of fixed strings
+* `-i, --ignore-case`: case insensitive matching
+* `-l, --files-with-matches`: only the name of matching files
+* `-v`: invert match (select only those without given pattern
+* `--exclude`: exclude with files with given filename pattern
+* `--exclude-dir`: exclude given directory from searching (when -R)
+    
+
+##### examples
+
+    # print head of the files in current dir, which contain someVar
+    grep -lR someVar . | while IFS= read -r file; do
+        head "$file"
+    done
+
+    # select all files with someVar except .svn files
+    grep -R someVar. | grep -vF .svn
+    grep -R --exclude '*\.svn' someVar .     # same with exclude
+
+Find more examples in `man grep`
+
+
+#### File metadata
+
+The `file` tool gives you a one-line summary.
+
+    # gives file info for everything in current directory
+    $ find . -exec file {} \; 
