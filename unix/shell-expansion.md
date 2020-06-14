@@ -69,37 +69,37 @@ Use subversion branching and merging:
 Combine and nest these expansions:
 
     # To create directory tree
-    $ mkdir -p {test,prod}/{,usr/,usr/local/}{{,s}bin,etc,lib,share}
+    $ mkdir -p {test,prod}/{,usr/,usr/local/}{etc,{,s}bin,lib,share}
 
     # the above line will create the following directories:
+    test/etc
     test/bin
     test/sbin
-    test/etc
     test/lib
     test/share
+    test/usr/etc
     test/usr/bin
     test/usr/sbin
-    test/usr/etc
     test/usr/lib
     test/usr/share
+    test/usr/local/etc
     test/usr/local/bin
     test/usr/local/sbin
-    test/usr/local/etc
     test/usr/local/lib
     test/usr/local/share
+    prod/etc
     prod/bin
     prod/sbin
-    prod/etc
     prod/lib
     prod/share
+    prod/usr/etc
     prod/usr/bin
     prod/usr/sbin
-    prod/usr/etc
     prod/usr/lib
     prod/usr/share
+    prod/usr/local/etc
     prod/usr/local/bin
     prod/usr/local/sbin
-    prod/usr/local/etc
     prod/usr/local/lib
     prod/usr/local/share
 
