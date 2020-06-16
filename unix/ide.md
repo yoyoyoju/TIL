@@ -19,7 +19,7 @@ Use `ls` with:
     $ ls -tl | head     # can also use head
     $ ls -tlr           # add r for reverse order in time
     $ ls -Rl | less    # list files recursively in a pager
-    $ ls -R | vi -     # pipe the output into vi
+    $ ls -R | vim -     # pipe the output into vim
 
 
 #### Finding Files
@@ -72,7 +72,7 @@ For more information and example check out `man find`
         # it means diff file1 file2
 
     # Open c files in vim
-    $ find . -name '*.c' -exec vi {} +
+    $ find . -name '*.c' -exec vim {} +
         # then one can use `:vert sall` to open all the args vertically
         # put number like `:vert sall2` to set maximum number of window
     
